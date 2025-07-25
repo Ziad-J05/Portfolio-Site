@@ -1,7 +1,7 @@
 import './index.css'
-import NavigationBar from './NavigationBar.jsx'
-import MainContentArea from './MainContentArea.jsx'
-import Footer from './Footer.jsx'
+import NavigationBar from './NavigationBar'
+import MainContentArea from './MainContentArea'
+import Footer from './Footer'
 
 
 function App() {
