@@ -9,7 +9,7 @@ import {
   TimelineTitle,
 } from "flowbite-react";
 
-export function ExperienceSection(){
+export default function ExperienceSection(){
   return(
     <>
       <section id="experience" className="w-2xl mx-auto mb-[3rem]">

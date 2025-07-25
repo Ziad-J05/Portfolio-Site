@@ -3,7 +3,7 @@ import { Card } from "flowbite-react";
 import { Badge } from "flowbite-react";
 
 
-export function ProjectSection(){
+export default function ProjectSection(){
   return(
     <>
       {/* Projects */}

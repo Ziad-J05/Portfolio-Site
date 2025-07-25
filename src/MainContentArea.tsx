@@ -1,6 +1,6 @@
 import './index.css'
-import { ExperienceSection } from './ExperienceSection'
-import { ProjectSection } from './ProjectSection'
+import ExperienceSection from './ExperienceSection'
+import ProjectSection from './ProjectSection'
 
 function IntroSection(){
   return (
