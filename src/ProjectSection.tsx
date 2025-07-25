@@ -14,7 +14,7 @@ export default function ProjectSection(){
             <Card
                 className="max-w-2xl"
                 imgAlt="Meaningful alt text for an image that is not purely decorative"
-                imgSrc="/image.png"
+                imgSrc="https://media.istockphoto.com/id/583809524/photo/alberta-wilderness-near-banff.jpg?s=612x612&w=0&k=20&c=hiI3ib9ibDxAgqEZEH09EO3JOw94v5xh6hzcuXGhO-M="
                 >
                 <div>
                     <h3 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
