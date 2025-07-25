@@ -1,4 +1,5 @@
 import './index.css'
+import { ExperienceSection } from './ExperienceSection'
 
 function IntroSection(){
   return (
@@ -77,49 +78,6 @@ function SkillsSection(){
               <p>Skill Name</p>
             </div>
           </div>
-        </section>
-    </>
-  )
-}
-
-function ExperienceSection(){
-  return(
-    <>
-    {/* Experience */}
-        <section id="experience" className="w-2xl mx-auto mb-[3rem]">
-          <h2 className="text-5xl mb-[1rem]">Experience</h2>
-          <ol>
-            <li className="mt-[1em]">
-              <h3 className="text-2xl font-semibold">
-                Job Title <span className="font-normal">Date</span>
-              </h3>
-              <ul className="list-disc list-inside">
-                <li className="ml-[0.5em]">Detail</li>
-                <li className="ml-[0.5em]">Detail</li>
-                <li className="ml-[0.5em]">Detail</li>
-              </ul>
-            </li>
-            <li className="mt-[1em]">
-              <h3 className="text-2xl font-semibold">
-                Job Title <span className="font-normal">Date</span>
-              </h3>
-              <ul className="list-disc list-inside">
-                <li className="ml-[0.5em]">Detail</li>
-                <li className="ml-[0.5em]">Detail</li>
-                <li className="ml-[0.5em]">Detail</li>
-              </ul>
-            </li>
-            <li className="mt-[1em]">
-              <h3 className="text-2xl font-semibold">
-                Job Title <span className="font-normal">Date</span>
-              </h3>
-              <ul className="list-disc list-inside">
-                <li className="ml-[0.5em]">Detail</li>
-                <li className="ml-[0.5em]">Detail</li>
-                <li className="ml-[0.5em]">Detail</li>
-              </ul>
-            </li>
-          </ol>
         </section>
     </>
   )
@@ -215,7 +173,7 @@ function ProjectSection(){
 function MainContentArea(){
   return(
     <>
-      <main className="bg-slate-200 pt-[3rem] pb-[3rem] mx-auto w-4xl">
+      <main className="bg-[#ffffff] pt-[3rem] pb-[3rem] mx-auto w-4xl">
 
           <IntroSection />
           <AboutSection />
