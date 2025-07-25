@@ -1,5 +1,6 @@
 import './index.css'
 import { ExperienceSection } from './ExperienceSection'
+import { ProjectSection } from './ProjectSection'
 
 function IntroSection(){
   return (
@@ -76,93 +77,6 @@ function SkillsSection(){
             <div className="flex items-center border rounded-xs p-[0.5em]">
               <img className="" src="img/photo-not-here" />
               <p>Skill Name</p>
-            </div>
-          </div>
-        </section>
-    </>
-  )
-}
-
-function ProjectSection(){
-  return(
-    <>
-      {/* Projects */}
-        <section id="projects" className="w-2xl mx-auto">
-          <h2 className="text-5xl mb-[1rem]">Projects</h2>
-          {/* Featured Project */}
-          <div className="grid grid-rows-[64_1fr] grid-cols-1 mb-[1.5rem]">
-            <img
-              className="h-64 w-2xl object-cover"
-              src="img/placeholder-photo -portfolio.png"
-            />
-            <div className="flex flex-col bg-slate-300 p-[8px]">
-              <h3 className="text-3xl font-semibold">Project Name</h3>
-              <p className="text-xl">Role</p>
-              <ul className="flex gap-x-[4px]">
-                <li className="border rounded-xs px-[0.5em] text-xl">Skill</li>
-                <li className="border rounded-xs px-[0.5em] text-xl">Skill</li>
-                <li className="border rounded-xs px-[0.5em] text-xl">Skill</li>
-              </ul>
-              <a className="text-xl hover:underline mt-auto" href="#">
-                More details
-              </a>
-            </div>
-          </div>
-          {/* All Projects */}
-          <div className="flex flex-col gap-y-[4px]">
-            <div className="grid grid-cols-[240px_1fr] grid-rows-1">
-              <img
-                className="w-[240px]"
-                src="img/placeholder-photo -portfolio.png"
-              />
-              <div className="flex flex-col ml-[4px] bg-slate-300 p-[4px]">
-                <h3 className="text-xl font-semibold">Project Name</h3>
-                <p>Role</p>
-                <ul className="flex gap-x-[4px]">
-                  <li className="border rounded-xs px-[0.5em]">Skill</li>
-                  <li className="border rounded-xs px-[0.5em]">Skill</li>
-                  <li className="border rounded-xs px-[0.5em]">Skill</li>
-                </ul>
-                <a className="hover:underline mt-auto" href="#">
-                  More details
-                </a>
-              </div>
-            </div>
-            <div className="grid grid-cols-[240px_1fr] grid-rows-1">
-              <img
-                className="w-[240px]"
-                src="img/placeholder-photo -portfolio.png"
-              />
-              <div className="flex flex-col ml-[4px] bg-slate-300 p-[4px]">
-                <h3 className="text-xl font-semibold">Project Name</h3>
-                <p>Role</p>
-                <ul className="flex gap-x-[4px]">
-                  <li className="border rounded-xs px-[0.5em]">Skill</li>
-                  <li className="border rounded-xs px-[0.5em]">Skill</li>
-                  <li className="border rounded-xs px-[0.5em]">Skill</li>
-                </ul>
-                <a className="hover:underline mt-auto" href="#">
-                  More details
-                </a>
-              </div>
-            </div>
-            <div className="grid grid-cols-[240px_1fr] grid-rows-1">
-              <img
-                className="w-[240px]"
-                src="img/placeholder-photo -portfolio.png"
-              />
-              <div className="flex flex-col ml-[4px] bg-slate-300 p-[4px]">
-                <h3 className="text-xl font-semibold">Project Name</h3>
-                <p>Role</p>
-                <ul className="flex gap-x-[4px]">
-                  <li className="border rounded-xs px-[0.5em]">Skill</li>
-                  <li className="border rounded-xs px-[0.5em]">Skill</li>
-                  <li className="border rounded-xs px-[0.5em]">Skill</li>
-                </ul>
-                <a className="hover:underline mt-auto" href="#">
-                  More details
-                </a>
-              </div>
             </div>
           </div>
         </section>
