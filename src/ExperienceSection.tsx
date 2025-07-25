@@ -7,14 +7,57 @@ import {
   TimelinePoint,
   TimelineTime,
   TimelineTitle,
+  createTheme, 
+  ThemeProvider
 } from "flowbite-react";
+
+const mainTheme = createTheme({
+  button: {
+    color: {
+      primary: "bg-blue-500 hover:bg-blue-600",
+    },
+    size: {
+      lg: "px-6 py-3",
+    },
+  },
+});
+
+
+const timelineTheme = createTheme({
+  timeline: {
+    root: {
+    direction: {
+      horizontal: "sm:flex",
+      vertical: "relative border-l border-gray-700 dark:border-gray-700"
+      }
+    },
+    item: {
+    point: {
+      horizontal: "flex items-center",
+      line: "hidden h-0.5 w-full bg-blue-600 sm:flex dark:bg-gray-700",
+      marker: {
+        base: {
+          horizontal: "absolute -left-1.5 h-3 w-3 rounded-full border border-amber-400 bg-amber-400 dark:border-gray-900 dark:bg-gray-700",
+          vertical: "absolute -left-1.5 mt-1.5 h-3 w-3 rounded-full border border-white bg-gray-700 dark:border-gray-900 dark:bg-gray-700"
+        },
+        icon: {
+          base: "h-3 w-3 text-primary-600 dark:text-primary-300",
+          wrapper: "absolute -left-3 flex h-6 w-6 items-center justify-center rounded-full bg-primary-200 ring-8 ring-white dark:bg-primary-900 dark:ring-gray-900"
+        }
+      },
+      vertical: ""
+    }
+  }
+  }
+});
 
 export default function ExperienceSection(){
   return(
     <>
       <section id="experience" className="w-2xl mx-auto mb-[3rem]">
         <h2 className="text-5xl mb-[1rem]">Experience</h2>
-          <Timeline>
+        <ThemeProvider theme={timelineTheme}>
+          <Timeline >
           <TimelineItem>
               <TimelinePoint />
               <TimelineContent>
@@ -58,6 +101,7 @@ export default function ExperienceSection(){
               </TimelineContent>
           </TimelineItem>
           </Timeline>
+        </ThemeProvider>
       </section>
     </>
   )
