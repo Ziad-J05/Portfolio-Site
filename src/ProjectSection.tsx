@@ -1,5 +1,5 @@
 import './index.css'
-import { Project, FeaturedProject } from './Project'
+import { Project, FeaturedProject, ProjectData } from './Project'
 
 
 export default function ProjectSection(){
@@ -12,9 +12,7 @@ export default function ProjectSection(){
         <FeaturedProject />
 
         {/* All Projects */}
-        <Project />
-        <Project />
-        <Project />
+        <Project projectData={ new ProjectData("Taken", "Programmer", [], "#")}/>
         
       </section>
     </>

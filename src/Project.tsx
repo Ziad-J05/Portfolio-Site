@@ -6,6 +6,20 @@ import {
   ThemeProvider 
 } from "flowbite-react";
 
+export class ProjectData {
+    name: string;
+    role: string;
+    skills: string[];
+    link: string;
+
+    constructor(name: string, role: string, skills: string[], link: string){
+        this.name = name,
+        this.role = role,
+        this.skills = skills,
+        this.link = link
+    }
+}
+
 const cardTheme = createTheme({
   card: {
     root: {
@@ -62,7 +76,7 @@ export function FeaturedProject(){
     )
 }
 
-export function Project(){
+export function Project( {projectData}: {projectData: ProjectData} ){
     return(
         <>
         <ThemeProvider theme={cardTheme}>
@@ -74,16 +88,16 @@ export function Project(){
             >
                 <div>
                 <h3 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-                    Project Name
+                    {projectData.name}
                 </h3>
                 <p className="text-xl text-gray-700 dark:text-gray-400 mb-0">
-                Role
+                    {projectData.role}
                 </p>
                 <div className="flex gap-2 my-0.5">
                     <Badge color="info">Default</Badge>
                     <Badge color="info">Default</Badge>
                 </div>
-                <a className="hover:underline" href="#">More info</a>
+                <a className="hover:underline" href={projectData.link}>More info</a>
                 </div>
             </Card>
         </ThemeProvider>
