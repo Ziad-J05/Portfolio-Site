@@ -1,6 +1,12 @@
 import './index.css'
 import { Project, FeaturedProject, ProjectData } from './Project'
+import ProjectArea from './ProjectArea'
 
+const projectDataList:ProjectData[] = 
+[
+  new ProjectData("Taken", "Programmer", ["Unity", "C#"], "#"),
+  new ProjectData("Taken", "Programmer", ["Unity", "C#"], "#")
+]
 
 export default function ProjectSection(){
   return(
@@ -12,7 +18,7 @@ export default function ProjectSection(){
         <FeaturedProject />
 
         {/* All Projects */}
-        <Project projectData={ new ProjectData("Taken", "Programmer", ["Unity", "C#"], "#")}/>
+        <ProjectArea projectDataList={projectDataList} />
         
       </section>
     </>
