@@ -11,18 +11,6 @@ import {
   ThemeProvider
 } from "flowbite-react";
 
-const mainTheme = createTheme({
-  button: {
-    color: {
-      primary: "bg-blue-500 hover:bg-blue-600",
-    },
-    size: {
-      lg: "px-6 py-3",
-    },
-  },
-});
-
-
 const timelineTheme = createTheme({
   timeline: {
     root: {
