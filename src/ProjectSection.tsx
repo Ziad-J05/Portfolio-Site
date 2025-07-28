@@ -12,7 +12,7 @@ export default function ProjectSection(){
         <FeaturedProject />
 
         {/* All Projects */}
-        <Project projectData={ new ProjectData("Taken", "Programmer", [], "#")}/>
+        <Project projectData={ new ProjectData("Taken", "Programmer", ["Unity", "C#"], "#")}/>
         
       </section>
     </>

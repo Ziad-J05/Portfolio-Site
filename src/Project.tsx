@@ -5,6 +5,7 @@ import {
   createTheme, 
   ThemeProvider 
 } from "flowbite-react";
+import SkillsArea from './SkillsArea';
 
 export class ProjectData {
     name: string;
@@ -76,6 +77,8 @@ export function FeaturedProject(){
     )
 }
 
+
+
 export function Project( {projectData}: {projectData: ProjectData} ){
     return(
         <>
@@ -94,8 +97,7 @@ export function Project( {projectData}: {projectData: ProjectData} ){
                     {projectData.role}
                 </p>
                 <div className="flex gap-2 my-0.5">
-                    <Badge color="info">Default</Badge>
-                    <Badge color="info">Default</Badge>
+                    <SkillsArea skills={projectData.skills} />
                 </div>
                 <a className="hover:underline" href={projectData.link}>More info</a>
                 </div>
