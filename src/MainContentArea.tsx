@@ -1,6 +1,21 @@
 import './index.css'
+import { ProjectInfo, FeaturedProjectInfo } from './Project'
 import ExperienceSection from './ExperienceSection'
-import ProjectSection from './ProjectSection'
+import ProjectSection from './ProjectSection' 
+
+const projectInfo:ProjectInfo[] = 
+[
+  new ProjectInfo("Taken", "Programmer", ["Unity", "C#"], "#"),
+  new ProjectInfo("Taken", "Programmer", ["Unity", "C#"], "#")
+]
+
+const featuredProjectInfo: FeaturedProjectInfo = new FeaturedProjectInfo(
+  "Pokedex Search Website",
+  "Solo Developer",
+  ["HTML", "CSS", "JavaScript"],
+  "#",
+  "Designed and developed a web app that retrieves and organizes information from PokeAPI, allowing users to search for their favorite monsters."
+)
 
 function IntroSection(){
   return (
@@ -93,7 +108,10 @@ function MainContentArea(){
           <AboutSection />
           <SkillsSection />
           <ExperienceSection />
-          <ProjectSection />
+          <ProjectSection 
+            projectDataList={projectInfo} 
+            featuredProjectData={featuredProjectInfo} 
+          />
           
         </main>
     </>

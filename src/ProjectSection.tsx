@@ -1,21 +1,13 @@
 import './index.css'
-import { Project, FeaturedProject, ProjectInfo, FeaturedProjectInfo } from './Project'
+import {FeaturedProject, ProjectInfo, FeaturedProjectInfo } from './Project'
 import ProjectArea from './ProjectArea'
 
-const projectDataList:ProjectInfo[] = 
-[
-  new ProjectInfo("Taken", "Programmer", ["Unity", "C#"], "#"),
-  new ProjectInfo("Taken", "Programmer", ["Unity", "C#"], "#")
-]
+interface ProjectSectionProps {
+  projectDataList: ProjectInfo[]
+  featuredProjectData: FeaturedProjectInfo
+}
 
-const featuredProjectData: FeaturedProjectInfo = new FeaturedProjectInfo(
-  "Pokedex Search Website",
-  "Solo Developer",
-  ["HTML", "CSS", "JavaScript"],
-  "#",
-  "Designed and developed a web app that retrieves and organizes information from PokeAPI, allowing users to search for their favorite monsters.")
-
-export default function ProjectSection(){
+export default function ProjectSection({projectDataList, featuredProjectData}: ProjectSectionProps){
   return(
     <>
       <section id="projects" className="w-2xl mx-auto">
