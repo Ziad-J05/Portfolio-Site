@@ -1,7 +1,13 @@
 import './index.css'
+import { JobInfo } from './JobTimeline';
 import { ProjectInfo, FeaturedProjectInfo } from './Project'
 import ExperienceSection from './ExperienceSection'
 import ProjectSection from './ProjectSection' 
+
+const a:JobInfo[] = [
+  new JobInfo("First Job", "Employer", 2000, 2002, ["erm", "uh"]),
+  new JobInfo("Second Job", "New Employer", 2002, 2022, ["erm erm", "uh um"])
+]
 
 const projectInfo:ProjectInfo[] = 
 [
@@ -107,7 +113,7 @@ function MainContentArea(){
           <IntroSection />
           <AboutSection />
           <SkillsSection />
-          <ExperienceSection />
+          <ExperienceSection jobInfoList={a} />
           <ProjectSection 
             projectDataList={projectInfo} 
             featuredProjectData={featuredProjectInfo} 
