@@ -7,7 +7,7 @@ import {
 } from "flowbite-react";
 import SkillsArea from './SkillsArea';
 
-export class ProjectData {
+export class ProjectInfo {
     name: string;
     role: string;
     skills: string[];
@@ -18,6 +18,15 @@ export class ProjectData {
         this.role = role,
         this.skills = skills,
         this.link = link
+    }
+}
+
+export class FeaturedProjectInfo extends ProjectInfo {
+    body: string;
+
+    constructor(name: string, role: string, skills: string[], link: string, body: string){
+        super(name, role, skills, link);
+        this.body = body;
     }
 }
 
@@ -42,7 +51,7 @@ const cardTheme = createTheme({
   }
 });
 
-export function FeaturedProject(){
+export function FeaturedProject( {projectInfo}: {projectInfo: FeaturedProjectInfo} ){
     return(
         <>
         <ThemeProvider theme={cardTheme}>
@@ -54,22 +63,21 @@ export function FeaturedProject(){
                 <div>
                 <div className="flex items-baseline gap-2">
                     <h3 className="text-3xl font-bold tracking-tight text-gray-900 dark:text-white">
-                    Project Name
+                        {projectInfo.name}
                     </h3>
                     <p className="text-2xl text-gray-700 dark:text-gray-400 mb-0">
-                    Role
+                        {projectInfo.role}
                     </p>
                 </div>
 
                 <div className="flex gap-2 my-0.5">
-                    <Badge color="info">Default</Badge>
-                    <Badge color="info">Default</Badge>
+                    <SkillsArea skills={projectInfo.skills} />
                 </div>
                 
                 <p className="font-normal text-gray-700 dark:text-gray-400">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse lobortis dui sit amet tellus efficitur, non tincidunt felis vulputate. Vestibulum sed justo nibh.
+                    {projectInfo.body}
                 </p>
-                <a className="hover:underline" href="#">More info</a>
+                <a className="hover:underline" href={projectInfo.link}>More info</a>
                 </div>
             </Card>
         </ThemeProvider>
@@ -79,7 +87,7 @@ export function FeaturedProject(){
 
 
 
-export function Project( {projectData}: {projectData: ProjectData} ){
+export function Project( {projectInfo}: {projectInfo: ProjectInfo} ){
     return(
         <>
         <ThemeProvider theme={cardTheme}>
@@ -91,15 +99,15 @@ export function Project( {projectData}: {projectData: ProjectData} ){
             >
                 <div>
                 <h3 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-                    {projectData.name}
+                    {projectInfo.name}
                 </h3>
                 <p className="text-xl text-gray-700 dark:text-gray-400 mb-0">
-                    {projectData.role}
+                    {projectInfo.role}
                 </p>
                 <div className="flex gap-2 my-0.5">
-                    <SkillsArea skills={projectData.skills} />
+                    <SkillsArea skills={projectInfo.skills} />
                 </div>
-                <a className="hover:underline" href={projectData.link}>More info</a>
+                <a className="hover:underline" href={projectInfo.link}>More info</a>
                 </div>
             </Card>
         </ThemeProvider>

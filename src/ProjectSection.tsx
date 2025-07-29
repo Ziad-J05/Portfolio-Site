@@ -1,12 +1,19 @@
 import './index.css'
-import { Project, FeaturedProject, ProjectData } from './Project'
+import { Project, FeaturedProject, ProjectInfo, FeaturedProjectInfo } from './Project'
 import ProjectArea from './ProjectArea'
 
-const projectDataList:ProjectData[] = 
+const projectDataList:ProjectInfo[] = 
 [
-  new ProjectData("Taken", "Programmer", ["Unity", "C#"], "#"),
-  new ProjectData("Taken", "Programmer", ["Unity", "C#"], "#")
+  new ProjectInfo("Taken", "Programmer", ["Unity", "C#"], "#"),
+  new ProjectInfo("Taken", "Programmer", ["Unity", "C#"], "#")
 ]
+
+const featuredProjectData: FeaturedProjectInfo = new FeaturedProjectInfo(
+  "Pokedex Search Website",
+  "Solo Developer",
+  ["HTML", "CSS", "JavaScript"],
+  "#",
+  "Designed and developed a web app that retrieves and organizes information from PokeAPI, allowing users to search for their favorite monsters.")
 
 export default function ProjectSection(){
   return(
@@ -15,10 +22,10 @@ export default function ProjectSection(){
         <h2 className="text-5xl mb-[1rem]">Projects</h2>
 
         {/* Featured Project */}
-        <FeaturedProject />
+        <FeaturedProject projectInfo={featuredProjectData}/>
 
         {/* All Projects */}
-        <ProjectArea projectDataList={projectDataList} />
+        <ProjectArea projectInfoList={projectDataList} />
         
       </section>
     </>
