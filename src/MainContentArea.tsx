@@ -4,7 +4,7 @@ import { ProjectInfo, FeaturedProjectInfo } from './Project'
 import ExperienceSection from './ExperienceSection'
 import ProjectSection from './ProjectSection' 
 
-const a:JobInfo[] = [
+const jobInfoList:JobInfo[] = [
   new JobInfo("First Job", "Employer", 2000, 2002, ["erm", "uh"]),
   new JobInfo("Second Job", "New Employer", 2002, 2022, ["erm erm", "uh um"])
 ]
@@ -113,7 +113,7 @@ function MainContentArea(){
           <IntroSection />
           <AboutSection />
           <SkillsSection />
-          <ExperienceSection jobInfoList={a} />
+          <ExperienceSection jobInfoList={jobInfoList} />
           <ProjectSection 
             projectDataList={projectInfo} 
             featuredProjectData={featuredProjectInfo} 
