@@ -5,7 +5,7 @@ import {
   createTheme, 
   ThemeProvider 
 } from "flowbite-react";
-import SkillsArea from './SkillsArea';
+import { SkillsArea } from './SkillsArea';
 
 export class ProjectInfo {
     name: string;

@@ -1,6 +1,7 @@
 import './index.css'
 import { JobInfo } from './JobTimeline';
 import { ProjectInfo, FeaturedProjectInfo } from './Project'
+import SkillsSection from './SkillsSection';
 import ExperienceSection from './ExperienceSection'
 import ProjectSection from './ProjectSection' 
 
@@ -59,47 +60,6 @@ function AboutSection(){
             magna ut nulla rhoncus, quis aliquam lacus rhoncus. Nunc eget purus
             sollicitudin, laoreet libero nec, eleifend neque.
           </p>
-        </section>
-    </>
-  )
-}
-
-function SkillsSection(){
-  return(
-    <>
-      {/* Skills */}
-        <section id="skills" className="w-2xl mx-auto mb-[3rem]">
-          <h2 className="text-5xl mb-[1rem]">Skills</h2>
-          <div className="grid grid-cols-4 grid-rows-2 gap-[4px]">
-            <div className="flex items-center border rounded-xs p-[0.5em]">
-              <img className="" src="img/photo-not-here" />
-              <p>Skill Name</p>
-            </div>
-            <div className="flex items-center border rounded-xs p-[0.5em]">
-              <img className="" src="img/photo-not-here" />
-              <p>Skill Name</p>
-            </div>
-            <div className="flex items-center border rounded-xs p-[0.5em]">
-              <img className="" src="img/photo-not-here" />
-              <p>Skill Name</p>
-            </div>
-            <div className="flex items-center border rounded-xs p-[0.5em]">
-              <img className="" src="img/photo-not-here" />
-              <p>Skill Name</p>
-            </div>
-            <div className="flex items-center border rounded-xs p-[0.5em]">
-              <img className="" src="img/photo-not-here" />
-              <p>Skill Name</p>
-            </div>
-            <div className="flex items-center border rounded-xs p-[0.5em]">
-              <img className="" src="img/photo-not-here" />
-              <p>Skill Name</p>
-            </div>
-            <div className="flex items-center border rounded-xs p-[0.5em]">
-              <img className="" src="img/photo-not-here" />
-              <p>Skill Name</p>
-            </div>
-          </div>
         </section>
     </>
   )
