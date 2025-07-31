@@ -5,6 +5,14 @@ import SkillsSection from './SkillsSection';
 import ExperienceSection from './ExperienceSection'
 import ProjectSection from './ProjectSection' 
 
+import { CsharpPlain } from 'devicons-react';
+import { UnityPlain } from 'devicons-react';
+
+const skillsRecord = {
+  "C#": <CsharpPlain size="26"/>,
+  "Unity": <UnityPlain size="26"/>
+}
+
 const jobInfoList:JobInfo[] = [
   new JobInfo("First Job", "Employer", 2000, 2002, ["erm", "uh"]),
   new JobInfo("Second Job", "New Employer", 2002, 2022, ["erm erm", "uh um"])
@@ -72,7 +80,7 @@ function MainContentArea(){
 
           <IntroSection />
           <AboutSection />
-          <SkillsSection />
+          <SkillsSection skills={skillsRecord}/>
           <ExperienceSection jobInfoList={jobInfoList} />
           <ProjectSection 
             projectDataList={projectInfo} 

@@ -1,14 +1,15 @@
 import './index.css'
-import { SkillsArea, IconSkillsArea } from './SkillsArea'
+import { IconSkillsArea } from './SkillsArea'
+import { ReactElement } from 'react';
 
-export default function SkillsSection(){
+export default function SkillsSection({skills}: {skills: Record<string, ReactElement>}){
   return(
     <>
       {/* Skills */}
         <section id="skills" className="w-2xl mx-auto mb-[3rem]">
           <h2 className="text-5xl mb-[1rem]">Skills</h2>
           <div className="flex">
-            <IconSkillsArea skills={["C#", "Unity", "JavaScript", "React", "Node.js"]} />
+            <IconSkillsArea skills={skills} />
           </div>
           
         </section>

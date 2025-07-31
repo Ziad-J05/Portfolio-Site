@@ -4,7 +4,8 @@ import {
     createTheme,
     ThemeProvider
  } from 'flowbite-react'
-import { CsharpPlain } from 'devicons-react';
+import { ReactElement } from 'react';
+
 
 const skillBadgeTheme = createTheme({
     badge: {
@@ -43,7 +44,7 @@ const skillBadgeTheme = createTheme({
             "xs": "h-3 w-3",
             "sm": "h-3.5 w-3.5",
             "lg": "h-4 w-4",
-            "xl": "h-4 w-4"
+            "xl": "h-5 w-4 fill-black"
             }
         }
 
@@ -66,16 +67,18 @@ export function SkillsArea({skills}: {skills: string[]}){
     )
 }
 
-export function IconSkillsArea({skills}: {skills: string[]}){
+export function IconSkillsArea({skills}: {skills: Record<string, ReactElement>}){
 
     /* TODO: using .map would likely be more idiomatic */
     const skillBadges: React.ReactElement[] = [];
 
-    for(const skill of skills) {
+    for(const [skill, badge] of Object.entries(skills)) {
         skillBadges.push(
         <Badge color="light" size="xl">
-            <CsharpPlain size="30" className="inline"/>
-            {skill}
+            <div className="flex items-center">
+                {badge}
+                {skill}
+            </div>
         </Badge>)
     }
     
