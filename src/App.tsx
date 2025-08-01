@@ -1,18 +1,20 @@
 import './index.css'
-import NavigationBar from './NavigationBar'
-import MainContentArea from './MainContentArea'
-import Footer from './Footer'
-
+import {HashRouter, Routes, Route} from 'react-router-dom'
+import HomePage from './HomePage'
+import ProjectsPage from './ProjectsPage'
+import ContactPage from './ContactPage'
 
 function App() {
 
   return (
     <>
-      
-      <NavigationBar />
-      <MainContentArea />
-      <Footer />
-
+    <HashRouter>
+      <Routes>
+        <Route path="/" element={<HomePage />}/>
+        <Route path="/projects" element={<ProjectsPage />}/>
+        <Route path="/contact" element={<ContactPage />}/>
+      </Routes>
+    </HashRouter>    
     </>
   )
 }

@@ -1,5 +1,6 @@
 import './index.css'
 import { Navbar, NavbarBrand, NavbarCollapse, NavbarLink, NavbarToggle } from "flowbite-react";
+import { Link } from 'react-router-dom';
 
 function NavigationBar(){
   return (
@@ -11,12 +12,9 @@ function NavigationBar(){
         </NavbarBrand>
         <NavbarToggle />
         <NavbarCollapse>
-          <NavbarLink href="#skills">
-            Skills
-          </NavbarLink>
-          <NavbarLink href="#experience">Experience</NavbarLink>
-          <NavbarLink href="#projects">Projects</NavbarLink>
-          <NavbarLink href="#contact">Contact</NavbarLink>
+          <NavbarLink href="/#/">Home</NavbarLink>
+          <NavbarLink href="/#/projects">Projects</NavbarLink>
+          <NavbarLink href="/#/contact">Contact</NavbarLink>
         </NavbarCollapse>
       </Navbar>
       </header>
