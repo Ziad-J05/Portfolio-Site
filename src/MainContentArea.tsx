@@ -87,7 +87,7 @@ function MainContentArea(){
             featuredProjectData={featuredProjectInfo} 
           />
           
-        </main>
+      </main>
     </>
   )
 }

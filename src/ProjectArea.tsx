@@ -10,7 +10,9 @@ export default function ProjectArea({projectInfoList}: {projectInfoList: Project
     
     return( 
         <>
+        <div className="flex flex-col gap-2 py-2">
             {projects}
+        </div>
         </>
     )
 }

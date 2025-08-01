@@ -1,6 +1,8 @@
 import './index.css'
 import {FeaturedProject, ProjectInfo, FeaturedProjectInfo } from './Project'
 import ProjectArea from './ProjectArea'
+import { Button } from 'flowbite-react'
+import { Link } from 'react-router-dom'
 
 interface ProjectSectionProps {
   projectDataList: ProjectInfo[]
@@ -19,6 +21,7 @@ export default function ProjectSection({projectDataList, featuredProjectData}: P
         {/* All Projects */}
         <ProjectArea projectInfoList={projectDataList} />
         
+        <Button as={Link} to="/projects" className='w-fit'>All Projects</Button>
       </section>
     </>
   )
