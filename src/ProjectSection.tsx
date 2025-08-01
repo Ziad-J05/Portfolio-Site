@@ -21,7 +21,7 @@ export default function ProjectSection({projectDataList, featuredProjectData}: P
         {/* All Projects */}
         <ProjectArea projectInfoList={projectDataList} />
         
-        <Button as={Link} to="/projects" className='w-fit'>All Projects</Button>
+        <Button as="a" href="/projects" className='w-fit'>All Projects</Button>
       </section>
     </>
   )

@@ -12,9 +12,9 @@ function NavigationBar(){
         </NavbarBrand>
         <NavbarToggle />
         <NavbarCollapse>
-          <NavbarLink href="/#/">Home</NavbarLink>
-          <NavbarLink href="/#/projects">Projects</NavbarLink>
-          <NavbarLink href="/#/contact">Contact</NavbarLink>
+          <NavbarLink href="/">Home</NavbarLink>
+          <NavbarLink href="/projects">Projects</NavbarLink>
+          <NavbarLink href="/contact">Contact</NavbarLink>
         </NavbarCollapse>
       </Navbar>
       </header>
