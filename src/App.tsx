@@ -1,8 +1,8 @@
 import './index.css'
 import {BrowserRouter, Routes, Route, ScrollRestoration} from 'react-router-dom'
-import HomePage from './HomePage'
-import ProjectsPage from './ProjectsPage'
-import ContactPage from './ContactPage'
+import HomePage from './pages/HomePage'
+import ProjectsPage from './pages/ProjectsPage'
+import ContactPage from './pages/ContactPage'
 
 function App() {
 

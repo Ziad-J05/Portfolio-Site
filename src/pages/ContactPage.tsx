@@ -1,6 +1,6 @@
-import './index.css'
-import NavigationBar from './NavigationBar'
-import Footer from './Footer'
+import '../index.css'
+import NavigationBar from '../NavigationBar'
+import Footer from '../Footer'
 
 export default function ContactPage() {
 

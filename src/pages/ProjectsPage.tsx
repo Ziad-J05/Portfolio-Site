@@ -1,8 +1,8 @@
-import './index.css'
-import NavigationBar from './NavigationBar'
-import ProjectArea from './ProjectArea'
-import { ProjectInfo } from './Project'
-import Footer from './Footer'
+import '../index.css'
+import NavigationBar from '../NavigationBar'
+import ProjectArea from '../ProjectArea'
+import { ProjectInfo } from '../Project'
+import Footer from '../Footer'
 
 const projectInfo:ProjectInfo[] = 
 [
