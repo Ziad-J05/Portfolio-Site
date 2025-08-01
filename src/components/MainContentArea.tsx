@@ -5,12 +5,22 @@ import SkillsSection from './SkillsSection';
 import ExperienceSection from './ExperienceSection'
 import ProjectSection from './ProjectSection' 
 
-import { CsharpPlain } from 'devicons-react';
-import { UnityPlain } from 'devicons-react';
-
+import { CsharpPlain, UnityPlain, CplusplusPlain, JavascriptPlain, ReactOriginal, Html5Plain, Css3Plain, JavaPlain, TypescriptPlain, GodotPlain, PythonPlain, BlenderOriginal, MayaPlain, TailwindcssOriginal} from 'devicons-react';
 const skillsRecord = {
   "C#": <CsharpPlain size="26"/>,
-  "Unity": <UnityPlain size="26"/>
+  "Unity": <UnityPlain size="26"/>,
+  "C++": <CplusplusPlain  size="26"/>,
+  "JavaScript": <JavascriptPlain size="26"/>,
+  "React": <ReactOriginal size="26"/>,
+  "HTML": <Html5Plain size="26"/>,
+  "CSS": <Css3Plain size="26"/>,
+  "Java": <JavaPlain size="26"/>,
+  "TypeScript": <TypescriptPlain size="26"/>,
+  "Godot": <GodotPlain size="26"/>,
+  "Tailwind": <TailwindcssOriginal size="26"/>,
+  "Python": <PythonPlain size="26"/>,
+  "Blender": <BlenderOriginal size="26"/>,
+  "Maya": <MayaPlain size="26"/>,
 }
 
 const jobInfoList:JobInfo[] = [
@@ -20,16 +30,16 @@ const jobInfoList:JobInfo[] = [
 
 const projectInfo:ProjectInfo[] = 
 [
-  new ProjectInfo("Taken", "Programmer", ["Unity", "C#"], "#"),
-  new ProjectInfo("Taken", "Programmer", ["Unity", "C#"], "#")
+  new ProjectInfo("Pokedex Search Website", "Solo Developer", ["HTML", "CSS", "JavaScript"], "#"),
+  new ProjectInfo("Gravity Game", "Solo Developer", ["C++", "SFML", "Box2D"], "#")
 ]
 
 const featuredProjectInfo: FeaturedProjectInfo = new FeaturedProjectInfo(
-  "Pokedex Search Website",
-  "Solo Developer",
-  ["HTML", "CSS", "JavaScript"],
+  "Eulyss",
+  "Programmer",
+  ["Unity", "C#"],
   "#",
-  "Designed and developed a web app that retrieves and organizes information from PokeAPI, allowing users to search for their favorite monsters."
+  "Collaborated as part of a team of two to create an adventure game with a custom text parser that imports text files as graphs for in-game dialogue. Currently in development."
 )
 
 function IntroSection(){
@@ -63,10 +73,11 @@ function AboutSection(){
       {/* About */}
         <section className="w-2xl mx-auto mb-[3rem]">
           <h2 className="text-5xl mb-[1rem]">About</h2>
-          <p className="text-justify">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras vestibulum
-            magna ut nulla rhoncus, quis aliquam lacus rhoncus. Nunc eget purus
-            sollicitudin, laoreet libero nec, eleifend neque.
+          <p className="">
+            I'm a software developer pusruing a Bachelor's of Science in Game Design and Development at Rochester Institute of Technology.
+          </p>
+          <p className=""> 
+            Unity and C# are my bread and butter, though I'm also familiar with frontend development technologies like React and Typescript, as well as languages like C++ and Java. No matter what project I'm working on, I always put the user first, making UX as good as it can be.
           </p>
         </section>
     </>

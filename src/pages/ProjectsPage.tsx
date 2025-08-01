@@ -6,14 +6,12 @@ import Footer from '../components/Footer'
 
 const projectInfo:ProjectInfo[] = 
 [
-  new ProjectInfo("Taken", "Programmer", ["Unity", "C#"], "#"),
-  new ProjectInfo("Taken", "Programmer", ["Unity", "C#"], "#"),
-  new ProjectInfo("Taken", "Programmer", ["Unity", "C#"], "#"),
-  new ProjectInfo("Taken", "Programmer", ["Unity", "C#"], "#"),
-  new ProjectInfo("Taken", "Programmer", ["Unity", "C#"], "#"),
-  new ProjectInfo("Taken", "Programmer", ["Unity", "C#"], "#"),
-  new ProjectInfo("Taken", "Programmer", ["Unity", "C#"], "#"),
-  new ProjectInfo("Taken", "Programmer", ["Unity", "C#"], "#"),
+  new ProjectInfo("Eulyss", "Programmer", ["Unity", "C#"], "#"),
+  new ProjectInfo("Pokedex Search Website", "Solo Developer", ["HTML", "CSS", "JavaScript"], "#"),
+  new ProjectInfo("Impetus", "Programmer", ["Unity", "C#"], "#"),
+  new ProjectInfo("Space Trucker", "Solo Developer", ["HTML", "CSS", "Javascript", "PixiJS"], "#"),
+  new ProjectInfo("Gravity Game", "Solo Developer", ["C++", "SFML", "Box2D"], "#"),
+  new ProjectInfo("Johnny Rocket", "Programmer", ["Monogame", "C#"], "#"),
 ]
 
 export default function ProjectsPage() {

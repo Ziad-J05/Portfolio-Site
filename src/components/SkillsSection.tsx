@@ -8,7 +8,7 @@ export default function SkillsSection({skills}: {skills: Record<string, ReactEle
       {/* Skills */}
         <section id="skills" className="w-2xl mx-auto mb-[3rem]">
           <h2 className="text-5xl mb-[1rem]">Skills</h2>
-          <div className="flex">
+          <div className="flex flex-wrap">
             <IconSkillsArea skills={skills} />
           </div>
           
