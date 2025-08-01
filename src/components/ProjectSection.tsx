@@ -1,4 +1,4 @@
-import './index.css'
+import '../index.css'
 import {FeaturedProject, ProjectInfo, FeaturedProjectInfo } from './Project'
 import ProjectArea from './ProjectArea'
 import { Button } from 'flowbite-react'

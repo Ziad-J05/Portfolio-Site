@@ -1,4 +1,4 @@
-import './index.css'
+import '../index.css'
 import { IconSkillsArea } from './SkillsArea'
 import { ReactElement } from 'react';
 

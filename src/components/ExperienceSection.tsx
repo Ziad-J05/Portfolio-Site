@@ -1,4 +1,4 @@
-import './index.css'
+import '../index.css'
 import {JobInfo} from './JobTimeline';
 import JobTimeline from './JobTimeline';
 

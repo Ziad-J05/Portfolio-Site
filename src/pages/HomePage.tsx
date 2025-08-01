@@ -1,7 +1,7 @@
 import '../index.css'
-import NavigationBar from '../NavigationBar'
-import MainContentArea from '../MainContentArea'
-import Footer from '../Footer'
+import NavigationBar from '../components/NavigationBar'
+import MainContentArea from '../components/MainContentArea'
+import Footer from '../components/Footer'
 
 export default function HomePage() {
 

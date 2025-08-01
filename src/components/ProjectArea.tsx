@@ -1,4 +1,4 @@
-import './index.css'
+import '../index.css'
 import { Project, FeaturedProject, ProjectInfo } from './Project'
 
 export default function ProjectArea({projectInfoList}: {projectInfoList: ProjectInfo[]}){

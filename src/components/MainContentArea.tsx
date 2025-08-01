@@ -1,4 +1,4 @@
-import './index.css'
+import '../index.css'
 import { JobInfo } from './JobTimeline';
 import { ProjectInfo, FeaturedProjectInfo } from './Project'
 import SkillsSection from './SkillsSection';
