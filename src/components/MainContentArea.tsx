@@ -54,7 +54,7 @@ function IntroSection(){
   return (
     <>
       {/* Intro */}
-        <section className="grid grid-cols-[18em_1fr] grid-rows-[1fr_3em] gap-x-[4px] w-lg mx-auto h-auto mb-[3rem] mt-[6rem]">
+        <section className="grid grid-cols-[18em_1fr] grid-rows-[1fr_3em] gap-x-[4px] w-lg mx-auto h-auto mb-[3rem]">
           <h1 className="justify-self-stretch self-center row-start-1 row-end-2 col-start-1 col-end-2 text-5xl ">
             Hello, I'm<span className="block font-bold text-7xl">Ziad</span>
             <span className="block font-bold text-7xl ml-[1em]">Jaafar</span>
@@ -95,7 +95,7 @@ function AboutSection(){
 function MainContentArea(){
   return(
     <>
-      <main className="bg-[#ffffff] pt-[3rem] pb-[3rem] mx-auto w-4xl">
+      <main className="bg-[#ffffff] py-36 mx-auto w-4xl">
 
           <IntroSection />
           <AboutSection />

@@ -19,7 +19,7 @@ export default function ProjectsPage() {
   return (
     <>
         <NavigationBar />
-        <main className="bg-[#ffffff] pt-[3rem] pb-[3rem] mx-auto w-4xl">
+        <main className="bg-[#ffffff] py-36 mx-auto w-4xl">
             <div className="w-2xl mx-auto">
                 <h2 className="text-5xl mb-[1rem]">All Projects</h2>
                 <ProjectArea projectInfoList={projectInfo} />
