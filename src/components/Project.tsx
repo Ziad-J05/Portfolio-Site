@@ -12,20 +12,22 @@ export class ProjectInfo {
     role: string;
     skills: string[];
     link: string;
+    img: string;
 
-    constructor(name: string, role: string, skills: string[], link: string){
+    constructor(name: string, role: string, skills: string[], link: string, img: string){
         this.name = name,
         this.role = role,
         this.skills = skills,
         this.link = link
+        this.img = img;
     }
 }
 
 export class FeaturedProjectInfo extends ProjectInfo {
     body: string;
 
-    constructor(name: string, role: string, skills: string[], link: string, body: string){
-        super(name, role, skills, link);
+    constructor(name: string, role: string, skills: string[], link: string, img:string, body: string){
+        super(name, role, skills, link, img);
         this.body = body;
     }
 }
@@ -58,7 +60,7 @@ export function FeaturedProject( {projectInfo}: {projectInfo: FeaturedProjectInf
             <Card
                 className="max-w-2xl"
                 imgAlt="Meaningful alt text for an image that is not purely decorative"
-                imgSrc="https://media.istockphoto.com/id/583809524/photo/alberta-wilderness-near-banff.jpg?s=612x612&w=0&k=20&c=hiI3ib9ibDxAgqEZEH09EO3JOw94v5xh6hzcuXGhO-M="
+                imgSrc={projectInfo.img}
             >
                 <div>
                 <div className="flex items-baseline gap-2">
@@ -94,7 +96,7 @@ export function Project( {projectInfo}: {projectInfo: ProjectInfo} ){
             <Card
             className="max-w-2xl"
             imgAlt="Meaningful alt text for an image that is not purely decorative"
-            imgSrc="https://media.istockphoto.com/id/583809524/photo/alberta-wilderness-near-banff.jpg?s=612x612&w=0&k=20&c=hiI3ib9ibDxAgqEZEH09EO3JOw94v5xh6hzcuXGhO-M="
+            imgSrc={projectInfo.img}
             horizontal
             >
                 <div>

@@ -6,6 +6,7 @@ import ExperienceSection from './ExperienceSection'
 import ProjectSection from './ProjectSection' 
 
 import { CsharpPlain, UnityPlain, CplusplusPlain, JavascriptPlain, ReactOriginal, Html5Plain, Css3Plain, JavaPlain, TypescriptPlain, GodotPlain, PythonPlain, BlenderOriginal, MayaPlain, TailwindcssOriginal} from 'devicons-react';
+
 const skillsRecord = {
   "C#": <CsharpPlain size="26"/>,
   "Unity": <UnityPlain size="26"/>,
@@ -24,14 +25,20 @@ const skillsRecord = {
 }
 
 const jobInfoList:JobInfo[] = [
-  new JobInfo("First Job", "Employer", 2000, 2002, ["erm", "uh"]),
-  new JobInfo("Second Job", "New Employer", 2002, 2022, ["erm erm", "uh um"])
+  new JobInfo("Game Development Apprentice", "Simcoach Games", 2021, 2021, 
+              ["Worked as part of a team of four to prototype games.", 
+               "Pitched projects to the company's CEO after development was finished."]
+             ),
+  new JobInfo("Virtual Tech Instructor", "iD Tech", 2025, 2025, 
+              ["Taught STEM technologies to students in one-on-one sessions and group tech camps.",
+               "Learned new tools like Godot and Blender during lesson preparation."]
+             )
 ]
 
 const projectInfo:ProjectInfo[] = 
 [
-  new ProjectInfo("Pokedex Search Website", "Solo Developer", ["HTML", "CSS", "JavaScript"], "#"),
-  new ProjectInfo("Gravity Game", "Solo Developer", ["C++", "SFML", "Box2D"], "#")
+  new ProjectInfo("Pokedex Search Website", "Solo Developer", ["HTML", "CSS", "JavaScript"], "#", "/placeholder-photo.jpg"),
+  new ProjectInfo("Gravity Game", "Solo Developer", ["C++", "SFML", "Box2D"], "#", "/placeholder-photo.jpg")
 ]
 
 const featuredProjectInfo: FeaturedProjectInfo = new FeaturedProjectInfo(
@@ -39,6 +46,7 @@ const featuredProjectInfo: FeaturedProjectInfo = new FeaturedProjectInfo(
   "Programmer",
   ["Unity", "C#"],
   "#",
+  "/placeholder-photo.jpg",
   "Collaborated as part of a team of two to create an adventure game with a custom text parser that imports text files as graphs for in-game dialogue. Currently in development."
 )
 
@@ -55,8 +63,8 @@ function IntroSection(){
             Game developer + software developer based out of Pittsburgh, PA
           </p>
           <img
-            className="row-start-1 row-end-2 col-start-2 col-end-3 w-48"
-            src="img/placeholder-photo.png"
+            className="row-start-1 row-end-2 col-start-2 col-end-3 size-48 object-cover"
+            src="/placeholder-photo.jpg"
           />
           <ul className="row-start-2 row-end-3 col-start-2 col-end-3">
             <li>Email</li>

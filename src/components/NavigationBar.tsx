@@ -7,7 +7,7 @@ function NavigationBar(){
     <>
       <header className="fixed w-full z-2">
       <Navbar fluid rounded>
-        <NavbarBrand href="https://flowbite-react.com">
+        <NavbarBrand href="/">
           <span className="self-center whitespace-nowrap text-xl font-semibold dark:text-white">Ziad Jaafar</span>
         </NavbarBrand>
         <NavbarToggle />
