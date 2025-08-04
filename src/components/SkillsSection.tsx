@@ -7,12 +7,15 @@ export default function SkillsSection({skills}: {skills: Record<string, ReactEle
   return(
     <>
       {/* Skills */}
-        <ContentContainer content={[
-          <h2 className="text-5xl mb-[1rem]">Skills</h2>,
-          <div className="flex flex-wrap">
-            <IconSkillsArea skills={skills} />
-          </div>
-        ]} />
+        <ContentContainer 
+          content={[
+            <h2 className="text-5xl mb-[1rem]">Skills</h2>,
+            <div className="flex flex-wrap">
+              <IconSkillsArea skills={skills} />
+            </div>
+          ]} 
+          bottomMargin={true}
+        />
     </>
   )
 }

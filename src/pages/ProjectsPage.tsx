@@ -22,10 +22,13 @@ export default function ProjectsPage() {
     <>
         <NavigationBar />
         <MainContentArea content={[
-          <ContentContainer content={[
+          <ContentContainer 
+          content={[
             <h2 className="text-5xl mb-[1rem]">All Projects</h2>,
             <ProjectArea projectInfoList={projectInfo} />
-          ]} />   
+          ]} 
+          bottomMargin={false}
+          />   
         ]} />
             
         <Footer />

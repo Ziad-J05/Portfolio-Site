@@ -13,12 +13,15 @@ interface ProjectSectionProps {
 export default function ProjectSection({projectDataList, featuredProjectData}: ProjectSectionProps){
   return(
     <>
-      <ContentContainer content={[
-        <h2 className="text-5xl mb-[1rem]">Projects</h2>,
-        <FeaturedProject projectInfo={featuredProjectData}/>,
-        <ProjectArea projectInfoList={projectDataList} />,
-        <Button as="a" href="/projects" className='w-fit'>All Projects</Button>
-      ]} />
+      <ContentContainer 
+        content={[
+          <h2 className="text-5xl mb-[1rem]">Projects</h2>,
+          <FeaturedProject projectInfo={featuredProjectData}/>,
+          <ProjectArea projectInfoList={projectDataList} />,
+          <Button as="a" href="/projects" className='w-fit'>All Projects</Button>
+        ]} 
+        bottomMargin={true}
+      />
     </>
   )
 }

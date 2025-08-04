@@ -1,11 +1,17 @@
 import { ReactElement } from 'react';
 import '../index.css'
 
-export default function ContentContainer({content}: {content: ReactElement[]}){
+interface ContentContainerProps {
+      content: ReactElement[];
+      bottomMargin: boolean;
+    }
 
-    /* TODO: add optional bottom margin */
+
+export default function ContentContainer({content, bottomMargin}: ContentContainerProps){
+
+    /* TODO: add optional bottom margin using ternary operator on class */
     return(
-        <div className="w-xl mx-auto">
+        <div className={bottomMargin ? 'w-xl mx-auto mb-12' : 'w-xl mx-auto'}>
             {content}
         </div>
     );

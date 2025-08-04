@@ -12,7 +12,7 @@ export default function AboutSection({content}: {content: string[]}){
 
     return(
         <>
-            <ContentContainer content={aboutText} />
+            <ContentContainer content={aboutText} bottomMargin={true} />
         </>
     )
 }
