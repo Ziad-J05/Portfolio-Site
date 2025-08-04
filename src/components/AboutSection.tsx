@@ -1,3 +1,5 @@
+import ContentContainer from "./ContentContainer";
+
 export default function AboutSection({content}: {content: string[]}){
 
     /* TODO: using .map would likely be more idiomatic */
@@ -10,9 +12,7 @@ export default function AboutSection({content}: {content: string[]}){
 
     return(
         <>
-            <section className="w-2xl mx-auto mb-[3rem]">
-                {aboutText}
-            </section>
+            <ContentContainer content={aboutText} />
         </>
     )
 }

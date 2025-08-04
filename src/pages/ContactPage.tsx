@@ -1,6 +1,7 @@
 import '../index.css'
 import NavigationBar from '../components/NavigationBar'
 import MainContentArea from '../components/MainContentArea'
+import ContentContainer from '../components/ContentContainer'
 import Footer from '../components/Footer'
 
 export default function ContactPage() {
@@ -9,9 +10,9 @@ export default function ContactPage() {
     <>
       <NavigationBar />
       <MainContentArea content={[
-        <div className="w-2xl mx-auto pt-4">
-          <h2 className="text-5xl mb-[1rem]">Contact Me</h2>
-          <div className='grid grid-cols-2 grid-rows-1'>
+        <ContentContainer content={[
+          <h2 className="text-5xl mb-[1rem]">Contact Me</h2>,
+          <div className='grid grid-cols-2 grid-rows-1 mb-4'>
               
             <ul className='flex flex-col'>
               <li>Email: <a href="mailto:ziadjaafar05@gmail.com">ziadjaafar05@gmail.com</a></li>
@@ -23,14 +24,12 @@ export default function ContactPage() {
               <li>GitHub: <a href="https://github.com/Ziad-J05">github.com/Ziad-J05</a></li>
             </ul>
 
-          </div>
+          </div>,
 
           <p><a>Resume</a></p>
-
-        </div>
+        ]} />
       ]} />
       <Footer />
-
     </>
   )
 }
