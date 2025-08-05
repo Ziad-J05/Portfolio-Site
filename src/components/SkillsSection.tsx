@@ -10,7 +10,7 @@ export default function SkillsSection({skills}: {skills: Record<string, ReactEle
         <ContentContainer 
           content={[
             <h2 className="text-5xl mb-[1rem]">Skills</h2>,
-            <div className="flex flex-wrap">
+            <div className="flex flex-wrap gap-2">
               <IconSkillsArea skills={skills} />
             </div>
           ]} 

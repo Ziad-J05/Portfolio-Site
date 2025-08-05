@@ -18,7 +18,7 @@ const skillBadgeTheme = createTheme({
             "success": "bg-green-100 text-green-800 hover:bg-green-200 dark:bg-green-200 dark:text-green-900 dark:hover:bg-green-300",
             "warning": "bg-yellow-100 text-yellow-800 hover:bg-yellow-200 dark:bg-yellow-200 dark:text-yellow-900 dark:hover:bg-yellow-300",
             "dark": "bg-gray-600 text-gray-100 hover:bg-gray-500 dark:bg-gray-900 dark:text-gray-200 dark:hover:bg-gray-700",
-            "light": "bg-gray-200 hover:bg-gray-200 text-gray-800 dark:bg-gray-400 dark:text-gray-900 dark:hover:bg-gray-500",
+            "light": "bg-white border-2 hover:bg-white text-black",
             },
             "size": {
             "xs": "p-1 text-xs",
@@ -30,7 +30,7 @@ const skillBadgeTheme = createTheme({
         },
         "icon": {
             "off": "rounded-full px-2 py-0.5",
-            "on": "rounded-full p-1.5",
+            "on": "p-1.5",
             "size": {
             "xs": "h-3 w-3",
             "sm": "h-3.5 w-3.5",
@@ -68,7 +68,7 @@ export function IconSkillsArea({skills}: {skills: Record<string, ReactElement>})
     for(const [skill, badge] of Object.entries(skills)) {
         skillBadges.push(
         <Badge color="light" size="xl">
-            <div className="flex items-center">
+            <div className="flex items-center gap-1 px-0.5 py-0.5">
                 {badge}
                 {skill}
             </div>

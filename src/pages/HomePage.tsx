@@ -19,20 +19,20 @@ const aboutSectionContent:string[] = [
 ]
 
 const skillsRecord = {
-  "C#": <CsharpPlain size="26"/>,
-  "Unity": <UnityPlain size="26"/>,
-  "C++": <CplusplusPlain  size="26"/>,
-  "JavaScript": <JavascriptPlain size="26"/>,
-  "React": <ReactOriginal size="26"/>,
-  "HTML": <Html5Plain size="26"/>,
-  "CSS": <Css3Plain size="26"/>,
-  "Java": <JavaPlain size="26"/>,
-  "TypeScript": <TypescriptPlain size="26"/>,
-  "Godot": <GodotPlain size="26"/>,
-  "Tailwind": <TailwindcssOriginal size="26"/>,
-  "Python": <PythonPlain size="26"/>,
-  "Blender": <BlenderOriginal size="26"/>,
-  "Maya": <MayaPlain size="26"/>,
+  "C#": <CsharpPlain size="26" className="*:fill-black"/>,
+  "Unity": <UnityPlain size="26" className="*:fill-black"/>,
+  "C++": <CplusplusPlain  size="26" className="*:fill-black"/>,
+  "JavaScript": <JavascriptPlain size="26" className="*:fill-black" />,
+  "React": <ReactOriginal size="26" className="*:fill-black"/>,
+  "HTML": <Html5Plain size="26" className="*:fill-black"/>,
+  "CSS": <Css3Plain size="26" className="*:fill-black"/>,
+  "Java": <JavaPlain size="26" className="*:fill-black"/>,
+  "TypeScript": <TypescriptPlain size="26" className="*:fill-black"/>,
+  "Godot": <GodotPlain size="26" className="*:fill-black"/>,
+  "Tailwind": <TailwindcssOriginal size="26" className="*:fill-black"/>,
+  "Python": <PythonPlain size="26" className="*:fill-black"/>,
+  "Blender": <BlenderOriginal size="26" className="*:fill-black"/>,
+  "Maya": <MayaPlain size="26" className="*:fill-black"/>,
 }
 
 const jobInfoList:JobInfo[] = [
