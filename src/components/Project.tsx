@@ -36,13 +36,13 @@ export class FeaturedProjectInfo extends ProjectInfo {
 const cardTheme = createTheme({
   card: {
     root: {
-      "base": "relative flex rounded-lg bg-white border-2 border-black shadow-none",
+      "base": "relative flex rounded-lg bg-white border-2 border-black shadow-[2px_4px_0px_-1px_rgba(0,0,0,1)]",
       "children": "flex h-full w-full flex-col justify-center gap-4 p-0",
       horizontal: {
         "off": "flex-col",
         "on": "flex-col md:max-w-2xl md:flex-row"
       },
-      "href": "hover:shadow-[4px_6px_0px_-1px_rgba(0,0,0,1)] hover:-top-[4px] hover:-left-[6px] hover:bg-white"
+      "href": "hover:shadow-[6px_8px_0px_-1px_rgba(0,0,0,1)] hover:-top-[4px] hover:-left-[6px] hover:bg-white"
     },
     img: {
       "base": "",

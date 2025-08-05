@@ -5,13 +5,13 @@ const navBarTheme = createTheme({
 
   navbar:{
       root: {
-        base: "bg-white px-2 py-2.5 sm:px-4 border-b-2",
+        base: "bg-white px-2 py-2 sm:px-4 border-b-2",
         rounded: {
           on: "rounded",
           off: ""
         },
         bordered: {
-          on: "border",
+          on: "border-5",
           off: ""
         },
         inner: {
@@ -27,17 +27,17 @@ const navBarTheme = createTheme({
       },
       collapse: {
         base: "w-full md:block md:w-auto",
-        list: "mt-4 flex flex-col md:mt-0 md:flex-row md:space-x-8 md:text-sm md:font-medium",
+        list: "mt-4 flex flex-col md:mt-0 md:flex-row md:space-x-2 md:text-sm md:font-medium",
         hidden: {
           on: "hidden",
           off: ""
         }
       },
       link: {
-        base: "block py-2 pl-3 pr-4 md:p-0 text-lg",
+        base: "block py-2 pl-3 pr-4 md:px-2 md:py-1 text-lg rounded-lg",
         active: {
           on: "bg-transparent text-white md:bg-transparent md:text-black",
-          off: "border-b border-gray-100 text-black hover:bg-gray-50 md:border-0 md:hover:bg-transparent md:hover:text-black md:hover:underline"
+          off: "border-b border-gray-100 text-black hover:bg-gray-50 md:border-2 md:border-white md:hover:bg-gray-200 md:hover:border-2 md:hover:border-black md:hover:text-black"
         },
         disabled: {
           on: "text-gray-400 hover:cursor-not-allowed dark:text-gray-600",

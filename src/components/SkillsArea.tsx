@@ -29,7 +29,7 @@ const skillBadgeTheme = createTheme({
             }
         },
         "icon": {
-            "off": "rounded-xl px-2 py-0.5",
+            "off": "rounded-full px-2 py-0.5",
             "on": "rounded-full p-1.5",
             "size": {
             "xs": "h-3 w-3",
