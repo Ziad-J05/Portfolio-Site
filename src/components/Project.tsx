@@ -83,6 +83,8 @@ export function FeaturedProject( {projectInfo}: {projectInfo: FeaturedProjectInf
                         <p className="font-normal text-black text-lg">
                             {projectInfo.body}
                         </p>
+
+                        <a href={projectInfo.link} className='text-lg font-semibold text-black hover:text-gray-400'>More info &rarr;</a>
                     </div>
                 </div>
             </Card>
@@ -113,9 +115,10 @@ export function Project( {projectInfo}: {projectInfo: ProjectInfo} ){
                         <div className="flex gap-2 my-0.5">
                             <SkillsArea skills={projectInfo.skills} />
                         </div>
-                        <p className="text-lg text-black mb-0">
+                        <p className="text-lg text-black">
                             {projectInfo.role}
                         </p>
+                        <a href={projectInfo.link} className='text-lg font-semibold text-black hover:text-gray-400'>More info &rarr;</a>
                     </div>
                 </div>
 
