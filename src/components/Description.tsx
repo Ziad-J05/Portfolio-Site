@@ -11,7 +11,7 @@ export default function Description({text}: {text: string[]}){
     
     return( 
         <>
-            <ul>
+            <ul className='list-disc list-inside'>
                 {listItems}
             </ul>
         </>

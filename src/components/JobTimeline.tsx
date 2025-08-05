@@ -43,18 +43,18 @@ const timelineTheme = createTheme({
       },
       content: {
         root: {
-          base: "border-2 border-black rounded-lg py-1 px-2",
+          base: "",
           horizontal: "mt-3 sm:pr-8",
           vertical: ""
         },
         body: {
-          base: "mb-1 text-lg font-normal text-black dark:text-gray-400"
+          base: "border-2 border-black border-t-0 rounded-b-lg py-1 px-2 mb-1 text-lg font-normal text-black dark:text-gray-400"
         },
         time: {
-          base: "mb-1 text-lg font-normal leading-none text-black dark:text-gray-500"
+          base: "pl-3 text-lg font-semibold leading-none text-black dark:text-gray-500"
         },
         title: {
-          base: "text-2xl font-semibold text-black dark:text-white"
+          base: "flex border-2 border-black rounded-t-lg px-2 gap-2 text-2xl font-normal text-black dark:text-white"
         }
       },
       point: {
@@ -63,7 +63,7 @@ const timelineTheme = createTheme({
         marker: {
           base: {
             horizontal: "absolute -left-1.5 h-3 w-3 rounded-full border border-amber-400 bg-amber-400 dark:border-gray-900 dark:bg-gray-700",
-            vertical: "absolute -left-2 mt-0 h-4 w-4 rounded-full border-2 border-black bg-white dark:border-gray-900 dark:bg-gray-700"
+            vertical: "absolute -left-2 mt-2 h-4 w-4 rounded-full border-2 border-black bg-white dark:border-gray-900 dark:bg-gray-700"
           },
           icon: {
             base: "h-3 w-3 text-primary-600 dark:text-primary-300",
@@ -86,7 +86,11 @@ export default function JobTimeline({jobInfoList}: {jobInfoList: JobInfo[]}){
               <TimelinePoint />
               <TimelineContent>
               <TimelineTime>{jobInfo.startDate}-{jobInfo.endDate}</TimelineTime>
-              <TimelineTitle>{jobInfo.title} | {jobInfo.employer}</TimelineTitle>
+              <TimelineTitle>
+                <div className='font-semibold'>{jobInfo.title}</div>
+                <div className="self-stretch border-l-2" />
+                <div>{jobInfo.employer}</div>
+                </TimelineTitle>
               <TimelineBody>
                 <Description text={jobInfo.description} />
               </TimelineBody>
