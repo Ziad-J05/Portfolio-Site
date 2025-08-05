@@ -20,7 +20,7 @@ const buttonTheme = createTheme({
         size: {
             xs: "h-8 px-3 text-xs",
             sm: "h-9 px-3 text-sm",
-            md: "h-10 px-5 text-sm",
+            md: "h-10 px-5 text-lg",
             lg: "h-12 px-5 text-base",
             xl: "h-[52px] px-6 text-base"
         },
@@ -33,7 +33,7 @@ const buttonTheme = createTheme({
 export default function LinkButton({text, link}: LinkButtonProps){
     return(
         <ThemeProvider theme={buttonTheme}>
-            <Button as="a" href={link} color="default" className=''>{text}</Button>
+            <Button as="a" href={link} size="md" color="default" className=''>{text}</Button>
         </ThemeProvider>
     );
 }

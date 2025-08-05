@@ -6,6 +6,7 @@ import {
   ThemeProvider 
 } from "flowbite-react";
 import { SkillsArea } from './SkillsArea';
+import LinkButton from './LinkButton';
 
 export class ProjectInfo {
     name: string;
@@ -63,25 +64,25 @@ export function FeaturedProject( {projectInfo}: {projectInfo: FeaturedProjectInf
                 imgSrc={projectInfo.img}
             >
                 <div>
-                <div className="flex items-baseline border-b-2">
-                    <h3 className="text-3xl font-bold tracking-tight px-2 py-1 text-black">
-                        {projectInfo.name}
-                    </h3>
-                    <div className="border-l-2 self-stretch"></div>
-                    <p className="text-3xl text-black px-2 py-1 mb-0">
-                        {projectInfo.role}
-                    </p>
-                </div>
-
-                <div className="px-2 py-1">
-                    <div className="flex gap-2 my-0.5">
-                        <SkillsArea skills={projectInfo.skills} />
+                    <div className="flex items-baseline border-b-2">
+                        <h3 className="text-3xl font-bold tracking-tight px-2 py-1 text-black">
+                            {projectInfo.name}
+                        </h3>
+                        <div className="border-l-2 self-stretch" />
+                        <p className="text-3xl text-black px-2 py-1 mb-0">
+                            {projectInfo.role}
+                        </p>
                     </div>
-                    
-                    <p className="font-normal text-gray-700 dark:text-gray-400">
-                        {projectInfo.body}
-                    </p>
-                    <a className="hover:underline" href={projectInfo.link}>More info</a>
+
+                    <div className="px-2 pt-1 pb-2">
+                        <div className="flex gap-2 my-0.5">
+                            <SkillsArea skills={projectInfo.skills} />
+                        </div>
+                        
+                        <p className="font-normal text-black text-lg">
+                            {projectInfo.body}
+                        </p>
+                        <LinkButton text="More info" link={projectInfo.link} />
                     </div>
                 </div>
             </Card>
@@ -107,13 +108,15 @@ export function Project( {projectInfo}: {projectInfo: ProjectInfo} ){
                         {projectInfo.name}
                     </h3>
                     <div className="px-2 py-1">
-                        <p className="text-2xl text-black mb-0">
-                            {projectInfo.role}
-                        </p>
+
                         <div className="flex gap-2 my-0.5">
                             <SkillsArea skills={projectInfo.skills} />
                         </div>
-                        <a className="hover:underline" href={projectInfo.link}>More info</a>
+                        <p className="text-lg text-black mb-0">
+                            {projectInfo.role}
+                        </p>
+                        
+                        <a className="hover:underline text-lg" href={projectInfo.link}>More info</a>
                     </div>
                 </div>
 
