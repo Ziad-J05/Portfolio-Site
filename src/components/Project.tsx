@@ -36,13 +36,13 @@ export class FeaturedProjectInfo extends ProjectInfo {
 const cardTheme = createTheme({
   card: {
     root: {
-      "base": "flex rounded-lg border-2 border-black shadow-none",
+      "base": "relative flex rounded-lg bg-white border-2 border-black shadow-none",
       "children": "flex h-full w-full flex-col justify-center gap-4 p-0",
       horizontal: {
         "off": "flex-col",
         "on": "flex-col md:max-w-2xl md:flex-row"
       },
-      "href": "hover:bg-gray-100 dark:hover:bg-gray-700"
+      "href": "hover:shadow-[4px_6px_0px_-1px_rgba(0,0,0,1)] hover:-top-[4px] hover:-left-[6px] hover:bg-white"
     },
     img: {
       "base": "",
@@ -59,6 +59,7 @@ export function FeaturedProject( {projectInfo}: {projectInfo: FeaturedProjectInf
         <>
         <ThemeProvider theme={cardTheme}>
             <Card
+                href={projectInfo.link}
                 className="max-w-2xl"
                 imgAlt="Meaningful alt text for an image that is not purely decorative"
                 imgSrc={projectInfo.img}
@@ -74,7 +75,7 @@ export function FeaturedProject( {projectInfo}: {projectInfo: FeaturedProjectInf
                         </p>
                     </div>
 
-                    <div className="px-2 pt-1 pb-2">
+                    <div className="px-2 py-1">
                         <div className="flex gap-2 my-0.5">
                             <SkillsArea skills={projectInfo.skills} />
                         </div>
@@ -82,7 +83,6 @@ export function FeaturedProject( {projectInfo}: {projectInfo: FeaturedProjectInf
                         <p className="font-normal text-black text-lg">
                             {projectInfo.body}
                         </p>
-                        <LinkButton text="More info" link={projectInfo.link} />
                     </div>
                 </div>
             </Card>
@@ -98,6 +98,7 @@ export function Project( {projectInfo}: {projectInfo: ProjectInfo} ){
         <>
         <ThemeProvider theme={cardTheme}>
             <Card
+            href={projectInfo.link}
             className="max-w-2xl"
             imgAlt="Meaningful alt text for an image that is not purely decorative"
             imgSrc={projectInfo.img}
@@ -115,8 +116,6 @@ export function Project( {projectInfo}: {projectInfo: ProjectInfo} ){
                         <p className="text-lg text-black mb-0">
                             {projectInfo.role}
                         </p>
-                        
-                        <a className="hover:underline text-lg" href={projectInfo.link}>More info</a>
                     </div>
                 </div>
 

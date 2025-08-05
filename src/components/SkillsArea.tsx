@@ -12,7 +12,7 @@ const skillBadgeTheme = createTheme({
         "root": {
             "base": "flex h-fit items-center gap-1 font-semibold",
             "color": {
-            "info": "bg-white border-2 hover:bg-cyan-100 text-black",
+            "info": "bg-white border-2 hover:bg-white text-black",
             "gray": "bg-gray-100 text-gray-800 hover:bg-gray-200 dark:bg-gray-700 dark:text-gray-300 dark:hover:bg-gray-600",
             "failure": "bg-red-100 text-red-800 hover:bg-red-200 dark:bg-red-200 dark:text-red-900 dark:hover:bg-red-300",
             "success": "bg-green-100 text-green-800 hover:bg-green-200 dark:bg-green-200 dark:text-green-900 dark:hover:bg-green-300",
