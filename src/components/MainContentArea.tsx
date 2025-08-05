@@ -5,7 +5,7 @@ function MainContentArea({content}: {content: ReactElement[]}){
 
   return(
     <>
-      <main className="bg-[#ffffff] py-36 mx-auto w-4xl">
+      <main className="bg-[#ffffff] py-36 mx-auto md:w-2xl lg:w-full">
           {content}
       </main>
     </>
