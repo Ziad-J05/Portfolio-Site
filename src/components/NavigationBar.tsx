@@ -5,7 +5,7 @@ const navBarTheme = createTheme({
 
   navbar:{
       root: {
-        base: "bg-white px-2 py-2 sm:px-4 border-b-2",
+        base: "bg-[#F7EDE2] px-2 py-2 sm:px-4 border-b-2",
         rounded: {
           on: "rounded",
           off: ""
@@ -37,7 +37,7 @@ const navBarTheme = createTheme({
         base: "block py-2 pl-3 pr-4 md:px-2 md:py-1 text-lg rounded-lg",
         active: {
           on: "bg-transparent text-white md:bg-transparent md:text-black",
-          off: "border-b border-gray-100 text-black hover:bg-gray-50 md:border-2 md:border-white md:hover:bg-gray-200 md:hover:border-2 md:hover:border-black md:hover:text-black"
+          off: "border-b border-gray-100 text-black hover:bg-gray-50 md:border-2 md:border-[#F7EDE2] md:hover:bg-white md:hover:border-2 md:hover:border-black md:hover:text-black"
         },
         disabled: {
           on: "text-gray-400 hover:cursor-not-allowed dark:text-gray-600",

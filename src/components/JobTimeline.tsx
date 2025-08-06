@@ -48,13 +48,13 @@ const timelineTheme = createTheme({
           vertical: ""
         },
         body: {
-          base: "border-2 border-black border-t-0 rounded-b-lg py-1 px-2 mb-1 text-lg font-normal text-black dark:text-gray-400"
+          base: "bg-white border-2 border-black border-t-0 rounded-b-lg py-1 px-2 mb-1 text-lg font-normal text-black dark:text-gray-400"
         },
         time: {
           base: "pl-3 text-lg font-semibold leading-none text-black dark:text-gray-500"
         },
         title: {
-          base: "flex border-2 border-black rounded-t-lg px-2 gap-2 text-2xl font-normal text-black dark:text-white"
+          base: "bg-white flex border-2 border-black rounded-t-lg px-2 gap-2 text-2xl font-normal text-black dark:text-white"
         }
       },
       point: {
