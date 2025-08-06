@@ -102,16 +102,16 @@ function ColorFromSkillType(type: SkillType){
             color = "cyan"
             break;
         case SkillType.Software:
-            color = "green"
+            color = "purple"
             break;
         case SkillType.Library:
-            color = "red"
+            color = "green"
             break;
         case SkillType.Framework:
             color = "lime"
             break;
         case SkillType.NonScriptLang:
-            color = "purple"
+            color = "blue"
             break;
     }
 
