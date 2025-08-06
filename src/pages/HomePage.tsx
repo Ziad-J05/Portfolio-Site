@@ -9,6 +9,7 @@ import SkillsSection from '../components/SkillsSection';
 import ExperienceSection from '../components/ExperienceSection'
 import ProjectSection from '../components/ProjectSection' 
 import Footer from '../components/Footer';
+import { Skill, SkillType } from '../components/Skill';
 
 import { CsharpPlain, UnityPlain, CplusplusPlain, JavascriptPlain, ReactOriginal, Html5Plain, Css3Plain, JavaPlain, TypescriptPlain, GodotPlain, PythonPlain, BlenderOriginal, MayaPlain, TailwindcssOriginal} from 'devicons-react';
 
@@ -18,22 +19,22 @@ const aboutSectionContent:string[] = [
   "Unity and C# are my bread and butter, though I'm also familiar with frontend development technologies like React and Typescript, as well as languages like C++ and Java. No matter what project I'm working on, I always put the user first, making UX as good as it can be."
 ]
 
-const skillsRecord = {
-  "C#": <CsharpPlain size="26" className="*:fill-black"/>,
-  "Unity": <UnityPlain size="26" className="*:fill-black"/>,
-  "C++": <CplusplusPlain  size="26" className="*:fill-black"/>,
-  "JavaScript": <JavascriptPlain size="26" className="*:fill-black" />,
-  "React": <ReactOriginal size="26" className="*:fill-black"/>,
-  "HTML": <Html5Plain size="26" className="*:fill-black"/>,
-  "CSS": <Css3Plain size="26" className="*:fill-black"/>,
-  "Java": <JavaPlain size="26" className="*:fill-black"/>,
-  "TypeScript": <TypescriptPlain size="26" className="*:fill-black"/>,
-  "Godot": <GodotPlain size="26" className="*:fill-black"/>,
-  "Tailwind": <TailwindcssOriginal size="26" className="*:fill-black"/>,
-  "Python": <PythonPlain size="26" className="*:fill-black"/>,
-  "Blender": <BlenderOriginal size="26" className="*:fill-black"/>,
-  "Maya": <MayaPlain size="26" className="*:fill-black"/>,
-}
+const skills = [
+  new Skill("C#", <CsharpPlain size="26" className="*:fill-black"/>, SkillType.Language),
+  new Skill("Unity", <UnityPlain size="26" className="*:fill-black"/>, SkillType.Software),
+  new Skill("C++", <CplusplusPlain  size="26" className="*:fill-black"/>, SkillType.Language),
+  new Skill("JavaScript", <JavascriptPlain size="26" className="*:fill-black" />, SkillType.Language),
+  new Skill("React", <ReactOriginal size="26" className="*:fill-black"/>, SkillType.Framework),
+  new Skill("HTML", <Html5Plain size="26" className="*:fill-black"/>, SkillType.NonScriptLang),
+  new Skill("CSS", <Css3Plain size="26" className="*:fill-black"/>, SkillType.NonScriptLang),
+  new Skill("Java", <JavaPlain size="26" className="*:fill-black"/>, SkillType.Language),
+  new Skill("TypeScript", <TypescriptPlain size="26" className="*:fill-black"/>, SkillType.Language),
+  new Skill("Godot", <GodotPlain size="26" className="*:fill-black"/>, SkillType.Software),
+  new Skill("Tailwind", <TailwindcssOriginal size="26" className="*:fill-black"/>, SkillType.Library),
+  new Skill("Python", <PythonPlain size="26" className="*:fill-black"/>, SkillType.Language),
+  new Skill("Blender", <BlenderOriginal size="26" className="*:fill-black"/>, SkillType.Software),
+  new Skill("Maya", <MayaPlain size="26" className="*:fill-black"/>, SkillType.Software),
+]
 
 const jobInfoList:JobInfo[] = [
   new JobInfo("Game Development Apprentice", "Simcoach Games", 2021, 2021, 
@@ -68,7 +69,7 @@ function HomePage(){
       <MainContentArea content={[
         <IntroSection />,
         <AboutSection content={aboutSectionContent}/>,
-        <SkillsSection skills={skillsRecord}/>,
+        <SkillsSection skills={skills}/>,
         <ExperienceSection jobInfoList={jobInfoList} />,
         <ProjectSection 
           projectDataList={projectInfo} 

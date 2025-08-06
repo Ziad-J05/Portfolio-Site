@@ -5,7 +5,7 @@ import {
     ThemeProvider
  } from 'flowbite-react'
 import { ReactElement } from 'react';
-
+import { Skill, SkillType } from './Skill';
 
 const skillBadgeTheme = createTheme({
     badge: {
@@ -13,12 +13,18 @@ const skillBadgeTheme = createTheme({
             "base": "flex h-fit items-center gap-1 font-semibold",
             "color": {
             "info": "bg-white border-2 hover:bg-white text-black",
-            "gray": "bg-gray-100 text-gray-800 hover:bg-gray-200 dark:bg-gray-700 dark:text-gray-300 dark:hover:bg-gray-600",
-            "failure": "bg-red-100 text-red-800 hover:bg-red-200 dark:bg-red-200 dark:text-red-900 dark:hover:bg-red-300",
-            "success": "bg-green-100 text-green-800 hover:bg-green-200 dark:bg-green-200 dark:text-green-900 dark:hover:bg-green-300",
-            "warning": "bg-yellow-100 text-yellow-800 hover:bg-yellow-200 dark:bg-yellow-200 dark:text-yellow-900 dark:hover:bg-yellow-300",
-            "dark": "bg-gray-600 text-gray-100 hover:bg-gray-500 dark:bg-gray-900 dark:text-gray-200 dark:hover:bg-gray-700",
             "light": "bg-white border-2 hover:bg-white text-black",
+            "indigo": "bg-indigo-100 border-2 hover:bg-white text-black",
+            "purple": "bg-purple-100 border-2 hover:bg-white text-black",
+            "pink": "bg-pink-100 border-2 hover:bg-white text-black",
+            "blue": "bg-blue-100 border-2 hover:bg-white text-black",
+            "cyan": "bg-cyan-100 border-2 hover:bg-white text-black",
+            "green": "bg-green-100 border-2 hover:bg-white text-black",
+            "lime": "bg-lime-100 border-2 hover:bg-white text-black",
+            "red": "bg-red-100 border-2 hover:bg-white text-black",
+            "teal": "bg-teal-100 border-2 hover:bg-white text-black",
+            "yellow": "bg-yellow-100 border-2 hover:bg-white text-black"
+    
             },
             "size": {
             "xs": "p-1 text-xs",
@@ -60,17 +66,40 @@ export function SkillsArea({skills}: {skills: string[]}){
     )
 }
 
-export function IconSkillsArea({skills}: {skills: Record<string, ReactElement>}){
+export function IconSkillsArea({skills}: {skills: Skill[]}){
 
     /* TODO: using .map would likely be more idiomatic */
     const skillBadges: React.ReactElement[] = [];
 
-    for(const [skill, badge] of Object.entries(skills)) {
+    for(const skill of skills) {
+
+        let color:string;
+
+        switch(skill.type){
+            case SkillType.Language:
+                color = "cyan"
+                break;
+            case SkillType.Software:
+                color = "green"
+                break;
+            case SkillType.Library:
+                color = "red"
+                break;
+            case SkillType.Framework:
+                color = "lime"
+                break;
+            case SkillType.NonScriptLang:
+                color = "purple"
+                break;
+        }
+
         skillBadges.push(
-        <Badge color="light" size="xl">
+        <Badge color={color} size="xl">
             <div className="flex items-center gap-1 px-0.5 py-0.5">
-                {badge}
-                {skill}
+                
+                {skill.icon}
+                {skill.name}
+                
             </div>
         </Badge>)
     }

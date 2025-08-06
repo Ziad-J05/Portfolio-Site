@@ -3,8 +3,9 @@ import { IconSkillsArea } from './SkillsArea'
 import { ReactElement } from 'react';
 import ContentContainer from './ContentContainer';
 import { SectionHeading } from './Headings';
+import { Skill } from './Skill';
 
-export default function SkillsSection({skills}: {skills: Record<string, ReactElement>}){
+export default function SkillsSection({skills}: {skills: Skill[]}){
   return(
     <>
       <ContentContainer 
