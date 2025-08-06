@@ -21,7 +21,7 @@ export default function AboutPage() {
         <ContentContainer 
           content={[
             <SectionHeading text="About Me" />,
-            <div className='grid grid-columns-2 grid-rows-1'>
+            <div className='flex gap-4'>
               <AboutSection content={aboutSectionContent}/>
               <img
                 className="block w-64 h-128 object-cover border-2 rounded-xl"

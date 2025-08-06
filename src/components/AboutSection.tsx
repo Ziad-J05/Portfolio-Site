@@ -11,7 +11,7 @@ export default function AboutSection({content}: {content: string[]}){
         
 
     return(
-        <div className="border-2 rounded-lg bg-white px-2 py-1">
+        <div className="border-2 rounded-lg bg-white px-2 py-1 h-fit">
             {aboutText}
         </div>
     )
