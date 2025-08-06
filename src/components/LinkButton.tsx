@@ -13,7 +13,7 @@ interface LinkButtonProps {
 
 const buttonTheme = createTheme({
     button: {
-        base: "relative flex shadow-[2px_4px_0px_-1px_rgba(0,0,0,1)] w-fit items-center justify-center rounded-lg text-center font-medium hover:-top-[2px] hover:-left-[2px] hover:shadow-[4px_6px_0px_-1px_rgba(0,0,0,1)] active:top-[2px] active:left-[2px] active:shadow-[0px_2px_0px_-1px_rgba(0,0,0,1)]",
+        base: "relative flex shadow-[2px_4px_0px_-1px_rgba(0,0,0,1)] w-fit items-center justify-center rounded-lg text-center font-medium hover:-translate-[2px] hover:shadow-[4px_6px_0px_-1px_rgba(0,0,0,1)] active:top-[2px] active:left-[2px] active:shadow-[0px_2px_0px_-1px_rgba(0,0,0,1)]",
         disabled: "pointer-events-none opacity-50",
         fullSized: "w-full",
         pill: "rounded-full",
@@ -33,7 +33,7 @@ const buttonTheme = createTheme({
 export default function LinkButton({text, link}: LinkButtonProps){
     return(
         <ThemeProvider theme={buttonTheme}>
-            <Button as="a" href={link} size="md" color="default" className=''>{text}</Button>
+            <Button as="a" href={link} size="md" color="default" className='transition-all duration-150 ease-out'>{text}</Button>
         </ThemeProvider>
     );
 }
