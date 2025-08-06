@@ -14,7 +14,7 @@ export default function ContactPage() {
         <ContentContainer 
           content={[
             <SectionHeading text="Contact Me" />,
-            <div className='grid grid-cols-2 grid-rows-1 mb-4'>
+            <div className='grid grid-cols-2 grid-rows-1 mb-4 text-lg'>
                 
               <ul className='flex flex-col'>
                 <li>Email: <a href="mailto:ziadjaafar05@gmail.com">ziadjaafar05@gmail.com</a></li>
@@ -28,7 +28,7 @@ export default function ContactPage() {
 
             </div>,
 
-            <p><a>Resume</a></p>
+            <p className='text-lg'><a>Resume</a></p>
           ]} 
           bottomMargin={false}
         />

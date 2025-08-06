@@ -6,7 +6,7 @@ export default function AboutSection({content}: {content: string[]}){
         const aboutText: React.ReactElement[] = [];
     
         for(const paragraph of content) {
-            aboutText.push(<p>{paragraph}</p>)
+            aboutText.push(<p className="text-lg">{paragraph}</p>)
         }
         
 
