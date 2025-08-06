@@ -36,13 +36,13 @@ export class FeaturedProjectInfo extends ProjectInfo {
 const cardTheme = createTheme({
   card: {
     root: {
-      "base": "relative flex rounded-lg bg-white border-2 border-black shadow-[2px_4px_0px_-1px_rgba(0,0,0,1)]",
+      "base": "relative flex rounded-lg bg-white border-2 border-black shadow-[2px_4px_0px_-1px_rgba(0,0,0,1)] group",
       "children": "flex h-full w-full flex-col justify-center gap-4 p-0",
       horizontal: {
         "off": "flex-col",
         "on": "flex-col md:max-w-2xl md:flex-row"
       },
-      "href": "hover:shadow-[6px_8px_0px_-1px_rgba(0,0,0,1)] hover:-top-[4px] hover:-left-[6px] hover:bg-white"
+      "href": "hover:shadow-[6px_8px_0px_-1px_rgba(0,0,0,1)] hover:-translate-[4px] hover:bg-white"
     },
     img: {
       "base": "",
@@ -60,7 +60,7 @@ export function FeaturedProject( {projectInfo}: {projectInfo: FeaturedProjectInf
         <ThemeProvider theme={cardTheme}>
             <Card
                 href={projectInfo.link}
-                className="max-w-2xl"
+                className="max-w-2xl transition-all duration-150 ease-out"
                 imgAlt="Meaningful alt text for an image that is not purely decorative"
                 imgSrc={projectInfo.img}
             >
@@ -84,7 +84,7 @@ export function FeaturedProject( {projectInfo}: {projectInfo: FeaturedProjectInf
                             {projectInfo.body}
                         </p>
 
-                        <a href={projectInfo.link} className='text-lg font-semibold text-black hover:text-gray-400'>More info &rarr;</a>
+                        <a href={projectInfo.link} className='text-lg font-semibold text-gray-400 group-hover:text-black transition-all ease-out duration-150'>More info &rarr;</a>
                     </div>
                 </div>
             </Card>
@@ -101,7 +101,7 @@ export function Project( {projectInfo}: {projectInfo: ProjectInfo} ){
         <ThemeProvider theme={cardTheme}>
             <Card
             href={projectInfo.link}
-            className="max-w-2xl"
+            className="max-w-2xl transition-all duration-150 ease-out"
             imgAlt="Meaningful alt text for an image that is not purely decorative"
             imgSrc={projectInfo.img}
             horizontal
@@ -118,7 +118,7 @@ export function Project( {projectInfo}: {projectInfo: ProjectInfo} ){
                         <p className="text-lg text-black">
                             {projectInfo.role}
                         </p>
-                        <a href={projectInfo.link} className='text-lg font-semibold text-black hover:text-gray-400'>More info &rarr;</a>
+                        <a href={projectInfo.link} className='text-lg font-semibold text-gray-400 group-hover:text-black transition-all ease-out duration-150'>More info &rarr;</a>
                     </div>
                 </div>
 
