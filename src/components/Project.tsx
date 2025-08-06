@@ -6,16 +6,16 @@ import {
   ThemeProvider 
 } from "flowbite-react";
 import { SkillsArea } from './SkillsArea';
-import LinkButton from './LinkButton';
+import { Skill } from './Skill';
 
 export class ProjectInfo {
     name: string;
     role: string;
-    skills: string[];
+    skills: Skill[];
     link: string;
     img: string;
 
-    constructor(name: string, role: string, skills: string[], link: string, img: string){
+    constructor(name: string, role: string, skills: Skill[], link: string, img: string){
         this.name = name,
         this.role = role,
         this.skills = skills,
@@ -27,7 +27,7 @@ export class ProjectInfo {
 export class FeaturedProjectInfo extends ProjectInfo {
     body: string;
 
-    constructor(name: string, role: string, skills: string[], link: string, img:string, body: string){
+    constructor(name: string, role: string, skills: Skill[], link: string, img:string, body: string){
         super(name, role, skills, link, img);
         this.body = body;
     }

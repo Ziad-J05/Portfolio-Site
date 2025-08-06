@@ -10,8 +10,7 @@ import ExperienceSection from '../components/ExperienceSection'
 import ProjectSection from '../components/ProjectSection' 
 import Footer from '../components/Footer';
 import { Skill, SkillType } from '../components/Skill';
-
-import { CsharpPlain, UnityPlain, CplusplusPlain, JavascriptPlain, ReactOriginal, Html5Plain, Css3Plain, JavaPlain, TypescriptPlain, GodotPlain, PythonPlain, BlenderOriginal, MayaPlain, TailwindcssOriginal} from 'devicons-react';
+import { HighlightSkills, OtherSkills } from '../components/MySkills';
 
 const aboutSectionContent:string[] = [
   "I'm a game designer and software developer pusruing a Bachelor's of Science in Game Design and Development at Rochester Institute of Technology.",
@@ -19,22 +18,7 @@ const aboutSectionContent:string[] = [
   "Unity and C# are my bread and butter, though I'm also familiar with frontend development technologies like React and Typescript, as well as languages like C++ and Java. No matter what project I'm working on, I always put the user first, making UX as good as it can be."
 ]
 
-const skills = [
-  new Skill("C#", <CsharpPlain size="26" className="*:fill-black"/>, SkillType.Language),
-  new Skill("Unity", <UnityPlain size="26" className="*:fill-black"/>, SkillType.Software),
-  new Skill("C++", <CplusplusPlain  size="26" className="*:fill-black"/>, SkillType.Language),
-  new Skill("JavaScript", <JavascriptPlain size="26" className="*:fill-black" />, SkillType.Language),
-  new Skill("React", <ReactOriginal size="26" className="*:fill-black"/>, SkillType.Framework),
-  new Skill("HTML", <Html5Plain size="26" className="*:fill-black"/>, SkillType.NonScriptLang),
-  new Skill("CSS", <Css3Plain size="26" className="*:fill-black"/>, SkillType.NonScriptLang),
-  new Skill("Java", <JavaPlain size="26" className="*:fill-black"/>, SkillType.Language),
-  new Skill("TypeScript", <TypescriptPlain size="26" className="*:fill-black"/>, SkillType.Language),
-  new Skill("Godot", <GodotPlain size="26" className="*:fill-black"/>, SkillType.Software),
-  new Skill("Tailwind", <TailwindcssOriginal size="26" className="*:fill-black"/>, SkillType.Library),
-  new Skill("Python", <PythonPlain size="26" className="*:fill-black"/>, SkillType.Language),
-  new Skill("Blender", <BlenderOriginal size="26" className="*:fill-black"/>, SkillType.Software),
-  new Skill("Maya", <MayaPlain size="26" className="*:fill-black"/>, SkillType.Software),
-]
+const skills: Skill[] = Object.values(HighlightSkills);
 
 const jobInfoList:JobInfo[] = [
   new JobInfo("Game Development Apprentice", "Simcoach Games", 2021, 2021, 
@@ -49,14 +33,14 @@ const jobInfoList:JobInfo[] = [
 
 const projectInfo:ProjectInfo[] = 
 [
-  new ProjectInfo("Pokedex Search Website", "Solo Developer", ["HTML", "CSS", "JavaScript"], "#", "/placeholder-photo.jpg"),
-  new ProjectInfo("Gravity Game", "Solo Developer", ["C++", "SFML", "Box2D"], "#", "/placeholder-photo.jpg")
+  new ProjectInfo("Pokedex Search Website", "Solo Developer", [HighlightSkills.HTML, HighlightSkills.CSS, HighlightSkills.JavaScript], "#", "/placeholder-photo.jpg"),
+  new ProjectInfo("Gravity Game", "Solo Developer", [HighlightSkills.CPlusPlus, OtherSkills.SFML, OtherSkills.Box2D], "#", "/placeholder-photo.jpg")
 ]
 
 const featuredProjectInfo: FeaturedProjectInfo = new FeaturedProjectInfo(
   "Eulyss",
   "Programmer",
-  ["Unity", "C#"],
+  [HighlightSkills.Unity, HighlightSkills.CSharp],
   "#",
   "/placeholder-photo.jpg",
   "Collaborated as part of a team of two to create an adventure game with a custom text parser that imports text files as graphs for in-game dialogue. Currently in development."

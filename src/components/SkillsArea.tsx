@@ -48,13 +48,13 @@ const skillBadgeTheme = createTheme({
     }
 })
 
-export function SkillsArea({skills}: {skills: string[]}){
+export function SkillsArea({skills}: {skills: Skill[]}){
 
     /* TODO: using .map would likely be more idiomatic */
     const skillBadges: React.ReactElement[] = [];
 
     for(const skill of skills) {
-        skillBadges.push(<Badge color="info" size="md">{skill}</Badge>)
+        skillBadges.push(<Badge color={ColorFromSkillType(skill.type)} size="md">{skill.name}</Badge>)
     }
     
     return( 
@@ -73,28 +73,8 @@ export function IconSkillsArea({skills}: {skills: Skill[]}){
 
     for(const skill of skills) {
 
-        let color:string;
-
-        switch(skill.type){
-            case SkillType.Language:
-                color = "cyan"
-                break;
-            case SkillType.Software:
-                color = "green"
-                break;
-            case SkillType.Library:
-                color = "red"
-                break;
-            case SkillType.Framework:
-                color = "lime"
-                break;
-            case SkillType.NonScriptLang:
-                color = "purple"
-                break;
-        }
-
         skillBadges.push(
-        <Badge color={color} size="xl">
+        <Badge color={ColorFromSkillType(skill.type)} size="xl">
             <div className="flex items-center gap-1 px-0.5 py-0.5">
                 
                 {skill.icon}
@@ -111,4 +91,29 @@ export function IconSkillsArea({skills}: {skills: Skill[]}){
         </ThemeProvider>
         </>
     )
+}
+
+function ColorFromSkillType(type: SkillType){
+
+    let color:string;
+
+    switch(type){
+        case SkillType.Language:
+            color = "cyan"
+            break;
+        case SkillType.Software:
+            color = "green"
+            break;
+        case SkillType.Library:
+            color = "red"
+            break;
+        case SkillType.Framework:
+            color = "lime"
+            break;
+        case SkillType.NonScriptLang:
+            color = "purple"
+            break;
+    }
+
+    return color;
 }
