@@ -2,6 +2,7 @@ import '../index.css'
 import NavigationBar from '../components/NavigationBar'
 import MainContentArea from '../components/MainContentArea'
 import ContentContainer from '../components/ContentContainer'
+import { SectionHeading } from '../components/Headings'
 import Footer from '../components/Footer'
 
 export default function ContactPage() {
@@ -12,7 +13,7 @@ export default function ContactPage() {
       <MainContentArea content={[
         <ContentContainer 
           content={[
-            <h2 className="text-5xl mb-[1rem]">Contact Me</h2>,
+            <SectionHeading text="Contact Me" />,
             <div className='grid grid-cols-2 grid-rows-1 mb-4'>
                 
               <ul className='flex flex-col'>

@@ -63,7 +63,7 @@ const timelineTheme = createTheme({
         marker: {
           base: {
             horizontal: "absolute -left-1.5 h-3 w-3 rounded-full border border-amber-400 bg-amber-400 dark:border-gray-900 dark:bg-gray-700",
-            vertical: "absolute -left-2 mt-2 h-4 w-4 rounded-full border-2 border-black bg-white dark:border-gray-900 dark:bg-gray-700"
+            vertical: "absolute -left-2 mt-2 h-4 w-4 rounded-full shadow-[1px_2px_0px_0px_rgba(0,0,0,1)] border-2 border-black bg-white dark:border-gray-900 dark:bg-gray-700"
           },
           icon: {
             base: "h-3 w-3 text-primary-600 dark:text-primary-300",

@@ -2,8 +2,8 @@ import '../index.css'
 import ContentContainer from './ContentContainer'
 import {FeaturedProject, ProjectInfo, FeaturedProjectInfo } from './Project'
 import ProjectArea from './ProjectArea'
-import { Button } from 'flowbite-react'
 import LinkButton from './LinkButton'
+import { SectionHeading } from './Headings'
 
 interface ProjectSectionProps {
   projectDataList: ProjectInfo[]
@@ -15,7 +15,7 @@ export default function ProjectSection({projectDataList, featuredProjectData}: P
     <>
       <ContentContainer 
         content={[
-          <h2 className="text-5xl mb-[1rem]">Projects</h2>,
+          <SectionHeading text="Projects" />,
           <FeaturedProject projectInfo={featuredProjectData}/>,
           <ProjectArea projectInfoList={projectDataList} />,
           <LinkButton text="All Projects" link="/projects" />,
