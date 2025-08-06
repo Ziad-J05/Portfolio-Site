@@ -12,12 +12,6 @@ import Footer from '../components/Footer';
 import { Skill } from '../components/Skill';
 import { MySkills} from '../components/MySkills';
 
-const aboutSectionContent:string[] = [
-  "I'm a game designer and software developer pusruing a Bachelor's of Science in Game Design and Development at Rochester Institute of Technology.",
-
-  "Unity and C# are my bread and butter, though I'm also familiar with frontend development technologies like React and Typescript, as well as languages like C++ and Java. No matter what project I'm working on, I always put the user first, making UX as good as it can be."
-]
-
 /* const skills: Skill[] = Object.values(MySkills); */
 const skills: Skill[] = [
   MySkills.CSharp,
@@ -68,7 +62,6 @@ function HomePage(){
     <NavigationBar />
       <MainContentArea content={[
         <IntroSection />,
-        <AboutSection content={aboutSectionContent}/>,
         <SkillsSection skills={skills}/>,
         <ExperienceSection jobInfoList={jobInfoList} />,
         <ProjectSection 

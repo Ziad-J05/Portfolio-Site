@@ -14,8 +14,7 @@ export default function SkillsSection({skills}: {skills: Skill[]}){
           <SectionHeading text="Skills" />,
           <div className="flex flex-wrap gap-2 mb-2">
             <IconSkillsArea skills={skills} />
-          </div>,
-          <LinkButton text='All Skills' link='#' />
+          </div>
         ]} 
         bottomMargin={true}
       />

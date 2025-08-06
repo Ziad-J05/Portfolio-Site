@@ -11,8 +11,8 @@ export default function AboutSection({content}: {content: string[]}){
         
 
     return(
-        <>
-            <ContentContainer content={aboutText} bottomMargin={true} />
-        </>
+        <div className="border-2 rounded-lg bg-white px-2 py-1">
+            {aboutText}
+        </div>
     )
 }
