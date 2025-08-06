@@ -9,8 +9,8 @@ import SkillsSection from '../components/SkillsSection';
 import ExperienceSection from '../components/ExperienceSection'
 import ProjectSection from '../components/ProjectSection' 
 import Footer from '../components/Footer';
-import { Skill, SkillType } from '../components/Skill';
-import { HighlightSkills, OtherSkills } from '../components/MySkills';
+import { Skill } from '../components/Skill';
+import { MySkills} from '../components/MySkills';
 
 const aboutSectionContent:string[] = [
   "I'm a game designer and software developer pusruing a Bachelor's of Science in Game Design and Development at Rochester Institute of Technology.",
@@ -18,7 +18,23 @@ const aboutSectionContent:string[] = [
   "Unity and C# are my bread and butter, though I'm also familiar with frontend development technologies like React and Typescript, as well as languages like C++ and Java. No matter what project I'm working on, I always put the user first, making UX as good as it can be."
 ]
 
-const skills: Skill[] = Object.values(HighlightSkills);
+/* const skills: Skill[] = Object.values(MySkills); */
+const skills: Skill[] = [
+  MySkills.CSharp,
+  MySkills.Unity,
+  MySkills.CPlusPlus,
+  MySkills.JavaScript,
+  MySkills.React,
+  MySkills.HTML,
+  MySkills.CSS,
+  MySkills.Java,
+  MySkills.Godot,
+  MySkills.TypeScript,
+  MySkills.Tailwind,
+  MySkills.Python,
+  MySkills.Blender,
+  MySkills.Maya
+]
 
 const jobInfoList:JobInfo[] = [
   new JobInfo("Game Development Apprentice", "Simcoach Games", 2021, 2021, 
@@ -33,14 +49,14 @@ const jobInfoList:JobInfo[] = [
 
 const projectInfo:ProjectInfo[] = 
 [
-  new ProjectInfo("Pokedex Search Website", "Solo Developer", [HighlightSkills.HTML, HighlightSkills.CSS, HighlightSkills.JavaScript], "#", "/placeholder-photo.jpg"),
-  new ProjectInfo("Gravity Game", "Solo Developer", [HighlightSkills.CPlusPlus, OtherSkills.SFML, OtherSkills.Box2D], "#", "/placeholder-photo.jpg")
+  new ProjectInfo("Pokedex Search Website", "Solo Developer", [MySkills.HTML, MySkills.CSS, MySkills.JavaScript], "#", "/placeholder-photo.jpg"),
+  new ProjectInfo("Gravity Game", "Solo Developer", [MySkills.CPlusPlus, MySkills.SFML, MySkills.Box2D], "#", "/placeholder-photo.jpg")
 ]
 
 const featuredProjectInfo: FeaturedProjectInfo = new FeaturedProjectInfo(
   "Eulyss",
   "Programmer",
-  [HighlightSkills.Unity, HighlightSkills.CSharp],
+  [MySkills.Unity, MySkills.CSharp],
   "#",
   "/placeholder-photo.jpg",
   "Collaborated as part of a team of two to create an adventure game with a custom text parser that imports text files as graphs for in-game dialogue. Currently in development."

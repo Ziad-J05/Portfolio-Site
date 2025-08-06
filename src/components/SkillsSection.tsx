@@ -4,6 +4,7 @@ import { ReactElement } from 'react';
 import ContentContainer from './ContentContainer';
 import { SectionHeading } from './Headings';
 import { Skill } from './Skill';
+import LinkButton from './LinkButton';
 
 export default function SkillsSection({skills}: {skills: Skill[]}){
   return(
@@ -11,9 +12,10 @@ export default function SkillsSection({skills}: {skills: Skill[]}){
       <ContentContainer 
         content={[
           <SectionHeading text="Skills" />,
-          <div className="flex flex-wrap gap-2">
+          <div className="flex flex-wrap gap-2 mb-2">
             <IconSkillsArea skills={skills} />
-          </div>
+          </div>,
+          <LinkButton text='All Skills' link='#' />
         ]} 
         bottomMargin={true}
       />
