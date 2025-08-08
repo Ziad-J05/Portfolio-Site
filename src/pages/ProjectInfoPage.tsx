@@ -1,6 +1,7 @@
 import '../index.css'
 import NavigationBar from '../components/NavigationBar'
 import LinkButton from '../components/LinkButton'
+import Component from '../components/Carousel'
 import MainContentArea from '../components/MainContentArea'
 import ContentContainer from '../components/ContentContainer'
 import { SectionHeading } from '../components/Headings'
@@ -26,7 +27,15 @@ export default function ProjectInfoPage() {
                 </div>
                 <div className='px-12 w-fit col-span-1 col-start-2 justify-self-center'><LinkButton text='Sample' link='#'/></div>
             </div>
+
+            
         </main>
+
+        <div className='w-2xl mx-auto'>
+            <Component />
+        </div>
+
+        
 
         <footer className="mx-auto text-lg w-6xl py-4 bg-[#F7EDE2] text-black border-2 border-b-0">
             <p className='w-2xl mx-auto text-center'>&copy;2025 Ziad Jaafar - Made with React and Tailwind</p>
