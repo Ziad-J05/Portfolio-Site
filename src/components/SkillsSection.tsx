@@ -4,7 +4,7 @@ import { ReactElement } from 'react';
 import ContentContainer from './ContentContainer';
 import { SectionHeading } from './Headings';
 import { Skill } from './Skill';
-import LinkButton from './LinkButton';
+import { LinkButton } from './LinkButton';
 
 export default function SkillsSection({skills}: {skills: Skill[]}){
   return(

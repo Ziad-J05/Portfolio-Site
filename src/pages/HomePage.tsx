@@ -43,15 +43,15 @@ const jobInfoList:JobInfo[] = [
 
 const projectInfo:ProjectInfo[] = 
 [
-  new ProjectInfo("Pokedex Search Website", "Solo Developer", [MySkills.HTML, MySkills.CSS, MySkills.JavaScript], "#", "/placeholder-photo.jpg"),
-  new ProjectInfo("Gravity Game", "Solo Developer", [MySkills.CPlusPlus, MySkills.SFML, MySkills.Box2D], "#", "/placeholder-photo.jpg")
+  new ProjectInfo("Pokedex Search Website", "Solo Developer", [MySkills.HTML, MySkills.CSS, MySkills.JavaScript], "/projects/project-info", "/placeholder-photo.jpg"),
+  new ProjectInfo("Gravity Game", "Solo Developer", [MySkills.CPlusPlus, MySkills.SFML, MySkills.Box2D], "/projects/project-info", "/placeholder-photo.jpg")
 ]
 
 const featuredProjectInfo: FeaturedProjectInfo = new FeaturedProjectInfo(
   "Eulyss",
   "Programmer",
   [MySkills.Unity, MySkills.CSharp],
-  "#",
+  "/projects/project-info",
   "/placeholder-photo.jpg",
   "Collaborated as part of a team of two to create an adventure game with a custom text parser that imports text files as graphs for in-game dialogue. Currently in development."
 )
