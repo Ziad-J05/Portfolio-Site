@@ -23,7 +23,7 @@ export default function ProjectsPage() {
   return (
     <>
         <NavigationBar />
-        <MainContentArea content={[
+        <MainContentArea width='4xl' content={[
           <ContentContainer 
           content={[
             <SectionHeading text="All Projects" />,

@@ -10,7 +10,7 @@ export default function ContactPage() {
   return (
     <>
       <NavigationBar />
-      <MainContentArea content={[
+      <MainContentArea width='4xl' content={[
         <ContentContainer 
           content={[
             <SectionHeading text="Contact Me" />,

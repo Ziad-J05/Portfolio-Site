@@ -17,7 +17,7 @@ export default function AboutPage() {
   return (
     <>
       <NavigationBar />
-      <MainContentArea content={[
+      <MainContentArea width='4xl' content={[
         <ContentContainer 
           content={[
             <SectionHeading text="About Me" />,
