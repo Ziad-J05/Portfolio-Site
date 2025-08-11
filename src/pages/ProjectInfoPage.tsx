@@ -24,7 +24,7 @@ export interface ProjectInfo{
 
 export function CreateProjectInfoPages({projectInfoList}: {projectInfoList: ProjectInfo[]}){
     
-    const pages:ReactElement[] = projectInfoList.map((info) => <Route path={'/projects/' + info.projectName.toLowerCase().replace(/\s/g, "")} element={<ProjectInfoPage projectName={info.projectName} companyName={info.companyName} description={info.description} projectLink={info.projectLink} githubLink={info.githubLink} processImages={info.processImages} />}/>)
+    const pages:ReactElement[] = projectInfoList.map((info) => <Route path={'/projects/' + info.projectName.toLowerCase().replace(/\s/g, "-")} element={<ProjectInfoPage projectName={info.projectName} companyName={info.companyName} description={info.description} projectLink={info.projectLink} githubLink={info.githubLink} processImages={info.processImages} />}/>)
 
     return ( pages );
 }
