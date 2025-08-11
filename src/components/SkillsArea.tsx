@@ -7,6 +7,7 @@ import {
 import { ReactElement } from 'react';
 import { Skill, SkillType } from './Skill';
 
+
 const skillBadgeTheme = createTheme({
     badge: {
         "root": {
@@ -14,16 +15,12 @@ const skillBadgeTheme = createTheme({
             "color": {
             "info": "bg-white border-2 hover:bg-white text-black",
             "light": "bg-white border-2 hover:bg-white text-black",
-            "indigo": "bg-indigo-100 border-2 hover:bg-white text-black",
-            "purple": "bg-purple-100 border-2 hover:bg-white text-black",
-            "pink": "bg-pink-100 border-2 hover:bg-white text-black",
-            "blue": "bg-blue-100 border-2 hover:bg-white text-black",
-            "cyan": "bg-cyan-100 border-2 hover:bg-white text-black",
-            "green": "bg-green-100 border-2 hover:bg-white text-black",
-            "lime": "bg-lime-100 border-2 hover:bg-white text-black",
-            "red": "bg-red-100 border-2 hover:bg-white text-black",
-            "teal": "bg-teal-100 border-2 hover:bg-white text-black",
-            "yellow": "bg-yellow-100 border-2 hover:bg-white text-black"
+            "teal": "bg-[#6ba5bf] border-2 hover:bg-white text-black",
+            "violet": "bg-[#6e95d4] border-2 hover:bg-white text-black",
+            "blue": "bg-[#6b8bbf] border-2 hover:bg-white text-black",
+            "green": "bg-[#6ab895] border-2 hover:bg-white text-black",
+            "yellow": "bg-[#bf986b] border-2 hover:bg-white text-black",
+            "orange": "bg-[#db9f74] border-2 hover:bg-white text-black",
     
             },
             "size": {
@@ -99,19 +96,19 @@ function ColorFromSkillType(type: SkillType){
 
     switch(type){
         case SkillType.Language:
-            color = "cyan"
+            color = "teal"
             break;
         case SkillType.Software:
-            color = "purple"
+            color = "blue"
             break;
         case SkillType.Library:
-            color = "green"
+            color = "orange"
             break;
         case SkillType.Framework:
-            color = "lime"
+            color = "orange"
             break;
         case SkillType.NonScriptLang:
-            color = "blue"
+            color = "green"
             break;
     }
 
