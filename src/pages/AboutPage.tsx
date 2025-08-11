@@ -24,7 +24,7 @@ export default function AboutPage() {
             <div className='flex gap-4'>
               <AboutSection content={aboutSectionContent}/>
               <img
-                className="block w-64 h-128 object-cover border-2 rounded-xl"
+                className="block w-64 h-96 object-cover border-2 rounded-xl"
                 src="/placeholder-photo.jpg"
               />
             </div>,
