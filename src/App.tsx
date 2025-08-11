@@ -27,10 +27,10 @@ function App() {
           projectLink='#' 
           githubLink='#' 
           processImages={[
-            new ProcessImage("/placeholder-photo.jpg", "This is a description. Hello!"),
-            new ProcessImage("/placeholder-photo.jpg", "This is another description. Notice how the image is the same!"),
-            new ProcessImage("/placeholder-photo.jpg", ""),
-            new ProcessImage("/placeholder-photo.jpg", "Did you see how the previous image has no description?"),
+            { source:"/placeholder-photo.jpg", caption:"This is a description. Hello!"},
+            { source:"/placeholder-photo.jpg", caption:"This is another description."},
+            { source:"/placeholder-photo.jpg", caption:""},
+            { source:"/placeholder-photo.jpg", caption:"That last one had no description."},
           ]}
         
         

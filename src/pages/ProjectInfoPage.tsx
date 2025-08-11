@@ -7,17 +7,12 @@ import ContentContainer from '../components/ContentContainer'
 import { PageHeading, SectionHeading } from '../components/Headings'
 import Footer from '../components/Footer'
 
-export class ProcessImage{
+export type ProcessImage = {
     source: string;
     caption: string;
-
-    constructor (source: string, caption: string){
-        this.source = source;
-        this.caption = caption;
-    }
 }
 
-interface ProjectPageProps{
+export interface ProjectInfo{
     projectName: string
     companyName: string
     description: string[]
@@ -26,7 +21,7 @@ interface ProjectPageProps{
     processImages: ProcessImage[]
 }
 
-export function ProjectInfoPage({projectName, companyName, description, projectLink, githubLink, processImages}: ProjectPageProps) {
+export function ProjectInfoPage({projectName, companyName, description, projectLink, githubLink, processImages}: ProjectInfo) {
 
   const bodyParagraphs:ReactElement[] = description.map((text) => <p>{text}</p>)
   
