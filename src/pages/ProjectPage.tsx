@@ -7,25 +7,38 @@ import ContentContainer from '../components/ContentContainer'
 import { PageHeading, SectionHeading } from '../components/Headings'
 import Footer from '../components/Footer'
 import { Route } from 'react-router-dom'
-import { ProcessImage } from '../components/ProjectData'
+import { GetProjectPageLink, ProcessImage, ProjectData } from '../components/ProjectData'
 
-export interface ProjectInfo{
+interface ProjectPageProps{
     projectName: string
     companyName: string
     description: string[]
-    projectLink: string
+    sampleLink: string
     githubLink: string
+    thumbnailSrc: string
     processImages: ProcessImage[]
 }
 
-export function CreateProjectInfoPages({projectInfoList}: {projectInfoList: ProjectInfo[]}){
-    
-    const pages:ReactElement[] = projectInfoList.map((info) => <Route path={'/projects/' + info.projectName.toLowerCase().replace(/\s/g, "-")} element={<ProjectInfoPage projectName={info.projectName} companyName={info.companyName} description={info.description} projectLink={info.projectLink} githubLink={info.githubLink} processImages={info.processImages} />}/>)
+export function CreateProjectInfoPages({projectDataList}: {projectDataList: ProjectData[]}){
+
+    const pages:ReactElement[] = projectDataList.map((data) => 
+        <Route 
+            path={GetProjectPageLink(data.projectName)} 
+            element={<ProjectPage 
+                projectName={data.projectName} 
+                companyName={data.companyName} 
+                description={data.description} 
+                sampleLink={data.sampleLink} 
+                githubLink={data.githubLink} 
+                thumbnailSrc={data.thumbnailSrc}
+                processImages={data.processImages} 
+            />}
+        />)
 
     return ( pages );
 }
 
-export function ProjectInfoPage({projectName, companyName, description, projectLink, githubLink, processImages}: ProjectInfo) {
+export function ProjectPage({projectName, companyName, description, sampleLink, githubLink, thumbnailSrc, processImages}: ProjectPageProps) {
 
   const bodyParagraphs:ReactElement[] = description.map((text) => <p>{text}</p>)
   
@@ -48,14 +61,14 @@ export function ProjectInfoPage({projectName, companyName, description, projectL
             <>
             <PageHeading text={projectName} />
             <p className="text-4xl w-4xl mx-auto font-regular">{companyName}</p>
-            <img className='w-6xl h-64 object-cover border-y-2 mt-4 mb-8' src='/placeholder-photo.jpg' />
+            <img className='w-6xl h-64 object-cover border-y-2 mt-4 mb-8' src={thumbnailSrc} />
 
             <div className='grid w-4xl mx-auto grid-rows-1 grid-cols-[1fr_calc(var(--spacing)*64)]'>
                 <div className='col-span-1 col-start-1 text-lg flex flex-col gap-4 w-2xl'>
                     {bodyParagraphs}
                 </div>
                 <div className='justify-self-stretch px-8 col-span-1 col-start-2 flex flex-col gap-8'>
-                    <LinkButtonFull text='View Project' link={projectLink}/>
+                    <LinkButtonFull text='View Project' link={sampleLink}/>
                     <LinkButtonFull text='Github' link={githubLink}/>
                 </div>
             </div>            

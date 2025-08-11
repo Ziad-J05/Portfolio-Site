@@ -1,16 +1,15 @@
 import '../index.css'
 import { JobInfo } from '../components/JobTimeline';
-import { ProjectInfo, FeaturedProjectInfo } from '../components/ProjectThumbnails'
 import NavigationBar from '../components/NavigationBar';
 import MainContentArea from '../components/MainContentArea';
 import IntroSection from '../components/IntroSection';
-import AboutSection from '../components/AboutSection';
 import SkillsSection from '../components/SkillsSection';
 import ExperienceSection from '../components/ExperienceSection'
 import ProjectSection from '../components/ProjectSection' 
 import Footer from '../components/Footer';
 import { Skill } from '../components/Skill';
 import { MySkills} from '../data/MySkills';
+import { MyProjects } from '../data/MyProjects';
 
 /* const skills: Skill[] = Object.values(MySkills); */
 const skills: Skill[] = [
@@ -41,21 +40,6 @@ const jobInfoList:JobInfo[] = [
              )
 ]
 
-const projectInfo:ProjectInfo[] = 
-[
-  new ProjectInfo("Pokedex Search Website", "Solo Developer", [MySkills.HTML, MySkills.CSS, MySkills.JavaScript], "/projects/project-info", "/placeholder-photo.jpg"),
-  new ProjectInfo("Gravity Game", "Solo Developer", [MySkills.CPlusPlus, MySkills.SFML, MySkills.Box2D], "/projects/project-info", "/placeholder-photo.jpg")
-]
-
-const featuredProjectInfo: FeaturedProjectInfo = new FeaturedProjectInfo(
-  "Eulyss",
-  "Programmer",
-  [MySkills.Unity, MySkills.CSharp],
-  "/projects/project-info",
-  "/placeholder-photo.jpg",
-  "Collaborated as part of a team of two to create an adventure game with a custom text parser that imports text files as graphs for in-game dialogue. Currently in development."
-)
-
 function HomePage(){
   return(
     <>
@@ -64,10 +48,7 @@ function HomePage(){
         <IntroSection />,
         <SkillsSection skills={skills}/>,
         <ExperienceSection jobInfoList={jobInfoList} />,
-        <ProjectSection 
-          projectDataList={projectInfo} 
-          featuredProjectData={featuredProjectInfo} 
-        />
+        <ProjectSection projectDataList={MyProjects.slice(0, 3)} />
       ]} />
     <Footer />
     </>

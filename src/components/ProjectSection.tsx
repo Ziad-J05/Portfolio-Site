@@ -9,7 +9,6 @@ import { SectionHeading } from './Headings'
 export default function ProjectSection({projectDataList}: {projectDataList: ProjectData[]}){
 
   const featuredProjectData = projectDataList[0]
-  const pageLink = GetProjectPageLink(featuredProjectData.projectName)
   const body = featuredProjectData.description[0]
 
   return(
@@ -22,7 +21,7 @@ export default function ProjectSection({projectDataList}: {projectDataList: Proj
             role={featuredProjectData.role}
             skills={featuredProjectData.skills} 
             body={body}
-            thumbnailSrc={pageLink}
+            thumbnailSrc={featuredProjectData.thumbnailSrc}
           />,
           <ProjectArea projectDataList={projectDataList.slice(1)} />,
           <LinkButton text="All Projects" link="/projects" />,
