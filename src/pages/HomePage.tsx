@@ -10,7 +10,7 @@ import ExperienceSection from '../components/ExperienceSection'
 import ProjectSection from '../components/ProjectSection' 
 import Footer from '../components/Footer';
 import { Skill } from '../components/Skill';
-import { MySkills} from '../components/MySkills';
+import { MySkills} from '../data/MySkills';
 
 /* const skills: Skill[] = Object.values(MySkills); */
 const skills: Skill[] = [

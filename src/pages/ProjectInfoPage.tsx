@@ -6,6 +6,7 @@ import MainContentArea from '../components/MainContentArea'
 import ContentContainer from '../components/ContentContainer'
 import { PageHeading, SectionHeading } from '../components/Headings'
 import Footer from '../components/Footer'
+import { Route } from 'react-router-dom'
 
 export type ProcessImage = {
     source: string;
@@ -19,6 +20,13 @@ export interface ProjectInfo{
     projectLink: string
     githubLink: string
     processImages: ProcessImage[]
+}
+
+export function CreateProjectInfoPages({projectInfoList}: {projectInfoList: ProjectInfo[]}){
+    
+    const pages:ReactElement[] = projectInfoList.map((info) => <Route path={'/projects/' + info.projectName.toLowerCase().replace(/\s/g, "")} element={<ProjectInfoPage projectName={info.projectName} companyName={info.companyName} description={info.description} projectLink={info.projectLink} githubLink={info.githubLink} processImages={info.processImages} />}/>)
+
+    return ( pages );
 }
 
 export function ProjectInfoPage({projectName, companyName, description, projectLink, githubLink, processImages}: ProjectInfo) {

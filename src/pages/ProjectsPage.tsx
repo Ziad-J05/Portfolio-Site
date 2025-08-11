@@ -6,7 +6,7 @@ import { SectionHeading } from '../components/Headings'
 import ProjectArea from '../components/ProjectArea'
 import { ProjectInfo } from '../components/Project'
 import Footer from '../components/Footer'
-import { MySkills} from '../components/MySkills'
+import { MySkills} from '../data/MySkills'
 
 const projectInfo:ProjectInfo[] = 
 [

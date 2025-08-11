@@ -1,4 +1,4 @@
-import { Skill, SkillType } from "./Skill";
+import { Skill, SkillType } from "../components/Skill";
 import { CsharpPlain, UnityPlain, CplusplusPlain, JavascriptPlain, ReactOriginal, Html5Plain, Css3Plain, JavaPlain, TypescriptPlain, GodotPlain, PythonPlain, BlenderOriginal, MayaPlain, TailwindcssOriginal} from 'devicons-react';
 
 export const MySkills: Record<string, Skill> = {
