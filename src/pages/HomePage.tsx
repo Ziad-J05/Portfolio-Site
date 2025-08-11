@@ -1,6 +1,6 @@
 import '../index.css'
 import { JobInfo } from '../components/JobTimeline';
-import { ProjectInfo, FeaturedProjectInfo } from '../components/Project'
+import { ProjectInfo, FeaturedProjectInfo } from '../components/ProjectThumbnails'
 import NavigationBar from '../components/NavigationBar';
 import MainContentArea from '../components/MainContentArea';
 import IntroSection from '../components/IntroSection';

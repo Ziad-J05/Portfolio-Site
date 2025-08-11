@@ -7,11 +7,7 @@ import ContentContainer from '../components/ContentContainer'
 import { PageHeading, SectionHeading } from '../components/Headings'
 import Footer from '../components/Footer'
 import { Route } from 'react-router-dom'
-
-export type ProcessImage = {
-    source: string;
-    caption: string;
-}
+import { ProcessImage } from '../components/ProjectData'
 
 export interface ProjectInfo{
     projectName: string

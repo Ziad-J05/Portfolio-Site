@@ -1,11 +1,16 @@
 import '../index.css'
-import { Project, FeaturedProject, ProjectInfo } from './Project'
+import { ProjectThumbnail } from './ProjectThumbnails'
+import { ProjectData } from './ProjectData';
 
-export default function ProjectArea({projectInfoList}: {projectInfoList: ProjectInfo[]}){
+export default function ProjectArea({projectDataList}: {projectDataList: ProjectData[]}){
     const projects: React.ReactElement[] = [];
     
-    for(const projectData of projectInfoList) {
-        projects.push(<Project projectInfo={projectData} />)
+    for(const projectData of projectDataList) {
+        projects.push(<ProjectThumbnail 
+            projectName={projectData.projectName} 
+            role={projectData.role} 
+            skills={projectData.skills} 
+            thumbnailSrc={projectData.thumbnailSrc}/>)
     }
     
     return( 

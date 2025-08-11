@@ -4,7 +4,7 @@ import MainContentArea from '../components/MainContentArea'
 import ContentContainer from '../components/ContentContainer'
 import { SectionHeading } from '../components/Headings'
 import ProjectArea from '../components/ProjectArea'
-import { ProjectInfo } from '../components/Project'
+import { ProjectInfo } from '../components/ProjectThumbnails'
 import Footer from '../components/Footer'
 import { MySkills} from '../data/MySkills'
 

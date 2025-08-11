@@ -7,30 +7,17 @@ import {
 } from "flowbite-react";
 import { SkillsArea } from './SkillsArea';
 import { Skill } from './Skill';
+import { GetProjectPageLink, ProjectData } from './ProjectData';
 
-export class ProjectInfo {
-    name: string;
-    role: string;
-    skills: Skill[];
-    link: string;
-    img: string;
-
-    constructor(name: string, role: string, skills: Skill[], link: string, img: string){
-        this.name = name,
-        this.role = role,
-        this.skills = skills,
-        this.link = link
-        this.img = img;
-    }
+interface ProjectThumbnailProps{
+    projectName: string
+    role: string
+    skills: Skill[]
+    thumbnailSrc: string
 }
 
-export class FeaturedProjectInfo extends ProjectInfo {
-    body: string;
-
-    constructor(name: string, role: string, skills: Skill[], link: string, img:string, body: string){
-        super(name, role, skills, link, img);
-        this.body = body;
-    }
+interface FeaturedProjectThumbnailProps extends ProjectThumbnailProps{
+    body: string
 }
 
 const cardTheme = createTheme({
@@ -54,37 +41,40 @@ const cardTheme = createTheme({
   }
 });
 
-export function FeaturedProject( {projectInfo}: {projectInfo: FeaturedProjectInfo} ){
+export function FeaturedProjectThumbnail({projectName, role, skills, body, thumbnailSrc}: FeaturedProjectThumbnailProps){
+    
+    const projectPageLink = GetProjectPageLink(projectName)
+
     return(
         <>
         <ThemeProvider theme={cardTheme}>
             <Card
-                href={projectInfo.link}
+                href={projectPageLink}
                 className="max-w-2xl transition-all duration-150 ease-out"
                 imgAlt="Meaningful alt text for an image that is not purely decorative"
-                imgSrc={projectInfo.img}
+                imgSrc={thumbnailSrc}
             >
                 <div>
                     <div className="flex items-baseline border-b-2">
                         <h3 className="text-3xl font-semibold tracking-tight px-2 py-1 text-black">
-                            {projectInfo.name}
+                            {projectName}
                         </h3>
                         <div className="border-l-2 self-stretch" />
                         <p className="text-3xl text-black px-2 py-1 mb-0">
-                            {projectInfo.role}
+                            {role}
                         </p>
                     </div>
 
                     <div className="px-2 py-1">
                         <div className="flex gap-2 my-0.5">
-                            <SkillsArea skills={projectInfo.skills} />
+                            <SkillsArea skills={skills} />
                         </div>
                         
                         <p className="font-normal text-black text-lg">
-                            {projectInfo.body}
+                            {body}
                         </p>
 
-                        <a href={projectInfo.link} className='text-lg font-semibold text-gray-400 group-hover:text-black transition-all ease-out duration-150'>More info &rarr;</a>
+                        <a href={projectPageLink} className='text-lg font-semibold text-gray-400 group-hover:text-black transition-all ease-out duration-150'>More info &rarr;</a>
                     </div>
                 </div>
             </Card>
@@ -95,30 +85,33 @@ export function FeaturedProject( {projectInfo}: {projectInfo: FeaturedProjectInf
 
 
 
-export function Project( {projectInfo}: {projectInfo: ProjectInfo} ){
+export function ProjectThumbnail( {projectName, role, skills, thumbnailSrc}: ProjectThumbnailProps ){
+
+    const projectPageLink = GetProjectPageLink(projectName)
+
     return(
         <>
         <ThemeProvider theme={cardTheme}>
             <Card
-            href={projectInfo.link}
+            href={projectPageLink}
             className="max-w-2xl transition-all duration-150 ease-out"
             imgAlt="Meaningful alt text for an image that is not purely decorative"
-            imgSrc={projectInfo.img}
+            imgSrc={thumbnailSrc}
             horizontal
             >
                 <div>
                     <h3 className="text-2xl font-semibold tracking-tight text-black border-b-2 w-full px-2 py-1">
-                        {projectInfo.name}
+                        {projectName}
                     </h3>
                     <div className="px-2 py-1">
 
                         <div className="flex gap-2 my-0.5">
-                            <SkillsArea skills={projectInfo.skills} />
+                            <SkillsArea skills={skills} />
                         </div>
                         <p className="text-lg text-black">
-                            {projectInfo.role}
+                            {role}
                         </p>
-                        <a href={projectInfo.link} className='text-lg font-semibold text-gray-400 group-hover:text-black transition-all ease-out duration-150'>More info &rarr;</a>
+                        <a href={projectPageLink} className='text-lg font-semibold text-gray-400 group-hover:text-black transition-all ease-out duration-150'>More info &rarr;</a>
                     </div>
                 </div>
 
