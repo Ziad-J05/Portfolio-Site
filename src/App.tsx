@@ -4,11 +4,7 @@ import HomePage from './pages/HomePage'
 import AboutPage from './pages/AboutPage'
 import ProjectsPage from './pages/ProjectsPage'
 import ContactPage from './pages/ContactPage'
-import { ProjectInfoPage } from './pages/ProjectInfoPage'
-
-const captionedImages: Record<string, string>= {
-  "/placeholder-photo.jpg": "This is a description. Hello!"
-}
+import { ProjectInfoPage, ProcessImage } from './pages/ProjectInfoPage'
 
 function App() {
 
@@ -30,10 +26,12 @@ function App() {
           ]}
           projectLink='#' 
           githubLink='#' 
-          processImages={{
-            "/placeholder-photo.jpg": "This is a description. Hello!",
-            "https://www.josephfiler.com/images/600/Arizona-Desert-Mountains-2518-Edit.jpg": "This is another description. Hello!"
-          }}
+          processImages={[
+            new ProcessImage("/placeholder-photo.jpg", "This is a description. Hello!"),
+            new ProcessImage("/placeholder-photo.jpg", "This is another description. Notice how the image is the same!"),
+            new ProcessImage("/placeholder-photo.jpg", ""),
+            new ProcessImage("/placeholder-photo.jpg", "Did you see how the previous image has no description?"),
+          ]}
         
         
         />}/>

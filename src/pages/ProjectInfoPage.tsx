@@ -7,14 +7,23 @@ import ContentContainer from '../components/ContentContainer'
 import { PageHeading, SectionHeading } from '../components/Headings'
 import Footer from '../components/Footer'
 
+export class ProcessImage{
+    source: string;
+    caption: string;
+
+    constructor (source: string, caption: string){
+        this.source = source;
+        this.caption = caption;
+    }
+}
+
 interface ProjectPageProps{
     projectName: string
     companyName: string
     description: string[]
     projectLink: string
     githubLink: string
-    /* TODO: storing the images and their captions as a record is a little scuffed. Image urls need to be unique and this is a serious case of 'magic numbers' */
-    processImages: Record<string, string>
+    processImages: ProcessImage[]
 }
 
 export function ProjectInfoPage({projectName, companyName, description, projectLink, githubLink, processImages}: ProjectPageProps) {
@@ -22,15 +31,15 @@ export function ProjectInfoPage({projectName, companyName, description, projectL
   const bodyParagraphs:ReactElement[] = description.map((text) => <p>{text}</p>)
   
   const captionedImageElements: ReactElement[] = []
-  Object.keys(processImages).forEach((image) => {
+  for (let image of processImages) {
     captionedImageElements.push(
         /* TODO: these divs are just Flowbite cards. They should be card components instead*/
         <div className='relative top-0 left-0 h-fit overflow-hidden rounded-lg border-2 bg-white'>
-            <img className='object-cover w-fit h-96' src={image}></img>
-            <p className='text-lg py-1 px-2'>{processImages[image]}</p>
+            <img className='object-cover w-fit h-96' src={image.source}></img>
+            <p className='text-lg px-2'>{image.caption}</p>
         </div>
     )
-  })
+  }
 
   return (
     <>
