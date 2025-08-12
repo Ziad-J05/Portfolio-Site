@@ -44,7 +44,7 @@ function HomePage(){
   return(
     <>
     <NavigationBar />
-      <MainContentArea width='4xl' content={[
+      <MainContentArea width='6xl' content={[
         <IntroSection />,
         <SkillsSection skills={skills}/>,
         <ExperienceSection jobInfoList={jobInfoList} />,

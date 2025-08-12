@@ -2,7 +2,7 @@ import '../index.css'
 import { ProjectThumbnail } from './ProjectThumbnails'
 import { ProjectData } from './ProjectData';
 
-export default function ProjectArea({projectDataList}: {projectDataList: ProjectData[]}){
+export function ProjectFlex({projectDataList}: {projectDataList: ProjectData[]}){
     const projects: React.ReactElement[] = [];
     
     for(const projectData of projectDataList) {
@@ -15,7 +15,7 @@ export default function ProjectArea({projectDataList}: {projectDataList: Project
     
     return( 
         <>
-        <div className="flex flex-col gap-2 py-2">
+        <div className="grid grid-cols-2 py-2 gap-4">
             {projects}
         </div>
         </>

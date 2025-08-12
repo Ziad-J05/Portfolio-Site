@@ -4,14 +4,19 @@ import '../index.css'
 interface ContentContainerProps {
       content: ReactElement[];
       bottomMargin: boolean;
+      width?: string;
     }
 
 
-export default function ContentContainer({content, bottomMargin}: ContentContainerProps){
+export default function ContentContainer({content, bottomMargin, width}: ContentContainerProps){
 
-    /* TODO: add optional bottom margin using ternary operator on class */
+    let containterClass:string = "w-" + width + " mx-auto"
+    if (bottomMargin){
+        containterClass += " mb-12"
+    }
+
     return(
-        <div className={bottomMargin ? 'w-2xl mx-auto mb-12' : 'w-2xl mx-auto'}>
+        <div className={containterClass}>
             {content}
         </div>
     );

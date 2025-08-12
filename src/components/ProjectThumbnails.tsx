@@ -50,7 +50,7 @@ export function FeaturedProjectThumbnail({projectName, role, skills, body, thumb
         <ThemeProvider theme={cardTheme}>
             <Card
                 href={projectPageLink}
-                className="max-w-2xl transition-all duration-150 ease-out"
+                className="max-w-xl transition-all duration-150 ease-out"
                 imgAlt="Meaningful alt text for an image that is not purely decorative"
                 imgSrc={thumbnailSrc}
             >
@@ -105,7 +105,7 @@ export function ProjectThumbnail( {projectName, role, skills, thumbnailSrc}: Pro
                     </h3>
                     <div className="px-2 py-1">
 
-                        <div className="flex gap-2 my-0.5">
+                        <div className="flex flex-wrap gap-2 my-0.5">
                             <SkillsArea skills={skills} />
                         </div>
                         <p className="text-lg text-black">

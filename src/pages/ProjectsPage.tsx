@@ -3,7 +3,7 @@ import NavigationBar from '../components/NavigationBar'
 import MainContentArea from '../components/MainContentArea'
 import ContentContainer from '../components/ContentContainer'
 import { SectionHeading } from '../components/Headings'
-import ProjectArea from '../components/ProjectArea'
+import { ProjectFlex } from '../components/ProjectArea'
 import { ProjectData } from '../components/ProjectData'
 import Footer from '../components/Footer'
 import { MySkills} from '../data/MySkills'
@@ -18,7 +18,7 @@ export default function ProjectsPage() {
           <ContentContainer 
           content={[
             <SectionHeading text="All Projects" />,
-            <ProjectArea projectDataList={MyProjects} />
+            <ProjectFlex projectDataList={MyProjects} />
           ]} 
           bottomMargin={false}
           />   

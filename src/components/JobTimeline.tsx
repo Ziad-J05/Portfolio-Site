@@ -100,7 +100,7 @@ export default function JobTimeline({jobInfoList}: {jobInfoList: JobInfo[]}){
   }
 
   return(
-    <>
+    <div className='w-2xl mx-auto'>
       <ThemeProvider theme={timelineTheme}>
         <Timeline>
         
@@ -108,6 +108,6 @@ export default function JobTimeline({jobInfoList}: {jobInfoList: JobInfo[]}){
         
         </Timeline>
       </ThemeProvider>
-    </>
+    </div>
   )
 }

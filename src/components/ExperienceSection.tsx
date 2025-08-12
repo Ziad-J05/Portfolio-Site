@@ -13,6 +13,7 @@ export default function ExperienceSection({jobInfoList}: {jobInfoList: JobInfo[]
           <JobTimeline jobInfoList={jobInfoList} />
         ]} 
         bottomMargin={true}
+        width="4xl"
       />
     </>
   )

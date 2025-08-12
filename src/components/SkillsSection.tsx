@@ -17,6 +17,7 @@ export default function SkillsSection({skills}: {skills: Skill[]}){
           </div>
         ]} 
         bottomMargin={true}
+        width='4xl'
       />
     </>
   )

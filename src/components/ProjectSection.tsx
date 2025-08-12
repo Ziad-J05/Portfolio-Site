@@ -1,7 +1,7 @@
 import '../index.css'
 import ContentContainer from './ContentContainer'
 import { FeaturedProjectThumbnail } from './ProjectThumbnails'
-import ProjectArea from './ProjectArea'
+import { ProjectFlex } from './ProjectArea'
 import { GetProjectPageLink, ProjectData } from './ProjectData'
 import { LinkButton } from './LinkButton'
 import { SectionHeading } from './Headings'
@@ -16,6 +16,7 @@ export default function ProjectSection({projectDataList}: {projectDataList: Proj
       <ContentContainer 
         content={[
           <SectionHeading text="Projects" />,
+          <div className='w-fit mx-auto'>
           <FeaturedProjectThumbnail 
             projectName={featuredProjectData.projectName} 
             role={featuredProjectData.role}
@@ -23,10 +24,14 @@ export default function ProjectSection({projectDataList}: {projectDataList: Proj
             body={body}
             thumbnailSrc={featuredProjectData.thumbnailSrc}
           />,
-          <ProjectArea projectDataList={projectDataList.slice(1)} />,
-          <LinkButton text="All Projects" link="/projects" />,
+          </div>,
+          <ProjectFlex projectDataList={projectDataList.slice(1)} />,
+          <div className='w-fit mx-auto mt-8'>
+            <LinkButton text="All Projects" link="/projects" />
+          </div>
         ]} 
         bottomMargin={true}
+        width="4xl"
       />
     </>
   )
