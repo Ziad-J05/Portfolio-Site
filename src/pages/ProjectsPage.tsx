@@ -20,7 +20,7 @@ export default function ProjectsPage() {
             <SectionHeading text="All Projects" />,
             <ProjectArea projectDataList={MyProjects} />
           ]} 
-          bottomMargin={false}
+          fixedWidth={true}
           />   
         ]} />
             

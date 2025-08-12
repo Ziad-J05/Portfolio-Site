@@ -20,9 +20,9 @@ const skillBadgeTheme = createTheme({
             "green": "bg-[#70db9b] border-2 hover:bg-white text-black",
             "yellow": "bg-[#ffc963] border-2 hover:bg-white text-black",
             "orange": "bg-[#ff9c5e] border-2 hover:bg-white text-black",
-            "light": "bg-[var(--accent-lt)] border-2 hover:bg-white text-black",
-            "medium": "bg-[var(--accent-md)] border-2 hover:bg-white text-black",
-            "dark": "bg-[var(--accent-dk)] border-2 hover:bg-white text-black",
+            "light": "bg-[var(--accent-lt)] border-2 hover:bg-[var(--accent-lt)] text-black",
+            "medium": "bg-[var(--accent-md)] border-2 text-black",
+            "dark": "bg-[var(--accent-dk)] border-2 hover:bg-[var(--accent-dk)]  text-black",
     
             },
             "size": {
@@ -101,7 +101,7 @@ function ColorFromSkillType(type: SkillType){
             color = "light"
             break;
         case SkillType.Software:
-            color = "dark"
+            color = "medium"
             break;
         case SkillType.Library:
             color = "medium"

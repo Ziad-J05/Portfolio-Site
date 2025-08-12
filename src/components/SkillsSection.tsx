@@ -16,7 +16,7 @@ export default function SkillsSection({skills}: {skills: Skill[]}){
             <IconSkillsArea skills={skills} />
           </div>
         ]} 
-        bottomMargin={true}
+        fixedWidth={false}
       />
     </>
   )

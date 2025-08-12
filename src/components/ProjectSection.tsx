@@ -13,21 +13,23 @@ export default function ProjectSection({projectDataList}: {projectDataList: Proj
 
   return(
     <>
-      <ContentContainer 
-        content={[
-          <SectionHeading text="Projects" />,
-          <FeaturedProjectThumbnail 
-            projectName={featuredProjectData.projectName} 
-            role={featuredProjectData.role}
-            skills={featuredProjectData.skills} 
-            body={body}
-            thumbnailSrc={featuredProjectData.thumbnailSrc}
-          />,
-          <ProjectArea projectDataList={projectDataList.slice(1)} />,
-          <LinkButton text="All Projects" link="/projects" />,
-        ]} 
-        bottomMargin={true}
-      />
+      <SectionHeading text="Projects" />,
+      <div className='flex gap-16'>
+        
+        <FeaturedProjectThumbnail 
+          projectName={featuredProjectData.projectName} 
+          role={featuredProjectData.role}
+          skills={featuredProjectData.skills} 
+          body={body}
+          thumbnailSrc={featuredProjectData.thumbnailSrc}
+        />
+        <div className='w-full flex gap-6 flex-col justify-center'>
+          <ProjectArea projectDataList={projectDataList.slice(1)} />
+          <LinkButton text="All Projects" link="/projects" />
+        </div>
+
+      </div>
+      
     </>
   )
 }

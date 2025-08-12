@@ -26,8 +26,8 @@ const cardTheme = createTheme({
       "base": "relative flex rounded-lg bg-white border-2 border-black shadow-[2px_4px_0px_-1px_rgba(0,0,0,1)] group",
       "children": "flex h-full w-full flex-col justify-center gap-4 p-0",
       horizontal: {
-        "off": "flex-col",
-        "on": "flex-col md:max-w-2xl md:flex-row"
+        "off": "w-3xl flex-col",
+        "on": "flex-col w-full md:max-w-full md:flex-row"
       },
       "href": "hover:shadow-[6px_8px_0px_-1px_rgba(0,0,0,1)] hover:-translate-[4px] hover:bg-white"
     },
@@ -50,7 +50,7 @@ export function FeaturedProjectThumbnail({projectName, role, skills, body, thumb
         <ThemeProvider theme={cardTheme}>
             <Card
                 href={projectPageLink}
-                className="max-w-2xl transition-all duration-150 ease-out"
+                className="transition-all duration-150 ease-out"
                 imgAlt="Meaningful alt text for an image that is not purely decorative"
                 imgSrc={thumbnailSrc}
             >
@@ -94,7 +94,7 @@ export function ProjectThumbnail( {projectName, role, skills, thumbnailSrc}: Pro
         <ThemeProvider theme={cardTheme}>
             <Card
             href={projectPageLink}
-            className="max-w-2xl transition-all duration-150 ease-out"
+            className="transition-all duration-150 ease-out"
             imgAlt="Meaningful alt text for an image that is not purely decorative"
             imgSrc={thumbnailSrc}
             horizontal

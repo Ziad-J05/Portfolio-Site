@@ -30,7 +30,7 @@ export default function ContactPage() {
 
             <p className='text-lg'><a>Resume</a></p>
           ]} 
-          bottomMargin={false}
+          fixedWidth={true}
         />
       ]} />
       <Footer />

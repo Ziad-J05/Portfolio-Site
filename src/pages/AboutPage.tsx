@@ -30,7 +30,7 @@ export default function AboutPage() {
             </div>,
             
           ]} 
-          bottomMargin={false}
+          fixedWidth={true}
         />
       ]} />
       <Footer />
