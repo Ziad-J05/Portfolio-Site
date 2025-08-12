@@ -11,7 +11,7 @@ export default function ContentContainer({content, bottomMargin}: ContentContain
 
     /* TODO: add optional bottom margin using ternary operator on class */
     return(
-        <div className={bottomMargin ? 'w-2xl mx-auto mb-12' : 'w-2xl mx-auto'}>
+        <div className={bottomMargin ? 'max-w-2xl w-fit sm:px-0 md:px-8 lg:px-0 lg:w-2xl mx-auto mb-12' : 'w-2xl mx-auto'}>
             {content}
         </div>
     );
