@@ -34,8 +34,8 @@ const cardTheme = createTheme({
     img: {
       "base": "",
       horizontal: {
-        off: "rounded-t-md h-64 object-cover border-b-2",
-        on: "h-96 w-full rounded-t-lg object-cover md:h-auto md:w-48 md:rounded-none md:rounded-l-md border-r-2"
+        off: "h-0 w-0 rounded-t-md md:h-64 md:w-auto object-cover border-b-2",
+        on: "h-0 w-0 rounded-t-lg object-cover md:h-auto md:w-48 md:rounded-none md:rounded-l-md border-r-2"
       }
     }
   }
