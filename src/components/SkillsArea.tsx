@@ -15,12 +15,12 @@ const skillBadgeTheme = createTheme({
             "color": {
             "info": "bg-white border-2 hover:bg-white text-black",
             "light": "bg-white border-2 hover:bg-white text-black",
-            "teal": "bg-[#6ba5bf] border-2 hover:bg-white text-black",
-            "violet": "bg-[#6e95d4] border-2 hover:bg-white text-black",
-            "blue": "bg-[#6b8bbf] border-2 hover:bg-white text-black",
-            "green": "bg-[#6ab895] border-2 hover:bg-white text-black",
-            "yellow": "bg-[#bf986b] border-2 hover:bg-white text-black",
-            "orange": "bg-[#db9f74] border-2 hover:bg-white text-black",
+            "teal": "bg-[#65ccdb] border-2 hover:bg-white text-black",
+            "violet": "bg-[#8789ed] border-2 hover:bg-white text-black",
+            "blue": "bg-[#7fa8eb] border-2 hover:bg-white text-black",
+            "green": "bg-[#70db9b] border-2 hover:bg-white text-black",
+            "yellow": "bg-[#ffc963] border-2 hover:bg-white text-black",
+            "orange": "bg-[#ff9c5e] border-2 hover:bg-white text-black",
     
             },
             "size": {
@@ -99,16 +99,16 @@ function ColorFromSkillType(type: SkillType){
             color = "teal"
             break;
         case SkillType.Software:
-            color = "blue"
+            color = "orange"
             break;
         case SkillType.Library:
-            color = "orange"
+            color = "blue"
             break;
         case SkillType.Framework:
-            color = "orange"
+            color = "green"
             break;
         case SkillType.NonScriptLang:
-            color = "green"
+            color = "violet"
             break;
     }
 
