@@ -25,7 +25,7 @@ const buttonTheme = createTheme({
             xl: "h-[52px] px-6 text-base"
         },
         color: {
-            default: "bg-white hover:bg-white text-black border-2",
+            default: "bg-[var(--primary)] hover:bg-[var(--primary)] text-[var(--content)] border-2 border-black",
         },
     }   
 })

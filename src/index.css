@@ -2,3 +2,12 @@
 @plugin "flowbite-react/plugin/tailwindcss";
 @source "../.flowbite-react/class-list.json";
 
+/* Global variables */
+:root {
+    --primary: #4285f4ff;
+    --secondary: #efefefff;
+    --content: #fff;
+    --accent-lt: #c1d8ffff;
+    --accent-md: #a0c4ffff;
+    --accent-dk: #73a7ffff;
+}
