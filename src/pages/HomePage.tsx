@@ -45,7 +45,7 @@ function HomePage(){
     <>
     <NavigationBar />
         <IntroSection />
-        <div className="grid grid-cols-2 auto-rows-min bg-[var(--secondary)] border-t-4 px-16 pt-8 pb-16">
+        <div className="grid grid-cols-2 auto-rows-min bg-[var(--secondary)] border-t-4 px-12 pb-24 pt-12">
           <div className='col-span-2 col-start-1 row-start-1 justify-self-center'>      
             <ExperienceSection jobInfoList={jobInfoList} />
           </div>  
