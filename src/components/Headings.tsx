@@ -6,6 +6,6 @@ export function SectionHeading( {text}: {text: string} ){
 
 export function PageHeading( {text}: {text: string} ){
     return(
-        <h1 className="text-5xl w-4xl font-bold mb-4 mx-auto">{text}</h1>
+        <h1 className="text-5xl w-5xl font-bold mb-4 mx-auto">{text}</h1>
     );
 }

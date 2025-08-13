@@ -60,7 +60,7 @@ export function ProjectPage({projectName, companyName, description, sampleLink, 
         <MainContentArea width='6xl' content={[
             <>
             <PageHeading text={projectName} />
-            <p className="text-4xl w-4xl mx-auto font-regular">{companyName}</p>
+            <p className="text-4xl w-5xl mx-auto font-regular">{companyName}</p>
             <img className='w-6xl h-64 object-cover border-y-2 mt-4 mb-8' src={thumbnailSrc} />
 
             <div className='grid w-4xl mx-auto grid-rows-1 grid-cols-[1fr_calc(var(--spacing)*64)]'>

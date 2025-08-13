@@ -14,15 +14,15 @@ export default function ProjectsPage() {
   return (
     <>
         <NavigationBar />
-        <MainContentArea width='4xl' content={[
-          <ContentContainer 
-          content={[
-            <SectionHeading text="All Projects" />,
-            <ProjectArea projectDataList={MyProjects} />
-          ]} 
-          fixedWidth={true}
-          />   
-        ]} />
+        <main className='bg-[var(--secondary)] py-36 mx-auto w-6xl min-h-[calc(100vh-var(--text-lg)-8*var(--spacing))] border-l-2 border-r-2'>
+          <div className='w-5xl mx-auto mb-12'>
+            <SectionHeading text="All Projects" />
+          </div>
+            <div className="grid grid-auto-rows grid-cols-2 gap-2 px-8 w-6xl">
+              <ProjectArea projectDataList={MyProjects} />
+            </div>
+          
+        </main>
             
         <Footer />
     </>
