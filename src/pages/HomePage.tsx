@@ -45,6 +45,12 @@ function HomePage(){
     <>
     <NavigationBar />
         <IntroSection />
+        <div className='pt-4 w-full h-0'>
+          <p className='w-fit mx-auto relative -top-8
+                        bg-[var(--content)] px-2 py-1 text-xl font-semibold rounded-none border-2'>
+            &darr; Learn more about my skills &darr;
+          </p>
+        </div>
         <div className="grid grid-cols-2 auto-rows-min bg-[var(--secondary)] border-t-2 px-12 pb-24 pt-12">
           <div className='col-span-2 col-start-1 row-start-1 justify-self-center'>      
             <ExperienceSection jobInfoList={jobInfoList} />
