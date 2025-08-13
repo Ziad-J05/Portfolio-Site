@@ -51,13 +51,12 @@ function HomePage(){
             &darr; Learn more about my skills &darr;
           </p>
         </div>
-        <div className="grid grid-cols-2 auto-rows-min bg-[var(--secondary)] border-t-2 px-12 pb-24 pt-12">
-          <div className='col-span-2 col-start-1 row-start-1 justify-self-center'>      
+        <div className="grid grid-cols-1 auto-rows-min bg-[var(--secondary)] border-t-2 px-12 pb-24">  
+            <SkillsSection skills={skills}/>   
             <ExperienceSection jobInfoList={jobInfoList} />
-          </div>  
-          <div className='col-span-2 col-start-1 row-start-2 justify-self-center'>
+            
             <ProjectSection projectDataList={MyProjects.slice(0, 3)} />
-          </div>
+          
         </div>
     <Footer />
     </>

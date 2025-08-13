@@ -23,7 +23,7 @@ export default function ProjectSection({projectDataList}: {projectDataList: Proj
           body={body}
           thumbnailSrc={featuredProjectData.thumbnailSrc}
         />
-        <div className='w-xl flex gap-12 flex-col justify-center'>
+        <div className='w-xl flex gap-6 flex-col justify-center'>
           <div className="flex flex-col gap-6 w-full">
             <ProjectArea projectDataList={projectDataList.slice(1)} />
           </div>

@@ -1,6 +1,6 @@
 export function SectionHeading( {text}: {text: string} ){
     return(
-        <h2 className="text-center text-6xl font-bold my-12 ">{text}</h2>
+        <h2 className="text-center text-6xl font-bold mb-12 mt-24 ">{text}</h2>
     );
 }
 

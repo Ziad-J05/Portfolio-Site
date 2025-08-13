@@ -4,7 +4,7 @@
 
 /* Global variables */
 :root {
-    --primary: #4285f4ff;
+    --primary: rgb(61, 106, 242);
     --secondary: #efefefff;
     --content: #fff;
     --accent-lt: #c1d8ffff;

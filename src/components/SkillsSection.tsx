@@ -12,7 +12,7 @@ export default function SkillsSection({skills}: {skills: Skill[]}){
       <ContentContainer 
         content={[
           <SectionHeading text="Skills" />,
-          <div className="flex flex-wrap gap-2 mb-2">
+          <div className="flex flex-wrap justify-center gap-2 mb-2">
             <IconSkillsArea skills={skills} />
           </div>
         ]} 
