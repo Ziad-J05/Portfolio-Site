@@ -57,13 +57,16 @@ export function ProjectPage({projectName, companyName, description, sampleLink, 
     <>
         <NavigationBar />
 
-        <MainContentArea width='6xl' content={[
-            <>
-            <PageHeading text={projectName} />
-            <p className="text-4xl w-5xl mx-auto font-regular">{companyName}</p>
-            <img className='w-6xl h-64 object-cover border-y-2 mt-4 mb-8' src={thumbnailSrc} />
+        <div className='bg-[var(--content)] pt-36 pb-18 border-b-0 mx-auto'>
+            <h1 className="text-left text-7xl w-4xl font-bold mb-4 mx-auto">{projectName}</h1>
+            <p className="text-left text-5xl w-4xl mx-auto font-light">{companyName}</p>
+        </div>
 
-            <div className='grid w-4xl mx-auto grid-rows-1 grid-cols-[1fr_calc(var(--spacing)*64)]'>
+
+        <div className='bg-[var(--secondary)] pb-36 pt-18 mx-auto'>
+            
+            <img className='w-4xl mx-auto h-72 object-cover rounded-xl border-2' src={thumbnailSrc} />
+            <div className='mt-18 grid w-4xl mx-auto grid-rows-1 grid-cols-[1fr_calc(var(--spacing)*64)]'>
                 <div className='col-span-1 col-start-1 text-lg flex flex-col gap-4 w-2xl'>
                     {bodyParagraphs}
                 </div>
@@ -73,15 +76,13 @@ export function ProjectPage({projectName, companyName, description, sampleLink, 
                 </div>
             </div>            
 
-            <h2 className="text-5xl w-4xl font-semibold mb-4 mt-8 mx-auto">Process</h2>
+            <h2 className="text-left text-6xl w-4xl font-semibold my-8 mx-auto">Process</h2>
 
             <div className='grid grid-auto-rows-auto grid-cols-2 gap-4 w-4xl mx-auto '>
                 {captionedImageElements}
             </div>
-            </>
-        ]} />
-
-        <footer className="mx-auto text-lg w-6xl py-4 bg-[#F7EDE2] text-black border-2 border-b-0">
+        </div>
+        <footer className="mx-auto text-lg w-full py-4 bg-[var(--secondary)] text-black border-t-2">
             <p className='w-2xl mx-auto text-center'>&copy;2025 Ziad Jaafar - Made with React and Tailwind</p>
         </footer>
     </>
