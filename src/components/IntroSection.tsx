@@ -8,7 +8,7 @@ export default function IntroSection(){
             Hello, I'm<span className="block font-bold text-8xl text-[var(--secondary)] text-shadow-[4px_4px_0px_rgba(0,0,0,1),-2px_-2px_0_rgba(0,0,0,1),-2px_2px_0_rgba(0,0,0,1),2px_-2px_0_rgba(0,0,0,1)]">ZIAD</span>
             <span className="block font-bold text-8xl text-[var(--secondary)] text-shadow-[4px_4px_0px_rgba(0,0,0,1),-2px_-2px_0_rgba(0,0,0,1),-2px_2px_0_rgba(0,0,0,1),2px_-2px_0_rgba(0,0,0,1)] ml-4">JAAFAR</span>
           </h1>
-          <p className="justify-self-end-safe self-start row-start-2 row-end-3 col-start-1 col-end-2 text-lg">
+          <p className="justify-self-end-safe self-start row-start-2 row-end-3 col-start-1 col-end-2 text-xl font-semibold">
             Game developer + software developer based out of Pittsburgh, PA
           </p>
           <img

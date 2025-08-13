@@ -48,21 +48,21 @@ const timelineTheme = createTheme({
           vertical: ""
         },
         body: {
-          base: "bg-white border-2 border-black border-t-0 rounded-b-lg py-1 px-2 mb-1 text-lg font-normal text-black dark:text-gray-400"
+          base: "bg-[var(--content)] border-2 border-black border-t-0 rounded-b-lg py-1 px-2 mb-1 text-lg font-normal text-black dark:text-gray-400"
         },
         time: {
-          base: "pl-3 text-lg font-semibold leading-none text-black dark:text-gray-500"
+          base: "pl-0 text-lg font-semibold leading-none text-black dark:text-gray-500"
         },
         title: {
-          base: "bg-white flex border-2 border-black rounded-t-lg px-2 gap-2 text-2xl font-normal text-black dark:text-white"
+          base: "bg-[var(--accent-lt)] flex border-2 border-black rounded-t-lg px-2 gap-2 text-2xl font-normal text-black dark:text-white"
         }
       },
       point: {
         horizontal: "flex items-center",
-        line: "hidden h-0.5 w-full bg-blue-600 sm:flex dark:bg-gray-700",
+        line: "hidden h-0.5 w-full bg-black sm:flex dark:bg-gray-700",
         marker: {
           base: {
-            horizontal: "absolute -left-1.5 h-3 w-3 rounded-full border border-amber-400 bg-amber-400 dark:border-gray-900 dark:bg-gray-700",
+            horizontal: "absolute left-0 h-4 w-4 rounded-full shadow-[1px_2px_0px_0px_rgba(0,0,0,1)] border-2 border-black bg-[var(--accent-dk)] dark:border-gray-900 dark:bg-gray-700",
             vertical: "absolute -left-2 mt-2 h-4 w-4 rounded-full shadow-[1px_2px_0px_0px_rgba(0,0,0,1)] border-2 border-black bg-[var(--accent-lt)] dark:border-gray-900 dark:bg-gray-700"
           },
           icon: {

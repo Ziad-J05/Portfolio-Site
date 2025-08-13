@@ -5,7 +5,7 @@ const navBarTheme = createTheme({
 
   navbar:{
       root: {
-        base: "bg-[var(--content)] py-0 px-4 sm:py-0 border-b-2",
+        base: "bg-[var(--content)] py-0 px-4 sm:py-0 border-b-4",
         rounded: {
           on: "rounded",
           off: ""
@@ -23,7 +23,7 @@ const navBarTheme = createTheme({
         }
       },
       brand: {
-        base: "flex *:text-xl *:font-bold items-center hover:text-[var(--primary)] border-0"
+        base: "flex *:text-[1.5rem] *:font-bold *:tracking-wide items-center hover:text-[var(--primary)] border-0"
       },
       collapse: {
         base: "w-full md:block md:w-auto",
