@@ -46,8 +46,9 @@ function HomePage(){
     <NavigationBar />
         <IntroSection />
         <div className="grid grid-cols-2 auto-rows-min bg-[var(--secondary)] border-t-4 px-16 pt-8 pb-16">
-            <SkillsSection skills={skills}/>            
+          <div className='col-span-2 col-start-1 row-start-1 justify-self-center'>      
             <ExperienceSection jobInfoList={jobInfoList} />
+          </div>  
           <div className='col-span-2 col-start-1 row-start-2 justify-self-center'>
             <ProjectSection projectDataList={MyProjects.slice(0, 3)} />
           </div>

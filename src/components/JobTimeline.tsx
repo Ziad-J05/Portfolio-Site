@@ -102,7 +102,7 @@ export default function JobTimeline({jobInfoList}: {jobInfoList: JobInfo[]}){
   return(
     <>
       <ThemeProvider theme={timelineTheme}>
-        <Timeline>
+        <Timeline horizontal>
         
           {timelineItems}
         
