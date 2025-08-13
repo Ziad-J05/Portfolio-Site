@@ -12,20 +12,25 @@ import { MySkills} from '../data/MySkills';
 import { MyProjects } from '../data/MyProjects';
 
 /* const skills: Skill[] = Object.values(MySkills); */
-const skills: Skill[] = [
-  MySkills.CSharp,
-  MySkills.Unity,
-  MySkills.CPlusPlus,
+const frontend: Skill[] = [
   MySkills.JavaScript,
   MySkills.React,
   MySkills.HTML,
   MySkills.CSS,
-  MySkills.Java,
-  MySkills.Godot,
   MySkills.TypeScript,
   MySkills.Tailwind,
-  MySkills.Python,
+  
+]
+const backend: Skill[] = [
+  MySkills.CSharp,
+  MySkills.Unity,
+  MySkills.CPlusPlus,
+  MySkills.Java,
+  MySkills.Godot,
+]
+const other: Skill[] = [
   MySkills.Blender,
+  MySkills.Python,
   MySkills.Maya
 ]
 
@@ -52,7 +57,7 @@ function HomePage(){
           </p>
         </div>
         <div className="grid grid-cols-1 auto-rows-min bg-[var(--secondary)] border-t-2 px-12 pb-24">  
-            <SkillsSection skills={skills}/>   
+            <SkillsSection skills={[backend,frontend,other]}/>   
             <ExperienceSection jobInfoList={jobInfoList} />
             
             <ProjectSection projectDataList={MyProjects.slice(0, 3)} />

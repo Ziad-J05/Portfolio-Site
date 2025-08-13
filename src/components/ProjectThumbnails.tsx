@@ -20,7 +20,7 @@ interface FeaturedProjectThumbnailProps extends ProjectThumbnailProps{
     body: string
 }
 
-const cardTheme = createTheme({
+export const cardTheme = createTheme({
   card: {
     root: {
       "base": "relative flex rounded-lg bg-white border-2 border-black shadow-[2px_4px_0px_-1px_rgba(0,0,0,1)] group",
