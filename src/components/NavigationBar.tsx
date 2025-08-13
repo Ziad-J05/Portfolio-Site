@@ -5,7 +5,7 @@ const navBarTheme = createTheme({
 
   navbar:{
       root: {
-        base: "bg-[var(--content)] px-2 py-2 sm:px-4 border-b-4",
+        base: "bg-[var(--content)] py-0 px-4 sm:py-0 border-b-2",
         rounded: {
           on: "rounded",
           off: ""
@@ -15,7 +15,7 @@ const navBarTheme = createTheme({
           off: ""
         },
         inner: {
-          base: "mx-auto flex flex-wrap items-center justify-between",
+          base: "mx-auto flex flex-wrap items-stretch justify-between",
           fluid: {
             on: "",
             off: "container"
@@ -23,21 +23,21 @@ const navBarTheme = createTheme({
         }
       },
       brand: {
-        base: "flex items-center hover:text-[var(--primary)]"
+        base: "flex *:text-xl *:font-bold items-center hover:text-[var(--primary)] border-0"
       },
       collapse: {
         base: "w-full md:block md:w-auto",
-        list: "mt-4 flex flex-col md:mt-0 md:flex-row md:space-x-2 md:text-sm md:font-medium",
+        list: "flex flex-col md:flex-row md:space-x-0 md:text-sm md:font-medium",
         hidden: {
           on: "hidden",
           off: ""
         }
       },
       link: {
-        base: "block py-2 pl-3 pr-4 md:px-2 md:py-1 text-lg rounded-lg",
+        base: "block py-2 px-4 md:py-2 md:px-4 text-lg",
         active: {
           on: "bg-transparent text-white md:bg-transparent md:text-black",
-          off: "border-b border-gray-100 text-black hover:bg-gray-50 md:border-2 md:border-[var(--content)] md:hover:bg-[var(--primary)] md:hover:border-2 md:hover:border-black md:hover:text-[var(--content)] transition-all ease-out duration-100"
+          off: "border-0 border-gray-100 text-black hover:bg-gray-50 md:border-0 md:hover:bg-[var(--primary)] md:hover:border-0 md:hover:text-[var(--content)] transition-all ease-out duration-100"
         },
         disabled: {
           on: "text-gray-400 hover:cursor-not-allowed dark:text-gray-600",
@@ -63,9 +63,13 @@ function NavigationBar(){
         </NavbarBrand>
         <NavbarToggle />
         <NavbarCollapse>
+          <div className='border-x-[1px]' />
           <NavbarLink href="/about">About</NavbarLink>
+          <div className='border-x-[1px]' />
           <NavbarLink href="/projects">Projects</NavbarLink>
+          <div className='border-x-[1px]' />
           <NavbarLink href="/contact">Contact</NavbarLink>
+          <div className='border-x-[1px]' />
         </NavbarCollapse>
       </Navbar>
       </header>
