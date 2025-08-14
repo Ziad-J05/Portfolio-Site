@@ -1,3 +1,5 @@
+
+
 @import "tailwindcss";
 @plugin "flowbite-react/plugin/tailwindcss";
 @source "../.flowbite-react/class-list.json";
@@ -10,4 +12,7 @@
     --accent-lt: #c1d8ffff;
     --accent-md: #a0c4ffff;
     --accent-dk: #73a7ffff;
+
+    --heading: "Sora";
+    --body: "Cascadia Mono";
 }
