@@ -14,7 +14,7 @@ export default function ProjectSection({projectDataList}: {projectDataList: Proj
   return(
     <>
       <SectionHeading text="Projects" />
-      <div className='flex gap-12'>
+      <div className='flex gap-12 mx-auto'>
         
         <FeaturedProjectThumbnail 
           projectName={featuredProjectData.projectName} 

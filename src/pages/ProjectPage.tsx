@@ -57,7 +57,7 @@ export function ProjectPage({projectName, companyName, description, sampleLink, 
     <>
         <NavigationBar />
 
-        <div className='bg-[var(--content)] pt-24 pb-12 border-b-2 mx-auto'>
+        <div className='bg-[var(--content)] pt-24 pb-12 border-b-0 mx-auto'>
             <h1 className="text-left text-7xl w-4xl font-bold mb-4 mx-auto">{projectName}</h1>
             <p className="text-left text-5xl w-4xl mx-auto font-light">{companyName}</p>
         </div>
