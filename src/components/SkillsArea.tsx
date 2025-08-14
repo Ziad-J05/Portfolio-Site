@@ -11,7 +11,7 @@ import { Skill, SkillType } from './Skill';
 const skillBadgeTheme = createTheme({
     badge: {
         "root": {
-            "base": "flex h-fit items-center gap-1 font-semibold",
+            "base": "font-(family-name:--display-font) flex h-fit items-center gap-1 font-semibold",
             "color": {
             "info": "bg-white border-2 hover:bg-white text-black",
             "teal": "bg-[#65ccdb] border-2 hover:bg-white text-black",

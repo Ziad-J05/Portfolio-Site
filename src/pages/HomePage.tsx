@@ -51,7 +51,7 @@ function HomePage(){
     <NavigationBar />
         <IntroSection />
         <div className='pt-4 w-full h-0'>
-          <p className='font-["Sora"] w-fit mx-auto relative -top-8
+          <p className='font-(family-name:--display-font) w-fit mx-auto relative -top-8
                         bg-[var(--content)] px-2 py-1 text-xl font-semibold rounded-none border-2'>
             &darr; Learn more about my expereince + projects &darr;
           </p>

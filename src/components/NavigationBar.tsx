@@ -5,7 +5,7 @@ const navBarTheme = createTheme({
 
   navbar:{
       root: {
-        base: "bg-[var(--content)] py-0 px-4 sm:py-0 border-b-4",
+        base: "font-(family-name:--display-font) bg-[var(--content)] py-0 px-4 sm:py-0 border-b-4",
         rounded: {
           on: "rounded",
           off: ""
