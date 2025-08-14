@@ -8,7 +8,7 @@ interface MainContentAreaProps{
 
 function MainContentArea({width, content}: MainContentAreaProps){
 
-  const mainClass:string = "bg-[var(--secondary)] py-36 mx-auto w-" + width + " min-h-[calc(100vh-var(--text-lg)-8*var(--spacing))] border-l-2 border-r-2"
+  const mainClass:string = "bg-[var(--secondary)] py-24 mx-auto w-full min-h-[calc(100vh-var(--text-lg)-8*var(--spacing))]"
 
   return(
     <>

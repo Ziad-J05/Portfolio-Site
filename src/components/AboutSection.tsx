@@ -11,7 +11,7 @@ export default function AboutSection({content}: {content: string[]}){
         
 
     return(
-        <div className="h-fit">
+        <div className="h-fit flex flex-col gap-6">
             {aboutText}
         </div>
     )

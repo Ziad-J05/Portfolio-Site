@@ -6,6 +6,8 @@ export function SectionHeading( {text}: {text: string} ){
 
 export function PageHeading( {text}: {text: string} ){
     return(
-        <h1 className="font-(family-name:--display-font) text-center text-6xl w-5xl font-bold mb-4 mx-auto">{text}</h1>
+        <div className='font-(family-name:--display-font) bg-[var(--content)] pt-24 pb-12 border-b-0 mx-auto'>
+            <h1 className="text-center text-7xl w-4xl font-bold mb-4 mx-auto">{text}</h1>
+        </div>
     );
 }
