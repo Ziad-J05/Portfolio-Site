@@ -3,7 +3,7 @@ import { LinkButton } from "./LinkButton"
 export default function IntroSection(){
   return (
     <>
-        <section className="grid grid-cols-[1fr_calc(64*var(--spacing))] grid-auto-rows-auto gap-4 w-3xl mx-auto h-auto mb-16 pt-32">
+        <section className="font-[Sora] grid grid-cols-[1fr_calc(64*var(--spacing))] grid-auto-rows-auto gap-4 w-3xl mx-auto h-auto mb-16 pt-32">
           <h1 className="justify-self-stretch self-center row-start-1 row-end-2 col-start-1 col-end-2 font-light text-5xl ">
             Hello, I'm<span className="block font-bold text-9xl text-[var(--secondary)] text-shadow-[6px_6px_0px_rgba(0,0,0,1),-3px_-3px_0_rgba(0,0,0,1),-3px_3px_0_rgba(0,0,0,1),3px_-3px_0_rgba(0,0,0,1)]">ZIAD</span>
             <span className="block font-bold text-9xl text-[var(--secondary)] text-shadow-[6px_6px_0px_rgba(0,0,0,1),-3px_-3px_0_rgba(0,0,0,1),-3px_3px_0_rgba(0,0,0,1),3px_-3px_0_rgba(0,0,0,1)] ml-12 pr-2">JAAFAR</span>
