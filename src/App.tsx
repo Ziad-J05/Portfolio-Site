@@ -6,11 +6,12 @@ import ProjectsPage from './pages/ProjectsPage'
 import ContactPage from './pages/ContactPage'
 import { CreateProjectInfoPages } from './pages/ProjectPage'
 import { MyProjects } from './data/MyProjects'
+import { ThemeProvider, createTheme } from 'flowbite-react'
 
 function App() {
 
   return (
-    <>
+    <div className="font-(family-name:--body-font)">
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<HomePage />}/>
@@ -20,7 +21,7 @@ function App() {
         {CreateProjectInfoPages({projectDataList: MyProjects})}
       </Routes>
     </BrowserRouter>    
-    </>
+    </div>
   )
 }
 

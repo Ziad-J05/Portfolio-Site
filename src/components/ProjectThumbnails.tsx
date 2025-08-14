@@ -56,11 +56,11 @@ export function FeaturedProjectThumbnail({projectName, role, skills, body, thumb
             >
                 <div>
                     <div className="flex items-baseline border-b-2">
-                        <h3 className="text-3xl font-semibold tracking-tight px-2 py-1 text-black">
+                        <h3 className="font-(family-name:--display-font) text-3xl font-semibold tracking-tight px-2 py-1 text-black">
                             {projectName}
                         </h3>
                         <div className="border-l-2 self-stretch" />
-                        <p className="text-3xl text-black px-2 py-1 mb-0">
+                        <p className="font-(family-name:--display-font) text-3xl text-black px-2 py-1 mb-0">
                             {role}
                         </p>
                     </div>
@@ -100,7 +100,7 @@ export function ProjectThumbnail( {projectName, role, skills, thumbnailSrc}: Pro
             horizontal
             >
                 <div>
-                    <h3 className="text-2xl font-semibold tracking-tight text-black border-b-2 w-full px-2 py-1">
+                    <h3 className="font-(family-name:--display-font) text-2xl font-semibold tracking-tight text-black border-b-2 w-full px-2 py-1">
                         {projectName}
                     </h3>
                     <div className="px-2 py-1">

@@ -54,7 +54,7 @@ const timelineTheme = createTheme({
           base: "pl-0 text-lg font-semibold leading-none text-black dark:text-gray-500"
         },
         title: {
-          base: "bg-[var(--accent-lt)] flex border-2 border-black rounded-t-lg px-2 gap-2 text-2xl font-normal text-black dark:text-white"
+          base: "bg-[var(--accent-lt)] flex border-2 border-black rounded-t-lg px-2 py-1 gap-2 text-2xl font-normal text-black dark:text-white"
         }
       },
       point: {
@@ -87,9 +87,7 @@ export default function JobTimeline({jobInfoList}: {jobInfoList: JobInfo[]}){
               <TimelineContent>
               <TimelineTime>{jobInfo.startDate}-{jobInfo.endDate}</TimelineTime>
               <TimelineTitle>
-                <div className='font-semibold'>{jobInfo.title}</div>
-                <div className="self-stretch border-l-2" />
-                <div>{jobInfo.employer}</div>
+                <div className='font-(family-name:--display-font) text-3xl font-semibold'>{jobInfo.employer}</div>
                 </TimelineTitle>
               <TimelineBody>
                 <Description text={jobInfo.description} />

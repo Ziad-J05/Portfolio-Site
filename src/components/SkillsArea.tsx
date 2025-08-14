@@ -30,7 +30,7 @@ const skillBadgeTheme = createTheme({
             "sm": "p-1.5 text-sm",
             "md": "p-1.5 text-md",
             "lg": "p-2 text-lg",
-            "xl": "p-3 text-2xl"
+            "xl": "p-3 text-xl"
             }
         },
         "icon": {
