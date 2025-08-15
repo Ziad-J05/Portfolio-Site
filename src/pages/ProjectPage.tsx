@@ -73,6 +73,7 @@ export function ProjectPage({projectName, companyName, description, sampleLink, 
                 <div className='justify-self-stretch px-8 col-span-1 col-start-2 flex flex-col gap-8'>
                     <LinkButtonFull text='View Project' link={sampleLink}/>
                     <LinkButtonFull text='Github' link={githubLink}/>
+                    <LinkButtonFull text='View Live Demo' link={githubLink}/>
                 </div>
             </div>            
 

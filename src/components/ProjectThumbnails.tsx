@@ -8,6 +8,7 @@ import {
 import { SkillsArea } from './SkillsArea';
 import { Skill } from './Skill';
 import { GetProjectPageLink, ProjectData } from './ProjectData';
+import { ArrowRight } from './Icons';
 
 interface ProjectThumbnailProps{
     projectName: string
@@ -74,7 +75,7 @@ export function FeaturedProjectThumbnail({projectName, role, skills, body, thumb
                             {body}
                         </p>
 
-                        <a href={projectPageLink} className='text-lg font-semibold text-gray-400 group-hover:text-black transition-all ease-out duration-150'>More info &rarr;</a>
+                        <a href={projectPageLink} className='text-lg font-semibold text-black group-hover:text-gray-400 transition-all ease-out duration-150'>More info<div className='inline ml-2'><ArrowRight/></div></a>
                     </div>
                 </div>
             </Card>
@@ -111,7 +112,7 @@ export function ProjectThumbnail( {projectName, role, skills, thumbnailSrc}: Pro
                         <p className="font-(family-name:--display-font) text-xl text-black">
                             {role}
                         </p>
-                        <a href={projectPageLink} className='text-lg font-semibold text-gray-400 group-hover:text-black transition-all ease-out duration-150'>More info &rarr;</a>
+                        <a href={projectPageLink} className='text-lg font-semibold text-black group-hover:text-gray-400 transition-all ease-out duration-150'>More info<div className='inline ml-2'><ArrowRight/></div></a>
                     </div>
                 </div>
 
