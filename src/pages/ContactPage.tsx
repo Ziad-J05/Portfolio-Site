@@ -48,7 +48,7 @@ function AnchorWidget({label, href, display, icon}: AnchorWidgetProps){
   return(
     <div className='flex gap-3'>
 
-      <div className='p-5 border-2 rounded-xl bg-[var(--accent-lt)] shadow-(--shadow)'>{icon}</div>
+      <div className='size-18 flex justify-center content-center items-center border-2 rounded-xl bg-[var(--accent-lt)] shadow-(--shadow)'>{icon}</div>
     
       <div className='flex flex-col justify-evenly'>
         <div className='mr-4 font-(family-name:--display-font) font-semibold text-2xl'>
