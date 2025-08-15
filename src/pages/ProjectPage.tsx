@@ -66,8 +66,8 @@ export function ProjectPage({projectName, companyName, description, sampleLink, 
         <div className='bg-[var(--secondary)] pb-24 pt-12 mx-auto'>
             
             <img className='w-4xl mx-auto h-72 object-cover rounded-xl border-2' src={thumbnailSrc} />
-            <div className='mt-12 grid w-4xl mx-auto grid-rows-1 grid-cols-[1fr_calc(var(--spacing)*64)]'>
-                <div className='col-span-1 col-start-1 text-lg flex flex-col gap-4 w-2xl'>
+            <div className='mt-12 grid w-4xl mx-auto grid-rows-1 grid-cols-[1fr_calc(var(--spacing)*72)]'>
+                <div className='col-span-1 col-start-1 text-lg flex flex-col gap-4 w-full'>
                     {bodyParagraphs}
                 </div>
                 <div className='justify-self-stretch px-8 col-span-1 col-start-2 flex flex-col gap-8'>

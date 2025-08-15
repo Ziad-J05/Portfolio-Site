@@ -20,8 +20,8 @@ const buttonTheme = createTheme({
         size: {
             xs: "h-8 px-3 text-xs",
             sm: "h-9 px-3 text-sm",
-            md: "h-10 px-5 text-lg w-fit",
-            lg: "h-10 px-5 text-lg",
+            md: "h-fit py-2 px-5 text-2xl w-fit",
+            lg: "h-fit py-2 px-5 text-2xl",
             xl: "h-[52px] px-6 text-base"
         },
         color: {

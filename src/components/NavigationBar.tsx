@@ -5,7 +5,7 @@ const navBarTheme = createTheme({
 
   navbar:{
       root: {
-        base: "font-(family-name:--display-font) bg-[var(--content)] py-0 px-4 sm:py-0 border-b-4",
+        base: "font-(family-name:--display-font) bg-[var(--content)] py-0 pr-0 pl-4 sm:pr-0 sm:pl-4 sm:py-0 border-b-4",
         rounded: {
           on: "rounded",
           off: ""
@@ -23,7 +23,7 @@ const navBarTheme = createTheme({
         }
       },
       brand: {
-        base: "flex *:text-[1.5rem] *:font-bold *:tracking-wide items-center hover:text-[var(--primary)] border-0"
+        base: "flex text-3xl font-bold tracking-wide items-center hover:text-[var(--primary)] border-0 transition-all ease-out duration-100"
       },
       collapse: {
         base: "w-full md:block md:w-auto",
@@ -34,7 +34,7 @@ const navBarTheme = createTheme({
         }
       },
       link: {
-        base: "block py-2 px-4 md:py-2 md:px-4 text-lg",
+        base: "block py-2 px-4 md:py-2 md:px-4 text-2xl",
         active: {
           on: "bg-transparent text-white md:bg-transparent md:text-black",
           off: "border-0 border-gray-100 text-black hover:bg-gray-50 md:border-0 md:hover:bg-[var(--primary)] md:hover:border-0 md:hover:text-[var(--content)] transition-all ease-out duration-100"
@@ -59,7 +59,7 @@ function NavigationBar(){
       <header className="fixed w-full z-2">
       <Navbar fluid>
         <NavbarBrand href="/">
-          <span className="self-center whitespace-nowrap text-xl font-semibold dark:text-white">Ziad Jaafar</span>
+          Ziad Jaafar
         </NavbarBrand>
         <NavbarToggle />
         <NavbarCollapse>
@@ -69,7 +69,6 @@ function NavigationBar(){
           <NavbarLink href="/projects">Projects</NavbarLink>
           <div className='border-x-[1px]' />
           <NavbarLink href="/contact">Contact</NavbarLink>
-          <div className='border-x-[1px]' />
         </NavbarCollapse>
       </Navbar>
       </header>
