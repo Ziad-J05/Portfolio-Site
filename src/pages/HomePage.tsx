@@ -10,6 +10,7 @@ import Footer from '../components/Footer';
 import { Skill } from '../components/Skill';
 import { MySkills} from '../data/MySkills';
 import { MyProjects } from '../data/MyProjects';
+import { ArrowDown, AngleDown } from '../components/Icons';
 
 /* const skills: Skill[] = Object.values(MySkills); */
 const frontend: Skill[] = [
@@ -53,7 +54,7 @@ function HomePage(){
         <div className='pt-4 w-full h-0'>
           <p className='font-(family-name:--display-font) w-fit mx-auto relative -top-8
                         bg-[var(--content)] px-2 py-1 text-xl font-semibold rounded-none border-2'>
-            &darr; Learn more about my expereince + projects &darr;
+            <AngleDown/> Learn more about my expereince + projects <AngleDown/>
           </p>
         </div>
         <div className="grid grid-cols-1 auto-rows-min bg-[var(--secondary)] border-t-2 px-12 pb-24">  

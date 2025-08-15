@@ -1,14 +1,16 @@
+import { ReactElement } from 'react';
 import '../index.css'
 import { 
     Button,
     createTheme,
     ThemeProvider,
-    
 } from 'flowbite-react'
+import { ArrowRight } from './Icons';
 
 interface LinkButtonProps {
     text: string;
     link: string;
+    arrow?: boolean;
 }
 
 const buttonTheme = createTheme({
@@ -30,18 +32,19 @@ const buttonTheme = createTheme({
     }   
 })
 
-export function LinkButton({text, link}: LinkButtonProps){
+export function LinkButton({text, link, arrow}: LinkButtonProps){
     return(
         <ThemeProvider theme={buttonTheme}>
-            <Button as="a" href={link} size="md" color="default" className='transition-all duration-150 ease-out'>{text}</Button>
+            <Button as="a" href={link} size="md" color="default" className='transition-all duration-150 ease-out'>{text}{arrow ? <div className='ml-2'><ArrowRight /></div>: <></>}</Button>
         </ThemeProvider>
     );
 }
 
-export function LinkButtonFull({text, link}: LinkButtonProps){
+export function LinkButtonFull({text, link, arrow}: LinkButtonProps){
+
     return(
         <ThemeProvider theme={buttonTheme}>
-            <Button fullSized as="a" href={link} size="lg" color="default" className='transition-all duration-150 ease-out'>{text}</Button>
+            <Button fullSized as="a" href={link} size="lg" color="default" className='transition-all duration-150 ease-out'>{text}{arrow ? <ArrowRight />: <></>}</Button>
         </ThemeProvider>
     );
 }

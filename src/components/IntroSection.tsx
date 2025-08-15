@@ -16,7 +16,7 @@ export default function IntroSection(){
             src="/placeholder-photo.jpg"
           />
           <div className="self-center row-start-2 row-end-3 col-start-2 col-end-3">
-            <LinkButton text="Get in contact" link="/contact" />
+            <LinkButton text="Get in contact" link="/contact" arrow/>
           </div>
         </section>
     </>

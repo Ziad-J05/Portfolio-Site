@@ -29,7 +29,7 @@ export default function ProjectSection({projectDataList}: {projectDataList: Proj
       {featuredProjectThumbnails}
 
       <div className='w-lg flex justify-center content-center items-center'>
-        <LinkButton text="All Projects" link="/projects" />
+        <LinkButton text="All Projects" link="/projects" arrow/>
       </div>
       
 
