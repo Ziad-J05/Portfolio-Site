@@ -13,4 +13,10 @@
 
     --display-font: 'Sora';
     --body-font: 'Cascadia Mono';
+
+    --shadow: 4px 4px 0px 0px rgba(0,0,0,1);
+    --shadow-hover: 6px 6px 0px 0px rgba(0,0,0,1);
+    --shadow-hover-lg: 8px 8px 0px 0px rgba(0,0,0,1);
+    --shadow-active: 2px 2px 0px 0px rgba(0,0,0,1);
+    --shadow-decor: 12px 12px 0px 0px var(--primary);
 }

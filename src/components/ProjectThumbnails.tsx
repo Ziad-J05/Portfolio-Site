@@ -23,13 +23,13 @@ interface FeaturedProjectThumbnailProps extends ProjectThumbnailProps{
 export const cardTheme = createTheme({
   card: {
     root: {
-      "base": "relative flex rounded-lg bg-white border-2 border-black shadow-[2px_4px_0px_-1px_rgba(0,0,0,1)] group",
+      "base": "relative flex rounded-lg bg-white border-2 border-black shadow-(--shadow) group",
       "children": "flex h-full w-full flex-col justify-center gap-4 p-0",
       horizontal: {
         "off": "max-w-lg flex-col",
         "on": "flex-col w-full md:max-w-full md:flex-row"
       },
-      "href": "hover:shadow-[6px_8px_0px_-1px_rgba(0,0,0,1)] hover:-translate-[4px] hover:bg-white"
+      "href": "hover:shadow-(--shadow-hover-lg) hover:-translate-[4px] hover:bg-white"
     },
     img: {
       "base": "",

@@ -19,10 +19,11 @@ export default function AboutPage() {
       <NavigationBar />
       <PageHeading text="About Me" />
       <MainContentArea width='4xl' content={[
-        <div className='flex gap-12 px-12'>
+        <div className='flex gap-12 px-12 justify-center'>
               <AboutSection content={aboutSectionContent}/>
               <img
-                className="block size-96 object-cover border-2 rounded-xl"
+                className="block size-96 object-cover border-4 rounded-3xl
+                           shadow-(--shadow-decor)"
                 src="/placeholder-photo.jpg"
               />
         </div>

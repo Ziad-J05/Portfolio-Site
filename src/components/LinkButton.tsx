@@ -13,7 +13,7 @@ interface LinkButtonProps {
 
 const buttonTheme = createTheme({
     button: {
-        base: "font-(family-name:--display-font) relative flex shadow-[2px_4px_0px_-1px_rgba(0,0,0,1)] items-center justify-center rounded-lg text-center font-medium hover:-translate-[2px] hover:shadow-[4px_6px_0px_-1px_rgba(0,0,0,1)] active:translate-[2px] active:shadow-[0px_2px_0px_-1px_rgba(0,0,0,1)] focus:ring-0",
+        base: "font-(family-name:--display-font) relative flex shadow-(--shadow) items-center justify-center rounded-lg text-center font-medium hover:-translate-[2px] hover:shadow-(--shadow-hover) active:translate-[2px] active:shadow-(--shadow-active) focus:ring-0",
         disabled: "pointer-events-none opacity-50",
         fullSized: "w-full",
         pill: "rounded-full",
