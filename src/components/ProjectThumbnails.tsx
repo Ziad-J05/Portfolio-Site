@@ -70,7 +70,7 @@ export function FeaturedProjectThumbnail({projectName, role, skills, body, thumb
                             <SkillsArea skills={skills} />
                         </div>
                         
-                        <p className="font-normal text-black text-lg">
+                        <p className="font-normal text-black text-lg line-clamp-4">
                             {body}
                         </p>
 
@@ -108,7 +108,7 @@ export function ProjectThumbnail( {projectName, role, skills, thumbnailSrc}: Pro
                         <div className="flex gap-2 my-0.5">
                             <SkillsArea skills={skills} />
                         </div>
-                        <p className="text-lg text-black">
+                        <p className="font-(family-name:--display-font) text-xl text-black">
                             {role}
                         </p>
                         <a href={projectPageLink} className='text-lg font-semibold text-gray-400 group-hover:text-black transition-all ease-out duration-150'>More info &rarr;</a>
