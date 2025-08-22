@@ -14,9 +14,9 @@ export default function SkillsSection({skills}: {skills: Skill[][]}){
       <ContentContainer 
         content={[
           <SectionHeading text="Skills" />,
-          <div className='grid grid-rows-1 grid-cols-3 gap-6 max-w-7xl'>
+          <div className='flex flex-col lg:flex-row gap-6 max-w-lg lg:max-w-7xl'>
 
-              <div className='py-4 px-4 bg-[var(--content)] border-2 rounded-lg flex flex-col justify-between align-top gap-4'>
+              <div className='basis-0 grow py-4 px-4 bg-[var(--content)] border-2 rounded-lg flex flex-col justify-between align-top gap-4'>
                 <div className='flex flex-col justify-start gap-4'>
                   <h3 className="font-(family-name:--display-font) text-center text-4xl font-semibold tracking-tight px-2 py-1 text-black">
                               Backend...
@@ -28,7 +28,7 @@ export default function SkillsSection({skills}: {skills: Skill[][]}){
                 </div>
               </div>
 
-              <div className='py-4 px-4 bg-[var(--content)] border-2 rounded-lg flex flex-col justify-between align-top gap-4'>
+              <div className='basis-0 grow py-4 px-4 bg-[var(--content)] border-2 rounded-lg flex flex-col justify-between align-top gap-4'>
                 <div className='flex flex-col justify-start gap-4'>
                   <h3 className="font-(family-name:--display-font) text-center text-4xl font-semibold tracking-tight px-2 py-1 text-black">
                               ...Frontend...
@@ -40,7 +40,7 @@ export default function SkillsSection({skills}: {skills: Skill[][]}){
                 </div>
               </div>
               
-              <div className='py-4 px-4 bg-[var(--content)] border-2 rounded-lg flex flex-col justify-between align-top gap-4'>
+              <div className='basis-0 grow py-4 px-4 bg-[var(--content)] border-2 rounded-lg flex flex-col justify-between align-top gap-4'>
                 <div className='flex flex-col justify-start gap-4'>
                   <h3 className="font-(family-name:--display-font) text-center text-4xl font-semibold tracking-tight px-2 py-1 text-black">
                             ...and More!
