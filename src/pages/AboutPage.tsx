@@ -2,7 +2,7 @@ import '../index.css'
 import NavigationBar from '../components/NavigationBar'
 import MainContentArea from '../components/MainContentArea'
 import ContentContainer from '../components/ContentContainer'
-import { SectionHeading } from '../components/Headings'
+import { SectionHeading, PageHeading } from '../components/Headings'
 import AboutSection from '../components/AboutSection'
 import Footer from '../components/Footer'
 
@@ -17,21 +17,16 @@ export default function AboutPage() {
   return (
     <>
       <NavigationBar />
+      <PageHeading text="About Me" />
       <MainContentArea width='4xl' content={[
-        <ContentContainer 
-          content={[
-            <SectionHeading text="About Me" />,
-            <div className='flex gap-4'>
+        <div className='flex gap-12 px-12 justify-center'>
               <AboutSection content={aboutSectionContent}/>
               <img
-                className="block w-64 h-96 object-cover border-2 rounded-xl"
+                className="block size-96 object-cover border-4 rounded-3xl
+                           shadow-(--shadow-decor)"
                 src="/placeholder-photo.jpg"
               />
-            </div>,
-            
-          ]} 
-          bottomMargin={false}
-        />
+        </div>
       ]} />
       <Footer />
     </>

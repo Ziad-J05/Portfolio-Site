@@ -6,15 +6,11 @@ import JobTimeline from './JobTimeline';
 
 export default function ExperienceSection({jobInfoList}: {jobInfoList: JobInfo[]}){
   return(
-    <>
-      <ContentContainer 
-        content={[
-          <SectionHeading text="Experience" />,
+    <div className='max-w-7xl mx-auto'>
+          <SectionHeading text="Experience" />
           <JobTimeline jobInfoList={jobInfoList} />
-        ]} 
-        bottomMargin={true}
-      />
-    </>
+          
+    </div>
   )
 }
 

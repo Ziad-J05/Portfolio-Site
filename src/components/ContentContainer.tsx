@@ -3,15 +3,15 @@ import '../index.css'
 
 interface ContentContainerProps {
       content: ReactElement[];
-      bottomMargin: boolean;
+      fixedWidth: boolean;
     }
 
 
-export default function ContentContainer({content, bottomMargin}: ContentContainerProps){
+export default function ContentContainer({content, fixedWidth}: ContentContainerProps){
 
     /* TODO: add optional bottom margin using ternary operator on class */
     return(
-        <div className={bottomMargin ? 'max-w-2xl w-fit sm:px-0 md:px-8 lg:px-0 lg:w-2xl mx-auto mb-12' : 'w-2xl mx-auto'}>
+        <div className={fixedWidth ? 'w-2xl mx-auto mb-12' : 'w-fit mx-auto'}>
             {content}
         </div>
     );

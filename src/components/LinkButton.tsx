@@ -1,47 +1,50 @@
+import { ReactElement } from 'react';
 import '../index.css'
 import { 
     Button,
     createTheme,
     ThemeProvider,
-    
 } from 'flowbite-react'
+import { ArrowRight } from './Icons';
 
 interface LinkButtonProps {
     text: string;
     link: string;
+    arrow?: boolean;
 }
 
 const buttonTheme = createTheme({
     button: {
-        base: "relative flex shadow-[2px_4px_0px_-1px_rgba(0,0,0,1)] items-center justify-center rounded-lg text-center font-medium hover:-translate-[2px] hover:shadow-[4px_6px_0px_-1px_rgba(0,0,0,1)] active:translate-[2px] active:shadow-[0px_2px_0px_-1px_rgba(0,0,0,1)] focus:ring-0",
+        base: "font-(family-name:--display-font) relative flex shadow-(--shadow) items-center justify-center rounded-lg text-center font-medium hover:-translate-[2px] hover:shadow-(--shadow-hover) active:translate-[2px] active:shadow-(--shadow-active) focus:ring-0",
         disabled: "pointer-events-none opacity-50",
         fullSized: "w-full",
         pill: "rounded-full",
         size: {
             xs: "h-8 px-3 text-xs",
             sm: "h-9 px-3 text-sm",
-            md: "h-10 px-5 text-lg w-fit",
-            lg: "h-10 px-5 text-lg",
+            md: "h-fit py-2 px-5 text-2xl w-fit",
+            lg: "h-fit py-2 px-5 text-2xl",
             xl: "h-[52px] px-6 text-base"
         },
         color: {
-            default: "bg-white hover:bg-white text-black border-2",
+            default: "bg-[var(--primary)] hover:bg-[var(--primary)] text-[var(--content)] border-2 border-black",
         },
     }   
 })
 
-export function LinkButton({text, link}: LinkButtonProps){
+export function LinkButton({text, link, arrow}: LinkButtonProps){
     return(
         <ThemeProvider theme={buttonTheme}>
-            <Button as="a" href={link} size="md" color="default" className='transition-all duration-150 ease-out'>{text}</Button>
+            <Button as="a" href={link} size="md" color="default" className='transition-all duration-150 ease-out'>{text}{arrow ? <div className='ml-2'><ArrowRight /></div>: <></>}</Button>
         </ThemeProvider>
     );
 }
 
-export function LinkButtonFull({text, link}: LinkButtonProps){
+export function LinkButtonFull({text, link, arrow}: LinkButtonProps){
+
     return(
         <ThemeProvider theme={buttonTheme}>
-            <Button fullSized as="a" href={link} size="lg" color="default" className='transition-all duration-150 ease-out'>{text}</Button>
+            <Button fullSized as="a" href={link} size="lg" color="default" className='transition-all duration-150 ease-out'>{text}{arrow ? <ArrowRight />: <></>}</Button>
         </ThemeProvider>
     );
 }

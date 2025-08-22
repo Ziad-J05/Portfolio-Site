@@ -10,22 +10,28 @@ import Footer from '../components/Footer';
 import { Skill } from '../components/Skill';
 import { MySkills} from '../data/MySkills';
 import { MyProjects } from '../data/MyProjects';
+import { ArrowDown, AngleDown } from '../components/Icons';
 
 /* const skills: Skill[] = Object.values(MySkills); */
-const skills: Skill[] = [
-  MySkills.CSharp,
-  MySkills.Unity,
-  MySkills.CPlusPlus,
+const frontend: Skill[] = [
   MySkills.JavaScript,
   MySkills.React,
   MySkills.HTML,
   MySkills.CSS,
-  MySkills.Java,
-  MySkills.Godot,
   MySkills.TypeScript,
   MySkills.Tailwind,
-  MySkills.Python,
+  
+]
+const backend: Skill[] = [
+  MySkills.CSharp,
+  MySkills.Unity,
+  MySkills.CPlusPlus,
+  MySkills.Java,
+  MySkills.Godot,
+]
+const other: Skill[] = [
   MySkills.Blender,
+  MySkills.Python,
   MySkills.Maya
 ]
 
@@ -44,12 +50,20 @@ function HomePage(){
   return(
     <>
     <NavigationBar />
-      <MainContentArea width='4xl' content={[
-        <IntroSection />,
-        <SkillsSection skills={skills}/>,
-        <ExperienceSection jobInfoList={jobInfoList} />,
-        <ProjectSection projectDataList={MyProjects.slice(0, 3)} />
-      ]} />
+        <IntroSection />
+        <div className='pt-4 w-full h-0'>
+          <p className='font-(family-name:--display-font) w-fit mx-auto relative -top-8
+                        bg-[var(--content)] px-2 py-1 text-xl font-semibold rounded-none border-2'>
+            <AngleDown/> Learn more about my expereince + projects <AngleDown/>
+          </p>
+        </div>
+        <div className="grid grid-cols-1 auto-rows-min bg-[var(--secondary)] border-t-2 px-12 pb-24">  
+            <SkillsSection skills={[backend,frontend,other]}/>   
+            <ExperienceSection jobInfoList={jobInfoList} />
+            
+            <ProjectSection projectDataList={MyProjects.slice(0, 3)} />
+          
+        </div>
     <Footer />
     </>
   )

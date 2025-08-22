@@ -11,16 +11,18 @@ import { Skill, SkillType } from './Skill';
 const skillBadgeTheme = createTheme({
     badge: {
         "root": {
-            "base": "flex h-fit items-center gap-1 font-semibold",
+            "base": "font-(family-name:--display-font) flex h-fit items-center gap-1 font-semibold",
             "color": {
             "info": "bg-white border-2 hover:bg-white text-black",
-            "light": "bg-white border-2 hover:bg-white text-black",
             "teal": "bg-[#65ccdb] border-2 hover:bg-white text-black",
             "violet": "bg-[#8789ed] border-2 hover:bg-white text-black",
             "blue": "bg-[#7fa8eb] border-2 hover:bg-white text-black",
             "green": "bg-[#70db9b] border-2 hover:bg-white text-black",
             "yellow": "bg-[#ffc963] border-2 hover:bg-white text-black",
             "orange": "bg-[#ff9c5e] border-2 hover:bg-white text-black",
+            "light": "bg-[var(--accent-lt)] border-2 hover:bg-[var(--accent-lt)] text-black",
+            "medium": "bg-[var(--accent-md)] border-2 text-black",
+            "dark": "bg-[var(--accent-dk)] border-2 hover:bg-[var(--accent-dk)]  text-black",
     
             },
             "size": {
@@ -28,7 +30,7 @@ const skillBadgeTheme = createTheme({
             "sm": "p-1.5 text-sm",
             "md": "p-1.5 text-md",
             "lg": "p-2 text-lg",
-            "xl": "p-3 text-2xl"
+            "xl": "p-3 text-xl"
             }
         },
         "icon": {
@@ -96,19 +98,19 @@ function ColorFromSkillType(type: SkillType){
 
     switch(type){
         case SkillType.Language:
-            color = "teal"
+            color = "light"
             break;
         case SkillType.Software:
-            color = "orange"
+            color = "medium"
             break;
         case SkillType.Library:
-            color = "blue"
+            color = "medium"
             break;
         case SkillType.Framework:
-            color = "green"
+            color = "medium"
             break;
         case SkillType.NonScriptLang:
-            color = "violet"
+            color = "medium"
             break;
     }
 

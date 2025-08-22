@@ -23,7 +23,7 @@ export const MyProjects: ProjectData[] = [
         ]
     },
 
-    {   projectName: 'Pokedex Search Website',
+    {   projectName: 'Pokedex Site',
         companyName: 'School Project' ,
         role: 'Solo Developer',
         skills: [MySkills.HTML, MySkills.CSS, MySkills.JavaScript],
@@ -45,7 +45,7 @@ export const MyProjects: ProjectData[] = [
 
     {   projectName: 'Impetus',
         companyName: 'Personal Project' ,
-        role: 'Programmer, Lead Artist',
+        role: 'Programmer, Art Lead',
         skills: [MySkills.Unity, MySkills.CSharp],
         thumbnailSrc: '/placeholder-photo.jpg',
         description: [

@@ -2,3 +2,21 @@
 @plugin "flowbite-react/plugin/tailwindcss";
 @source "../.flowbite-react/class-list.json";
 
+/* Global variables */
+:root {
+    --primary: rgb(61, 106, 242);
+    --secondary: rgb(243, 243, 243);
+    --content: #fff;
+    --accent-lt: #c1d8ffff;
+    --accent-md: #a0c4ffff;
+    --accent-dk: #73a7ffff;
+
+    --display-font: 'Sora';
+    --body-font: 'Cascadia Mono';
+
+    --shadow: 4px 4px 0px 0px rgba(0,0,0,1);
+    --shadow-hover: 6px 6px 0px 0px rgba(0,0,0,1);
+    --shadow-hover-lg: 8px 8px 0px 0px rgba(0,0,0,1);
+    --shadow-active: 2px 2px 0px 0px rgba(0,0,0,1);
+    --shadow-decor: 12px 12px 0px 0px var(--primary);
+}

@@ -5,7 +5,7 @@ const navBarTheme = createTheme({
 
   navbar:{
       root: {
-        base: "bg-[#F7EDE2] px-2 py-2 sm:px-4 border-b-2",
+        base: "font-(family-name:--display-font) bg-[var(--content)] py-0 pr-0 pl-4 sm:pr-0 sm:pl-4 sm:py-0 border-b-4",
         rounded: {
           on: "rounded",
           off: ""
@@ -15,7 +15,7 @@ const navBarTheme = createTheme({
           off: ""
         },
         inner: {
-          base: "mx-auto flex flex-wrap items-center justify-between",
+          base: "mx-auto flex flex-wrap items-stretch justify-between",
           fluid: {
             on: "",
             off: "container"
@@ -23,21 +23,21 @@ const navBarTheme = createTheme({
         }
       },
       brand: {
-        base: "flex items-center"
+        base: "flex text-3xl font-bold tracking-wide items-center hover:text-[var(--primary)] border-0 transition-all ease-out duration-100"
       },
       collapse: {
         base: "w-full md:block md:w-auto",
-        list: "mt-4 flex flex-col md:mt-0 md:flex-row md:space-x-2 md:text-sm md:font-medium",
+        list: "flex flex-col md:flex-row md:space-x-0 md:text-sm md:font-medium",
         hidden: {
           on: "hidden",
           off: ""
         }
       },
       link: {
-        base: "block py-2 pl-3 pr-4 md:px-2 md:py-1 text-lg rounded-lg",
+        base: "block py-2 px-4 md:py-2 md:px-4 text-2xl",
         active: {
           on: "bg-transparent text-white md:bg-transparent md:text-black",
-          off: "border-b border-gray-100 text-black hover:bg-gray-50 md:border-2 md:border-[#F7EDE2] md:hover:bg-white md:hover:border-2 md:hover:border-black md:hover:text-black transition-all ease-out duration-100"
+          off: "border-0 border-gray-100 text-black hover:bg-gray-50 md:border-0 md:hover:bg-[var(--primary)] md:hover:border-0 md:hover:text-[var(--content)] transition-all ease-out duration-100"
         },
         disabled: {
           on: "text-gray-400 hover:cursor-not-allowed dark:text-gray-600",
@@ -59,12 +59,15 @@ function NavigationBar(){
       <header className="fixed w-full z-2">
       <Navbar fluid>
         <NavbarBrand href="/">
-          <span className="self-center whitespace-nowrap text-xl font-semibold dark:text-white">Ziad Jaafar</span>
+          Ziad Jaafar
         </NavbarBrand>
         <NavbarToggle />
         <NavbarCollapse>
+          <div className='border-x-[1px]' />
           <NavbarLink href="/about">About</NavbarLink>
+          <div className='border-x-[1px]' />
           <NavbarLink href="/projects">Projects</NavbarLink>
+          <div className='border-x-[1px]' />
           <NavbarLink href="/contact">Contact</NavbarLink>
         </NavbarCollapse>
       </Navbar>

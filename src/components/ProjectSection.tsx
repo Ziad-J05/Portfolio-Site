@@ -5,29 +5,38 @@ import ProjectArea from './ProjectArea'
 import { GetProjectPageLink, ProjectData } from './ProjectData'
 import { LinkButton } from './LinkButton'
 import { SectionHeading } from './Headings'
+import { ReactElement } from 'react'
 
 export default function ProjectSection({projectDataList}: {projectDataList: ProjectData[]}){
 
-  const featuredProjectData = projectDataList[0]
-  const body = featuredProjectData.description[0]
+
+  const featuredProjectThumbnails: ReactElement[] = 
+    projectDataList.map((peojectData) => 
+      <FeaturedProjectThumbnail 
+        projectName={peojectData.projectName} 
+        role={peojectData.role}
+        skills={peojectData.skills} 
+        body={peojectData.description[0]}
+        thumbnailSrc={peojectData.thumbnailSrc}
+      />)
 
   return(
     <>
-      <ContentContainer 
-        content={[
-          <SectionHeading text="Projects" />,
-          <FeaturedProjectThumbnail 
-            projectName={featuredProjectData.projectName} 
-            role={featuredProjectData.role}
-            skills={featuredProjectData.skills} 
-            body={body}
-            thumbnailSrc={featuredProjectData.thumbnailSrc}
-          />,
-          <ProjectArea projectDataList={projectDataList.slice(1)} />,
-          <LinkButton text="All Projects" link="/projects" />,
-        ]} 
-        bottomMargin={true}
-      />
+      <SectionHeading text="Projects" />
+      <div className='flex gap-12 mx-auto flex-wrap max-w-7xl justify-center'>
+        
+        
+      {featuredProjectThumbnails}
+
+      <div className='w-lg flex justify-center content-center items-center'>
+        <LinkButton text="All Projects" link="/projects" arrow/>
+      </div>
+      
+
+      </div>
+
+      
+      
     </>
   )
 }
