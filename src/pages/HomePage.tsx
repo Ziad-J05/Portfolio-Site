@@ -52,10 +52,14 @@ function HomePage(){
     <NavigationBar />
         <IntroSection />
         <div className='pt-4 w-full h-0'>
-          <p className='font-(family-name:--display-font) w-fit mx-auto relative -top-8
-                        bg-[var(--content)] px-2 py-1 text-xl font-semibold rounded-none border-2'>
-            <AngleDown/> Learn more about my expereince + projects <AngleDown/>
-          </p>
+          <div className='w-fit mx-auto'>
+            <div className='grid grid-rows-1 grid-cols-[max-content_1fr_max-content]  justify-items-center items-center font-(family-name:--display-font) w-fit mx-8 relative -top-8 gap-4
+                          bg-[var(--content)] px-2 py-1 text-xl font-semibold rounded-none border-2'>
+              <AngleDown/> 
+              <p className='text-center'>Learn more about my expereince + projects</p>
+              <AngleDown/> 
+            </div>
+          </div>
         </div>
         <div className="grid grid-cols-1 auto-rows-min bg-[var(--secondary)] border-t-2 px-0 pb-24">  
             <SkillsSection skills={[backend,frontend,other]}/>   
