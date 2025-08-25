@@ -57,7 +57,7 @@ function HomePage(){
             <AngleDown/> Learn more about my expereince + projects <AngleDown/>
           </p>
         </div>
-        <div className="grid grid-cols-1 auto-rows-min bg-[var(--secondary)] border-t-2 px-12 pb-24">  
+        <div className="grid grid-cols-1 auto-rows-min bg-[var(--secondary)] border-t-2 px-0 pb-24">  
             <SkillsSection skills={[backend,frontend,other]}/>   
             <ExperienceSection jobInfoList={jobInfoList} />
             

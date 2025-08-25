@@ -14,7 +14,7 @@ export default function SkillsSection({skills}: {skills: Skill[][]}){
       <ContentContainer 
         content={[
           <SectionHeading text="Skills" />,
-          <div className='flex flex-col lg:flex-row gap-6 max-w-lg lg:max-w-7xl'>
+          <div className='flex flex-col lg:flex-row gap-6 max-w-lg mx-12 lg:max-w-7xl'>
 
               <div className='basis-0 grow py-4 px-4 bg-[var(--content)] border-2 rounded-lg flex flex-col justify-between align-top gap-4'>
                 <div className='flex flex-col justify-start gap-4'>
