@@ -27,7 +27,7 @@ export const cardTheme = createTheme({
       "base": "relative flex rounded-lg bg-white border-2 border-black shadow-(--shadow) group",
       "children": "flex h-full w-full flex-col justify-center gap-4 p-0",
       horizontal: {
-        "off": "max-w-lg flex-col",
+        "off": "max-w-xs sm:max-w-sm md:max-w-lg flex-col",
         "on": "flex-col w-full md:max-w-full md:flex-row"
       },
       "href": "hover:shadow-(--shadow-hover-lg) hover:-translate-[4px] hover:bg-white"
@@ -57,11 +57,11 @@ export function FeaturedProjectThumbnail({projectName, role, skills, body, thumb
             >
                 <div>
                     <div className="flex items-baseline border-b-2">
-                        <h3 className="font-(family-name:--display-font) text-3xl font-semibold tracking-tight px-2 py-1 text-black">
+                        <h3 className="font-(family-name:--display-font) text-2xl md:text-3xl font-semibold tracking-tight px-2 py-1 text-black">
                             {projectName}
                         </h3>
                         <div className="border-l-2 self-stretch" />
-                        <p className="font-(family-name:--display-font) text-3xl text-black px-2 py-1 mb-0">
+                        <p className="font-(family-name:--display-font) text-2xl md:text-3xl text-black px-2 py-1 mb-0">
                             {role}
                         </p>
                     </div>

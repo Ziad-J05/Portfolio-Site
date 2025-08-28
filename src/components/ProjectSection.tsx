@@ -23,12 +23,12 @@ export default function ProjectSection({projectDataList}: {projectDataList: Proj
   return(
     <>
       <SectionHeading text="Projects" />
-      <div className='flex gap-12 mx-auto flex-wrap max-w-7xl justify-center'>
+      <div className='flex gap-12 mx-auto flex-wrap w-full justify-center-safe'>
         
         
       {featuredProjectThumbnails}
 
-      <div className='w-lg flex justify-center content-center items-center'>
+      <div className='w-full lg:w-lg flex justify-center content-center items-center-safe'>
         <LinkButton text="All Projects" link="/projects" arrow/>
       </div>
       
