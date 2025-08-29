@@ -16,18 +16,11 @@ export default function ContactPage() {
       <PageHeading text="Contact Me" />
         <MainContentArea width='4xl' content={[
 
-            <div className='grid grid-cols-2 grid-rows-1 gap-6 w-fit mb-4 mx-auto text-xl'>
-                
-              <ul className='flex flex-col gap-6'>
+            <div className='flex flex-col lg:grid grid-cols-2 grid-rows-2 gap-6 w-fit px-6 xs:p-0 mb-4 mx-auto text-xl'>
                 <AnchorWidget label="Email" href="mailto:ziadjaafar05@gmail.com" display='ziadjaafar05@gmail.com' icon={<Envelope/>}/>
                 <AnchorWidget label="Phone" href="tel:+1724-393-5879" display='724-393-5879' icon={<Phone/>}/>
-              </ul>
-
-              <ul className='flex flex-col gap-6'>
                 <AnchorWidget label="Github" href="https://github.com/Ziad-J05" display='github.com/Ziad-J05' icon={<GitHub/>}/>
                 <AnchorWidget label="LinkedIn" href="https://www.linkedin.com/in/ziad-jaafar222/" display='linkedin.com/in/ziad-jaafar222/' icon={<LinkedIn/>}/>
-              </ul>
-
             </div>
 
           ]} 
@@ -48,7 +41,7 @@ function AnchorWidget({label, href, display, icon}: AnchorWidgetProps){
   return(
     <div className='flex gap-3'>
 
-      <div className='size-18 flex justify-center content-center items-center border-2 rounded-xl bg-[var(--accent-lt)] shadow-(--shadow)'>{icon}</div>
+      <div className='size-0 sm:size-18 flex justify-center content-center items-center sm:border-2 rounded-xl bg-[var(--accent-lt)] sm:shadow-(--shadow)'>{icon}</div>
     
       <div className='flex flex-col justify-evenly'>
         <div className='mr-4 font-(family-name:--display-font) font-semibold text-2xl'>
