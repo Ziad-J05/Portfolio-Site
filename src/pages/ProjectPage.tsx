@@ -65,12 +65,12 @@ export function ProjectPage({projectName, companyName, description, sampleLink, 
 
         <div className='bg-[var(--secondary)] pb-24 pt-12 px-6  mx-auto'>
             
-            <img className='w-4xl mx-auto h-72 object-cover rounded-xl border-2' src={thumbnailSrc} />
-            <div className='mt-12 grid w-4xl mx-auto grid-rows-1 grid-cols-[1fr_calc(var(--spacing)*72)]'>
+            <img className='w-0 sm:w-4xl mx-auto h-0 sm:h-72 object-cover rounded-xl sm:border-2' src={thumbnailSrc} alt=""/>
+            <div className='sm:mt-12 grid w-full lg:w-4xl mx-auto grid-rows-auto grid-cols-1 lg:grid-rows-1 lg:grid-cols-[1fr_calc(var(--spacing)*72)]'>
                 <div className='col-span-1 col-start-1 text-lg flex flex-col gap-4 w-full'>
                     {bodyParagraphs}
                 </div>
-                <div className='justify-self-stretch px-8 col-span-1 col-start-2 flex flex-col gap-8'>
+                <div className='justify-self-center sm:justify-self-stretch px-2 lg:px-8 row-start-1 col-span-1 col-start-1 lg:col-start-2 flex flex-col sm:flex-row lg:flex-col items-center gap-2 lg:gap-8 mb-12 lg:mb-0'>
                     <LinkButtonFull text='View Project' link={sampleLink}/>
                     <LinkButtonFull text='Github' link={githubLink}/>
                     <LinkButtonFull text='Live Demo' link={githubLink}/>
