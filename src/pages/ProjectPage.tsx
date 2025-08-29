@@ -58,12 +58,12 @@ export function ProjectPage({projectName, companyName, description, sampleLink, 
         <NavigationBar />
 
         <div className='font-(family-name:--display-font) bg-[var(--content)] pt-24 pb-12 border-b-0 mx-auto'>
-            <h1 className="text-left text-7xl w-4xl font-bold mb-4 mx-auto">{projectName}</h1>
-            <p className="text-left text-5xl w-4xl mx-auto font-light">{companyName}</p>
+            <h1 className="text-center lg:text-left text-6xl md:text-7xl w-full lg:w-4xl font-bold mb-4 mx-auto">{projectName}</h1>
+            <p className="text-center lg:text-left text-4xl md:text-5xl w-full lg:w-4xl mx-auto font-light">{companyName}</p>
         </div>
 
 
-        <div className='bg-[var(--secondary)] pb-24 pt-12 mx-auto'>
+        <div className='bg-[var(--secondary)] pb-24 pt-12 px-6  mx-auto'>
             
             <img className='w-4xl mx-auto h-72 object-cover rounded-xl border-2' src={thumbnailSrc} />
             <div className='mt-12 grid w-4xl mx-auto grid-rows-1 grid-cols-[1fr_calc(var(--spacing)*72)]'>
