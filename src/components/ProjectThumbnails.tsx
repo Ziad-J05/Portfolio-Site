@@ -1,13 +1,12 @@
 import '../index.css'
 import { 
   Card, 
-  Badge,
   createTheme, 
   ThemeProvider 
 } from "flowbite-react";
 import { SkillsArea } from './SkillsArea';
 import { Skill } from './Skill';
-import { GetProjectPageLink, ProjectData } from './ProjectData';
+import { GetProjectPageLink } from './ProjectData';
 import { ArrowRight } from './Icons';
 
 interface ProjectThumbnailProps{
@@ -28,7 +27,7 @@ export const cardTheme = createTheme({
       "children": "flex h-full w-full flex-col justify-center gap-4 p-0",
       horizontal: {
         "off": "max-w-xs sm:max-w-sm md:max-w-lg flex-col",
-        "on": "flex-col w-full md:max-w-full md:flex-row"
+        "on": "flex-col w-full md:flex-row"
       },
       "href": "hover:shadow-(--shadow-hover-lg) hover:-translate-[4px] hover:bg-white"
     },
@@ -47,7 +46,7 @@ export function FeaturedProjectThumbnail({projectName, role, skills, body, thumb
     const projectPageLink = GetProjectPageLink(projectName)
 
     return(
-        <>
+        
         <ThemeProvider theme={cardTheme}>
             <Card
                 href={projectPageLink}
@@ -80,7 +79,7 @@ export function FeaturedProjectThumbnail({projectName, role, skills, body, thumb
                 </div>
             </Card>
         </ThemeProvider>
-        </>
+        
     )
 }
 
@@ -91,7 +90,7 @@ export function ProjectThumbnail( {projectName, role, skills, thumbnailSrc}: Pro
     const projectPageLink = GetProjectPageLink(projectName)
 
     return(
-        <>
+        
         <ThemeProvider theme={cardTheme}>
             <Card
             href={projectPageLink}
@@ -106,7 +105,7 @@ export function ProjectThumbnail( {projectName, role, skills, thumbnailSrc}: Pro
                     </h3>
                     <div className="px-2 py-1">
 
-                        <div className="flex gap-2 my-0.5">
+                        <div className="flex flex-wrap gap-2 my-0.5">
                             <SkillsArea skills={skills} />
                         </div>
                         <p className="font-(family-name:--display-font) text-xl text-black">
@@ -118,6 +117,6 @@ export function ProjectThumbnail( {projectName, role, skills, thumbnailSrc}: Pro
 
             </Card>
         </ThemeProvider>
-        </>
+        
     )
 }

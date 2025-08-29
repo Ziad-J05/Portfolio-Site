@@ -16,7 +16,7 @@ export default function ProjectsPage() {
         <NavigationBar />
         <PageHeading text="My Projects" />
         <MainContentArea width='4xl' content={[
-          <div className="grid grid-auto-rows grid-cols-2 gap-2 px-8 w-6xl mx-auto">
+          <div className="grid grid-auto-rows grid-cols-1 xl:grid-cols-2 gap-2 justify-items-center px-8 max-w-lg md:max-w-7xl mx-auto">
               <ProjectArea projectDataList={MyProjects} />
             </div>
         ]} />
