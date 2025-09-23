@@ -42,6 +42,8 @@ export function ProjectPage({projectName, companyName, description, sampleLink, 
 
   const bodyParagraphs:ReactElement[] = description.map((text) => <p>{text}</p>)
   
+  const processImagesHeading = processImages.length ? <h2 className="font-(family-name:--display-font) text-center lg:text-left text-6xl w-full lg:w-4xl font-semibold mt-12 mb-12 mx-auto">Process</h2> : '';
+
   const captionedImageElements: ReactElement[] = []
   for (let image of processImages) {
     captionedImageElements.push(
@@ -71,13 +73,12 @@ export function ProjectPage({projectName, companyName, description, sampleLink, 
                     {bodyParagraphs}
                 </div>
                 <div className='justify-self-center sm:justify-self-stretch px-2 lg:px-8 row-start-1 col-span-1 col-start-1 lg:col-start-2 flex flex-col sm:flex-row lg:flex-col items-center gap-2 lg:gap-8 mb-12 lg:mb-0'>
-                    <LinkButtonFull text='View Project' link={sampleLink}/>
-                    <LinkButtonFull text='Github' link={githubLink}/>
-                    <LinkButtonFull text='Live Demo' link={githubLink}/>
+                    <LinkButtonFull text='View Project' disabled={!sampleLink} link={sampleLink}/>
+                    <LinkButtonFull text='Github' disabled={!githubLink} link={githubLink}/>
                 </div>
             </div>            
 
-            <h2 className="font-(family-name:--display-font) text-center lg:text-left text-6xl w-full lg:w-4xl font-semibold mt-12 mb-12 mx-auto">Process</h2>
+            {processImagesHeading}
 
             <div className='grid grid-auto-rows-auto grid-cols-1 md:grid-cols-2 gap-4 w-full lg:w-4xl mx-auto justify-items-center'>
                 {captionedImageElements}

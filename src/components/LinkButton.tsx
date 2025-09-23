@@ -1,6 +1,6 @@
 import { ReactElement } from 'react';
 import '../index.css'
-import { 
+import {
     Button,
     createTheme,
     ThemeProvider,
@@ -11,12 +11,13 @@ interface LinkButtonProps {
     text: string;
     link: string;
     arrow?: boolean;
+    disabled?: boolean;
 }
 
 const buttonTheme = createTheme({
     button: {
         base: "font-(family-name:--display-font) relative flex shadow-(--shadow) items-center justify-center rounded-lg text-center font-medium hover:-translate-[2px] hover:shadow-(--shadow-hover) active:translate-[2px] active:shadow-(--shadow-active) focus:ring-0",
-        disabled: "pointer-events-none opacity-50",
+        disabled: "pointer-events-none opacity-100 !bg-[rgb(180,180,180)] shadow-none",
         fullSized: "w-full",
         pill: "rounded-full",
         size: {
@@ -29,22 +30,26 @@ const buttonTheme = createTheme({
         color: {
             default: "bg-[var(--primary)] hover:bg-[var(--primary)] text-[var(--content)] border-2 border-black",
         },
-    }   
+    }
 })
 
-export function LinkButton({text, link, arrow}: LinkButtonProps){
-    return(
+export function LinkButton({ text, link, arrow, disabled }: LinkButtonProps) {
+    return (
         <ThemeProvider theme={buttonTheme}>
-            <Button as="a" href={link} size="md" color="default" className='transition-all duration-150 ease-out'>{text}{arrow ? <div className='ml-2'><ArrowRight /></div>: <></>}</Button>
+            <Button as="a" href={link} size="md" color="default" className='transition-all duration-150 ease-out'>{text}{arrow ? <div className='ml-2'><ArrowRight /></div> : <></>}</Button>
         </ThemeProvider>
     );
 }
 
-export function LinkButtonFull({text, link, arrow}: LinkButtonProps){
+export function LinkButtonFull({ text, link, arrow, disabled }: LinkButtonProps) {
 
-    return(
+    return (
         <ThemeProvider theme={buttonTheme}>
-            <Button fullSized as="a" href={link} size="lg" color="default" className='transition-all duration-150 ease-out'>{text}{arrow ? <ArrowRight />: <></>}</Button>
+            {disabled ?
+                <Button disabled fullSized size="lg" color="default">{text}{arrow ? <ArrowRight /> : <></>}</Button> :
+                <Button fullSized as="a" href={link} size="lg" color="default" className='transition-all duration-150 ease-out'>{text}{arrow ? <ArrowRight /> : <></>}</Button>
+            }
+
         </ThemeProvider>
     );
 }
