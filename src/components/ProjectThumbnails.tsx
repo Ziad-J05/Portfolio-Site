@@ -27,7 +27,7 @@ export const cardTheme = createTheme({
       "children": "flex h-full w-full flex-col justify-center gap-4 p-0",
       horizontal: {
         "off": "max-w-xs sm:max-w-sm md:max-w-lg flex-col",
-        "on": "flex-col w-full md:flex-row"
+        "on": "h-40 flex-col w-full md:flex-row"
       },
       "href": "hover:shadow-(--shadow-hover-lg) hover:-translate-[4px] hover:bg-white"
     },
@@ -35,7 +35,7 @@ export const cardTheme = createTheme({
       "base": "",
       horizontal: {
         off: "h-0 w-0 rounded-t-md md:h-64 md:w-auto object-cover border-b-2",
-        on: "h-0 w-0 rounded-t-lg object-cover md:h-auto md:w-48 md:rounded-none md:rounded-l-md border-r-2"
+        on: "h-0 w-0 rounded-t-lg object-cover md:h-39 md:w-48 md:rounded-none md:rounded-l-md border-r-2"
       }
     }
   }
@@ -51,7 +51,7 @@ export function FeaturedProjectThumbnail({projectName, role, skills, body, thumb
             <Card
                 href={projectPageLink}
                 className="transition-all duration-150 ease-out"
-                imgAlt="Meaningful alt text for an image that is not purely decorative"
+                imgAlt="Screenshot of the project"
                 imgSrc={thumbnailSrc}
             >
                 <div>
@@ -95,7 +95,7 @@ export function ProjectThumbnail( {projectName, role, skills, thumbnailSrc}: Pro
             <Card
             href={projectPageLink}
             className="transition-all duration-150 ease-out"
-            imgAlt="Meaningful alt text for an image that is not purely decorative"
+            imgAlt="Screenshot of the project"
             imgSrc={thumbnailSrc}
             horizontal
             >
