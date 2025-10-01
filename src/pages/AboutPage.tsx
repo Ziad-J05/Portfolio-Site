@@ -22,8 +22,8 @@ export default function AboutPage() {
         <div className='flex flex-col lg:flex-row gap-12 px-12 justify-center'>
               <AboutSection content={aboutSectionContent}/>
               <img
-                className="block size-96 object-cover border-4 rounded-3xl
-                           shadow-(--shadow-decor) self-center"
+                className="hidden size-96 object-cover border-4 rounded-3xl
+                           shadow-(--shadow-decor) self-center" // Change from hidden to block after photo has been taken
                 src="/placeholder-photo.jpg"
                 alt="Photograph of the developer"
               />

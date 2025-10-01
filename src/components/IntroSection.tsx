@@ -13,7 +13,7 @@ export default function IntroSection(){
           </p>
           <img
             className="row-start-1 row-end-2 col-start-2 col-end-3 size-64 sm:size-72 md:size-64 lg:size-72 object-cover border-2 self-center md:self-end rounded-xl"
-            src="/placeholder-photo.jpg"
+            src="/ziad-jaafar-portrait.jpg"
             alt="Photograph of the developer"
           />
           <div className="self-center row-start-2 row-end-3 col-start-2 col-end-3">

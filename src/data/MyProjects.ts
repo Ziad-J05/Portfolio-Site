@@ -24,8 +24,8 @@ export const MyProjects: ProjectData[] = [
         skills: [MySkills.HTML, MySkills.CSS, MySkills.JavaScript],
         thumbnailSrc: '/pokedex-search-thumb.png',
         description: [
-            'Designed and developed a single-page web app that allows users to search for stats about the monsters from the Pokemon games.',
-            `This site was created using HTML, CSS, and JavaScript. It gets its data from the PokeAPI, and parses this data in a user-friendly, easy-to-read form. The site also utilizes local storage to keep track of users' previous searches.`,
+            'Designed and developed a single-page web app that allows users to search for stats about monsters from the Pokemon games. Implemented a system to fetch and parse data from PokeAPI.',
+            `This site was created using HTML, CSS, and JavaScript. It gets its data as JSON files from the PokeAPI, and parses this data in a user-friendly, easy-to-read form. The site also utilizes local storage to keep track of users' previous searches.`,
         ],
         sampleLink:'https://people.rit.edu/zj7206/235/project2/' ,
         githubLink:'', 
@@ -38,7 +38,7 @@ export const MyProjects: ProjectData[] = [
         skills: [MySkills.Unity, MySkills.CSharp],
         thumbnailSrc: '/impetus-thumb.png',
         description: [
-            'As part of a team of 6, developed a vertical slice of a 2D roguelike video game.',
+            'As part of a team of 6, developed a vertical slice of a 2D roguelike video game. Designed and programmed an algorithm to randomly generate dungeon archetecture and designed UI.',
             `The game was developed in Unity with C#. I worked as one of the team's software developers, and designed and implemented an algorithm that randomly generates dungeons for the player to explore. Dungeons are internally stored as graphs of room objects, and these rooms are assembled at runtime using prefabs.`,
             `To organize the development team, our production manager utilized Jira to implement an Agile workflow. We were assigned weekly sprints and shared our progress during each sprint on biweekly video calls. Using this approach, we were able to finish the vertical slice in the span of three months.`,
             `I also juggled my role as a software developer with being the project's art lead. I designed the game's level art and user interface elements to both convey the game's aesthetics and be as readable as possible. I also created all of the game's level art in Krita, that our level designer then implemented in the room prefabs for the dungeons.`
