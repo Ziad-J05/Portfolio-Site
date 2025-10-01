@@ -36,14 +36,14 @@ export const MyProjects: ProjectData[] = [
         companyName: 'Personal Project' ,
         role: 'Programmer, Art Lead',
         skills: [MySkills.Unity, MySkills.CSharp],
-        thumbnailSrc: '/placeholder-photo.jpg',
+        thumbnailSrc: '/impetus-thumb.png',
         description: [
             'As part of a team of 6, developed a vertical slice of a 2D roguelike video game.',
             `The game was developed in Unity with C#. I worked as one of the team's software developers, and designed and implemented an algorithm that randomly generates dungeons for the player to explore. Dungeons are internally stored as graphs of room objects, and these rooms are assembled at runtime using prefabs.`,
             `To organize the development team, our production manager utilized Jira to implement an Agile workflow. We were assigned weekly sprints and shared our progress during each sprint on biweekly video calls. Using this approach, we were able to finish the vertical slice in the span of three months.`,
             `I also juggled my role as a software developer with being the project's art lead. I designed the game's level art and user interface elements to both convey the game's aesthetics and be as readable as possible. I also created all of the game's level art in Krita, that our level designer then implemented in the room prefabs for the dungeons.`
         ],
-        sampleLink:'',
+        sampleLink:'https://people.rit.edu/ebw4243/Impetus_Builds/',
         githubLink:'https://github.com/CytaStorm/Impetus', 
         processImages:[]
     },
