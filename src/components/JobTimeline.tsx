@@ -86,9 +86,10 @@ export default function JobTimeline({jobInfoList}: {jobInfoList: JobInfo[]}){
               <TimelinePoint />
               <TimelineContent>
               <TimelineTime>{jobInfo.startDate}-{jobInfo.endDate}</TimelineTime>
-              <TimelineTitle>
-                <div className='font-(family-name:--display-font) text-3xl font-semibold'>{jobInfo.employer}</div>
-                </TimelineTitle>
+              <TimelineTitle className='flex flex-col'>
+                <div className='font-(family-name:--display-font) text-3xl font-semibold'>{jobInfo.title}</div>
+                <div className='font-(family-name:--display-font) text-3xl font-normal'>{jobInfo.employer}</div>
+              </TimelineTitle>
               <TimelineBody>
                 <Description text={jobInfo.description} />
               </TimelineBody>
