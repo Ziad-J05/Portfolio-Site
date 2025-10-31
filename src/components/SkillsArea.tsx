@@ -53,7 +53,7 @@ export function SkillsArea({skills}: {skills: Skill[]}){
     const skillBadges: React.ReactElement[] = [];
 
     for(const skill of skills) {
-        skillBadges.push(<Badge color={ColorFromSkillType(skill.type)} size="md">{skill.name}</Badge>)
+        skillBadges.push(<Badge key={skill.name} color={ColorFromSkillType(skill.type)} size="md">{skill.name}</Badge>)
     }
     
     return( 
@@ -73,7 +73,7 @@ export function IconSkillsArea({skills}: {skills: Skill[]}){
     for(const skill of skills) {
 
         skillBadges.push(
-        <Badge color={ColorFromSkillType(skill.type)} size="xl">
+        <Badge key={skill.name} color={ColorFromSkillType(skill.type)} size="xl">
             <div className="flex items-center gap-1 px-0.5 py-0.5">
                 
                 {skill.icon}

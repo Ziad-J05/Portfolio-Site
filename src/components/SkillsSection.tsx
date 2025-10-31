@@ -12,8 +12,9 @@ export default function SkillsSection({skills}: {skills: Skill[][]}){
   return(
     <>
       <ContentContainer 
-        content={[
-          <SectionHeading text="Skills" />,
+        content={
+          <>
+          <SectionHeading text="Skills" />
           <div className='flex flex-col lg:flex-row gap-6 max-w-lg mx-12 lg:max-w-7xl'>
 
               <div className='basis-0 grow py-4 px-4 bg-[var(--content)] border-2 rounded-lg flex flex-col justify-between align-top gap-4'>
@@ -54,7 +55,8 @@ export default function SkillsSection({skills}: {skills: Skill[][]}){
               </div>
 
           </div>
-        ]} 
+        </>
+        } 
         fixedWidth={false}
       />
     </>

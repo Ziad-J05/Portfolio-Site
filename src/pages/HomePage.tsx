@@ -36,11 +36,11 @@ const other: Skill[] = [
 ]
 
 const jobInfoList:JobInfo[] = [
-  new JobInfo("Game Development Apprentice", "Simcoach Games", 2021, 2021, 
+  new JobInfo("Game Development Apprentice", "Simcoach Games", "2021", "2021", 
               ["Worked as part of a team of four to prototype games.", 
                "Pitched projects to the company's CEO after development was finished."]
              ),
-  new JobInfo("Virtual Tech Instructor", "iD Tech", 2025, 2025, 
+  new JobInfo("Virtual Tech Instructor", "iD Tech", "2025", "Present", 
               ["Taught STEM technologies to students in one-on-one sessions and group tech camps.",
                "Learned new tools like Godot and Blender during lesson preparation."]
              )

@@ -74,7 +74,7 @@ export function FeaturedProjectThumbnail({projectName, role, skills, body, thumb
                             {body}
                         </p>
 
-                        <a href={projectPageLink} className='text-lg font-semibold text-black group-hover:text-[var(--primary)] transition-all ease-out duration-150'>More info<div className='inline ml-2'><ArrowRight/></div></a>
+                        <span className='text-lg font-semibold text-black group-hover:text-[var(--primary)] transition-all ease-out duration-150'>More info<div className='inline ml-2'><ArrowRight/></div></span>
                     </div>
                 </div>
             </Card>

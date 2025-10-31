@@ -2,7 +2,7 @@ import { ReactElement } from 'react';
 import '../index.css'
 
 interface ContentContainerProps {
-      content: ReactElement[];
+      content: ReactElement;
       fixedWidth: boolean;
     }
 

@@ -15,11 +15,11 @@ import Description from './Description';
 export class JobInfo {
     title: string;
     employer: string;
-    startDate: number;
-    endDate: number;
+    startDate: string;
+    endDate: string;
     description: string[];
 
-    constructor( title: string, employer: string, startDate: number, endDate: number, description: string[]){
+    constructor( title: string, employer: string, startDate: string, endDate: string, description: string[]){
       this.title = title;
       this.employer = employer;
       this.startDate = startDate;
@@ -82,7 +82,7 @@ export default function JobTimeline({jobInfoList}: {jobInfoList: JobInfo[]}){
 
   for(const jobInfo of jobInfoList){
     timelineItems.push(
-      <TimelineItem>
+      <TimelineItem key={`${jobInfo.title}${jobInfo.startDate}`}>
               <TimelinePoint />
               <TimelineContent>
               <TimelineTime>{jobInfo.startDate}-{jobInfo.endDate}</TimelineTime>

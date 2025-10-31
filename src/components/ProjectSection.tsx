@@ -13,6 +13,7 @@ export default function ProjectSection({projectDataList}: {projectDataList: Proj
   const featuredProjectThumbnails: ReactElement[] = 
     projectDataList.map((peojectData) => 
       <FeaturedProjectThumbnail 
+        key={peojectData.projectName}
         projectName={peojectData.projectName} 
         role={peojectData.role}
         skills={peojectData.skills} 
