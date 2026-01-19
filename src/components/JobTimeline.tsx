@@ -33,13 +33,13 @@ const timelineTheme = createTheme({
     root: {
     direction: {
       horizontal: "sm:flex",
-      vertical: "relative border-l-2 border-black dark:border-gray-700"
+      vertical: "relative sm:border-l-2 sm:border-black sm:dark:border-gray-700"
       }
     },
     item: {
       root: {
       horizontal: "relative mb-6 sm:mb-0",
-      vertical: "mb-10 ml-6"
+      vertical: "mb-10 ml-0 sm:ml-6"
       },
       content: {
         root: {
@@ -54,7 +54,7 @@ const timelineTheme = createTheme({
           base: "relative top-2 -left-2 bg-[var(--content)] p-1 text-lg border-2 font-semibold leading-none text-black dark:text-gray-500"
         },
         title: {
-          base: "bg-[var(--accent-lt)] flex border-2 border-black rounded-t-lg px-4 pt-4 pb-2 gap-2 text-2xl font-normal text-black dark:text-white"
+          base: "bg-[var(--accent-lt)] flex flex-wrap gap-x-4 border-2 border-black rounded-t-lg px-4 pt-4 pb-2 text-2xl font-normal text-black dark:text-white"
         }
       },
       point: {
@@ -70,7 +70,7 @@ const timelineTheme = createTheme({
             wrapper: "absolute -left-3 flex h-6 w-6 items-center justify-center rounded-full bg-primary-200 ring-8 ring-white dark:bg-primary-900 dark:ring-gray-900"
           }
         },
-        vertical: ""
+        vertical: "hidden sm:block"
       }
   }
   }
@@ -86,9 +86,9 @@ export default function JobTimeline({jobInfoList}: {jobInfoList: JobInfo[]}){
               <TimelinePoint />
               <TimelineContent>
               <TimelineTime>{jobInfo.startDate}-{jobInfo.endDate}</TimelineTime>
-              <TimelineTitle className='flex flex-col'>
-                <div className='font-(family-name:--display-font) text-3xl font-semibold'>{jobInfo.title}</div>
-                <div className='font-(family-name:--display-font) text-3xl font-normal'>{jobInfo.employer}</div>
+              <TimelineTitle>
+                <span className='font-(family-name:--display-font) block text-3xl font-semibold'>{jobInfo.employer}</span>
+                <span className='font-(family-name:--display-font) block text-3xl font-normal'>{jobInfo.title}</span>
               </TimelineTitle>
               <TimelineBody>
                 <Description text={jobInfo.description} />
@@ -101,7 +101,7 @@ export default function JobTimeline({jobInfoList}: {jobInfoList: JobInfo[]}){
   return(
     <>
       <ThemeProvider theme={timelineTheme}>
-        <Timeline horizontal>
+        <Timeline>
         
           {timelineItems}
         
