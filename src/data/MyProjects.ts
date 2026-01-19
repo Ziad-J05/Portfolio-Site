@@ -48,6 +48,23 @@ export const MyProjects: ProjectData[] = [
         processImages:[]
     },
 
+    {   projectName: 'Galaxy Visualizer',
+        companyName: 'School Project' ,
+        role: 'Solo Developer',
+        skills: [MySkills.HTML, MySkills.CSS, MySkills.JavaScript],
+        thumbnailSrc: '/galaxy-thumb.png',
+        description: [
+            'Galaxy Visualizer is a web-based audio visualizer that uses HTML, CSS, and JavaScript, as well as the Canvas and Web Audio APIs.',
+            'This site was designed to procedurally generate animations based on a given audio track. It reads the file and gathers audio data using the HTML Web Audio API, which is then used to inform the animations generated using the Canvas API. Additionally, some of the site data is read in from JSON files, to allow for ease of editing.',
+            'The site features custom styling for user inputs and a responsive layout that works on all desktop browsers, created entirely in vanilla CSS.',
+            'The aesthetic for the visualizer was inspired by the visual effects of films like 2001: A Space Odyssey. This informed creative choices like the stars in the background of the visualizer, and the milticolored forms that are used to evoke the feeling of far-off galaxies. The "galaxies" are generated procedurally based on frequency data, and the "horizon line" responds to waveform data.',
+
+        ],
+        sampleLink:'https://people.rit.edu/zj7206/330/galaxy-visualizer/' ,
+        githubLink: '', 
+        processImages:[]
+    },
+
     {   projectName: 'Space Trucker',
         companyName: 'School Project' ,
         role: 'Solo Developer',
