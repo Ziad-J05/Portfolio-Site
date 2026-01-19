@@ -20,19 +20,18 @@ const frontend: Skill[] = [
   MySkills.CSS,
   MySkills.TypeScript,
   MySkills.Tailwind,
-
 ]
 const backend: Skill[] = [
   MySkills.CSharp,
-  MySkills.Unity,
+  MySkills.Python,
   MySkills.CPlusPlus,
   MySkills.Java,
-  MySkills.Godot,
 ]
 const other: Skill[] = [
   MySkills.Blender,
-  MySkills.Python,
-  MySkills.Maya
+  MySkills.Maya,
+  MySkills.Unity,
+  MySkills.Godot,
 ]
 
 const jobInfoList: JobInfo[] = [

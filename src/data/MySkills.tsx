@@ -4,7 +4,7 @@ import { CsharpPlain, UnityPlain, CplusplusPlain, JavascriptPlain, ReactOriginal
 export const MySkills: Record<string, Skill> = {
   "CSharp": new Skill("C#", <CsharpPlain size="26" className="*:fill-black"/>, SkillType.Language),
   "Unity": new Skill("Unity", <UnityPlain size="26" className="*:fill-black"/>, SkillType.Software),
-  "CPlusPlus": new Skill("C++", <CplusplusPlain  size="26" className="*:fill-black"/>, SkillType.Language),
+  "CPlusPlus": new Skill("C++", <CplusplusPlain size="26" className="*:fill-black"/>, SkillType.Language),
   "JavaScript": new Skill("JavaScript", <JavascriptPlain size="26" className="*:fill-black" />, SkillType.Language),
   "React": new Skill("React", <ReactOriginal size="26" className="*:fill-black"/>, SkillType.Framework),
   "HTML": new Skill("HTML", <Html5Plain size="26" className="*:fill-black"/>, SkillType.NonScriptLang),
