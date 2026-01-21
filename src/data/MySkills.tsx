@@ -20,4 +20,5 @@ export const MySkills: Record<string, Skill> = {
   "Box2D": new Skill("Box2D", <div />, SkillType.Library),
   "PixiJS": new Skill("PixiJS", <div />, SkillType.Library),
   "Monogame": new Skill("Monogame", <div />, SkillType.Library),
+  "GameDesign": new Skill("Game Design", <div />, SkillType.Other),
 };

@@ -41,6 +41,10 @@ export function CreateProjectInfoPages({projectDataList}: {projectDataList: Proj
 export function ProjectPage({projectName, companyName, description, sampleLink, githubLink, thumbnailSrc, processImages}: ProjectPageProps) {
 
   const bodyParagraphs:ReactElement[] = description.map((text) => <p>{text}</p>)
+
+  let doesImageExist:Boolean = !(thumbnailSrc === '');
+
+  const bannerImage = doesImageExist ? <img className='w-0 sm:w-4xl mx-auto h-0 sm:h-72 object-cover rounded-xl sm:border-2' src={thumbnailSrc} alt=""/> : <div className='w-0 sm:w-4xl mx-auto h-0 sm:h-6'></div>;
   
   const processImagesHeading = processImages.length ? <h2 className="font-(family-name:--display-font) text-center lg:text-left text-6xl w-full lg:w-4xl font-semibold mt-12 mb-12 mx-auto">Process</h2> : '';
 
@@ -64,10 +68,9 @@ export function ProjectPage({projectName, companyName, description, sampleLink, 
             <p className="text-center lg:text-left text-4xl md:text-5xl w-full lg:w-4xl mx-auto font-light">{companyName}</p>
         </div>
 
-
         <div className='bg-[var(--secondary)] pb-24 pt-12 px-6  mx-auto'>
             
-            <img className='w-0 sm:w-4xl mx-auto h-0 sm:h-72 object-cover rounded-xl sm:border-2' src={thumbnailSrc} alt=""/>
+            {bannerImage}
             <div className='sm:mt-12 grid w-full lg:w-4xl mx-auto grid-rows-auto grid-cols-1 lg:grid-rows-1 lg:grid-cols-[1fr_calc(var(--spacing)*72)]'>
                 <div className='col-span-1 col-start-1 text-lg flex flex-col gap-4 w-full'>
                     {bodyParagraphs}

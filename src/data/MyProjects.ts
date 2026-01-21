@@ -6,7 +6,7 @@ export const MyProjects: ProjectData[] = [
     {   projectName: 'Eulyss',
         companyName: 'Personal Project' ,
         role: 'Programmer',
-        skills: [MySkills.Unity, MySkills.CSharp],
+        skills: [MySkills.Unity, MySkills.CSharp, MySkills.GameDesign],
         thumbnailSrc: '/eulyss-thumb.png',
         description: [
             'Collaborated as part of a team of two to create an adventure game with a custom text parser that imports text files as graphs for in-game dialogue. Currently in development.',
@@ -35,7 +35,7 @@ export const MyProjects: ProjectData[] = [
     {   projectName: 'Impetus',
         companyName: 'Personal Project' ,
         role: 'Programmer, Art Lead',
-        skills: [MySkills.Unity, MySkills.CSharp],
+        skills: [MySkills.Unity, MySkills.CSharp, MySkills.GameDesign],
         thumbnailSrc: '/impetus-thumb.png',
         description: [
             'As part of a team of 6, developed a vertical slice of a 2D roguelike video game. Designed and programmed an algorithm to randomly generate dungeon archetecture and designed UI.',
@@ -80,6 +80,36 @@ export const MyProjects: ProjectData[] = [
         processImages:[]
     },
 
+    {   projectName: '13 Ghosts',
+        companyName: 'School Project' ,
+        role: 'Designer',
+        skills: [MySkills.GameDesign],
+        thumbnailSrc: '',
+        description: [
+            '13 Ghosts is a micro roleplaying game written in less than 200 words. The goal of the game is to exorcise all of the ghosts in a haunted mansion with your rag-tag ghost hunting team.',
+            'Despite its simple nature, 13 Ghosts is a challenging, fun experience for players, and was recieved well by playtesters. It can be played with nothing more than a deck of cards, some dice, and something to write with.',
+            '','','','','','','','','',''
+        ],
+        sampleLink:'/13-ghosts-manual.pdf' ,
+        githubLink: '', 
+        processImages:[]
+    },
+
+    {   projectName: 'Vice Versa',
+        companyName: 'School Project' ,
+        role: 'Designer',
+        skills: [MySkills.GameDesign],
+        thumbnailSrc: '',
+        description: [
+            'Vice Versa is a tabletop roleplaying game designed to foster empathy about mental health.',
+            'I collaborated as part of a 5-person team to create this print-and-play game. Our mission was to use the Enneagram as a tool to help players grow empathetic to the struggles their friends and loved ones may face every day. We chose to make the experience a tabletop roleplaying game because the roleplaying framework forces players to consider perspectives other than their own.',
+            `My work on this project incudes helping design the core gameplay loop and combat system, as well as writing the game's instuction manual and designing example scenarios for new players.`,
+        ],
+        sampleLink:'/vice-versa-manual.pdf' ,
+        githubLink: '', 
+        processImages:[]
+    },
+
     {   projectName: 'Gravity Game',
         companyName: 'School Project' ,
         role: 'Solo Developer',
@@ -98,7 +128,7 @@ export const MyProjects: ProjectData[] = [
     {   projectName: 'Johnny Rocket',
         companyName: 'School Project' ,
         role: 'Programmer',
-        skills: [MySkills.CSharp, MySkills.Monogame],
+        skills: [MySkills.CSharp, MySkills.Monogame, MySkills.GameDesign],
         thumbnailSrc: '/johnny-rocket-thumb.png',
         description: [
             'Worked as a team of four to create a 2D adventure game with real-time combat and three unique levels over the span of two months. The game was developed in C#, using the Monogame library to handle inputs and render graphics.',
