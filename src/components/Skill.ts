@@ -5,7 +5,7 @@ export enum SkillType{
     Software,
     Library,
     Framework,
-    NonScriptLang,
+    NonScriptLang
 }
 
 export class Skill{
