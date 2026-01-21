@@ -113,6 +113,9 @@ function ColorFromSkillType(type: SkillType) {
         case SkillType.NonScriptLang:
             color = "medium"
             break;
+        default:
+            color = "medium"
+            break;
     }
 
     return color;
