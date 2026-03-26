@@ -13,40 +13,42 @@ import { MyProjects } from '../data/MyProjects';
 import { ArrowDown, AngleDown } from '../components/Icons';
 
 /* const skills: Skill[] = Object.values(MySkills); */
-const frontend: Skill[] = [
-  MySkills.JavaScript,
+const frameworks: Skill[] = [
+  
   MySkills.React,
+  
+  MySkills.Tailwind,
+]
+const languages: Skill[] = [
+  MySkills.CSharp,
+  MySkills.JavaScript,
+  MySkills.CPlusPlus,
   MySkills.HTML,
   MySkills.CSS,
   MySkills.TypeScript,
-  MySkills.Tailwind,
-]
-const backend: Skill[] = [
-  MySkills.CSharp,
   MySkills.Python,
-  MySkills.CPlusPlus,
   MySkills.Java,
 ]
-const other: Skill[] = [
-  MySkills.Blender,
-  MySkills.Maya,
+const software: Skill[] = [
   MySkills.Unity,
   MySkills.Godot,
+  MySkills.Blender,
+  MySkills.Maya,
 ]
 
 const jobInfoList: JobInfo[] = [
-  new JobInfo("Game Development Apprentice", "Simcoach Games", "2021", "2021",
-    ["Worked as part of a team of four to prototype games.",
-      "Pitched projects to the company's CEO after development was finished."]
+  new JobInfo("Game Developer", "Space Boss", "2025", "Present",
+    ["Worked with U.S. Department of War to design an educational XR tabletop game.",
+      "Collaborated with researchers from Technergetics to train a custom LLM."]
   ),
   new JobInfo("Virtual Tech Instructor", "iD Tech", "2025", "Present",
     ["Taught STEM technologies to students in one-on-one sessions and group tech camps.",
       "Learned new tools like Godot and Blender during lesson preparation."]
   ),
-  new JobInfo("Game Developer", "Space Boss", "2025", "Present",
-    ["Worked with U.S. Department of War to design an educational XR tabletop game.",
-      "Collaborated with researchers from Technergetics to train a custom LLM."]
-  )
+  new JobInfo("Game Development Apprentice", "Simcoach Games", "2021", "2021",
+    ["Worked as part of a team of four to prototype games.",
+      "Pitched projects to the company's CEO after development was finished."]
+  ),
 ]
 
 function HomePage() {
@@ -65,7 +67,7 @@ function HomePage() {
         </div>
       </div>
       <div className="grid grid-cols-1 auto-rows-min bg-[var(--secondary)] border-t-2 px-0 pb-24">
-        <SkillsSection skills={[backend, frontend, other]} />
+        <SkillsSection skills={[languages, frameworks, software]} />
         <ExperienceSection jobInfoList={jobInfoList} />
 
         <ProjectSection projectDataList={MyProjects.slice(0, 3)} />

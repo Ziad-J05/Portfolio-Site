@@ -46,7 +46,7 @@ export function LinkButtonFull({ text, link, arrow, disabled }: LinkButtonProps)
     return (
         <ThemeProvider theme={buttonTheme}>
             {disabled ?
-                <Button disabled fullSized size="lg" color="default">{text}{arrow ? <ArrowRight /> : <></>}</Button> :
+                /*<Button disabled fullSized size="lg" color="default">{text}{arrow ? <ArrowRight /> : <></>}</Button>*/<></> :
                 <Button fullSized as="a" href={link} size="lg" color="default" className='transition-all duration-150 ease-out'>{text}{arrow ? <ArrowRight /> : <></>}</Button>
             }
 

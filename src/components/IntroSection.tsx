@@ -9,7 +9,7 @@ export default function IntroSection(){
             <span className="block font-bold text-8xl sm:text-9xl md:text-8xl lg:text-9xl text-[var(--secondary)] text-shadow-[6px_6px_0px_rgba(0,0,0,1),-3px_-3px_0_rgba(0,0,0,1),-3px_3px_0_rgba(0,0,0,1),3px_-3px_0_rgba(0,0,0,1)] sm:ml-12 pr-2">Jaafar</span>
           </h1>
           <p className="justify-self-end-safe self-center text-center md:text-left w-xs sm:w-sm md:w-full md:self-start row-start-2 row-end-3 col-start-1 col-end-2 text-xl font-semibold">
-            Game developer + software developer based out of Pittsburgh, PA
+            Game developer and software developer
           </p>
           <img
             className="row-start-1 row-end-2 col-start-2 col-end-3 size-64 sm:size-72 md:size-64 lg:size-72 object-cover border-2 self-center md:self-end rounded-xl"

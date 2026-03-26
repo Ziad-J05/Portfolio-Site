@@ -20,9 +20,8 @@ export default function SkillsSection({skills}: {skills: Skill[][]}){
               <div className='basis-0 grow py-4 px-4 bg-[var(--content)] border-2 rounded-lg flex flex-col justify-between align-top gap-4'>
                 <div className='flex flex-col justify-start gap-4'>
                   <h3 className="font-(family-name:--display-font) text-center text-4xl font-semibold tracking-tight px-2 py-1 text-black">
-                              Backend...
+                              Languages...
                   </h3>
-                  <p className='text-lg'>My bread and butter is backend software development, especially when it comes to game design! Languages like C# and C++ are my go-to's, and I'm familiar with libraries like SFML and Box2D.</p>
                 </div>
                 <div className="flex flex-wrap justify-center gap-2 mb-2">
                   <IconSkillsArea skills={skills[0]} />
@@ -32,9 +31,8 @@ export default function SkillsSection({skills}: {skills: Skill[][]}){
               <div className='basis-0 grow py-4 px-4 bg-[var(--content)] border-2 rounded-lg flex flex-col justify-between align-top gap-4'>
                 <div className='flex flex-col justify-start gap-4'>
                   <h3 className="font-(family-name:--display-font) text-center text-4xl font-semibold tracking-tight px-2 py-1 text-black">
-                              ...Frontend...
+                              ...Frameworks...
                   </h3>
-                  <p className='text-lg'>Although I have the most experience with backend, I have a soft spot for frontend web development. JavaScript comes pretty naturally to me and I've recently been learning TypeScript and React.</p>
                 </div>
                 <div className="flex flex-wrap justify-center gap-2 mb-2">
                   <IconSkillsArea skills={skills[1]} />
@@ -44,9 +42,8 @@ export default function SkillsSection({skills}: {skills: Skill[][]}){
               <div className='basis-0 grow py-4 px-4 bg-[var(--content)] border-2 rounded-lg flex flex-col justify-between align-top gap-4'>
                 <div className='flex flex-col justify-start gap-4'>
                   <h3 className="font-(family-name:--display-font) text-center text-4xl font-semibold tracking-tight px-2 py-1 text-black">
-                            ...and More!
+                            ...and Software!
                   </h3>
-                  <p className='text-lg'>Throughout my experience on projects and jobs as a game developer, I've had to pick up different software for game design and 3D modeling.</p>
                 </div>
                 
                 <div className="flex flex-wrap justify-center gap-2 mb-2">
