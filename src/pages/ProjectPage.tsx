@@ -40,7 +40,7 @@ export function CreateProjectInfoPages({projectDataList}: {projectDataList: Proj
 
 export function ProjectPage({projectName, companyName, description, sampleLink, githubLink, thumbnailSrc, processImages}: ProjectPageProps) {
 
-  const bodyParagraphs:ReactElement[] = description.map((text) => <p>{text}</p>)
+  const bodyParagraphs:ReactElement[] = description.map((text) => (text[0] == '#' ? <h2 className="font-(family-name:--display-font) text-left text-5xl font-semibold mt-4 mb-4">{text.substring(1)}</h2> : <p>{text}</p>))
 
   let doesImageExist:Boolean = !(thumbnailSrc === '');
 
