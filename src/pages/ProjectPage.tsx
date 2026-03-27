@@ -40,13 +40,13 @@ export function CreateProjectInfoPages({projectDataList}: {projectDataList: Proj
 
 export function ProjectPage({projectName, companyName, description, sampleLink, githubLink, thumbnailSrc, processImages}: ProjectPageProps) {
 
-  const bodyParagraphs:ReactElement[] = description.map((text) => (text[0] == '#' ? <h2 className="font-(family-name:--display-font) text-left text-5xl font-semibold mt-12 mb-4">{text.substring(1)}</h2> : <p>{text}</p>))
+  const bodyParagraphs:ReactElement[] = description.map((text) => (text[0] == '#' ? <h2 className="font-(family-name:--display-font) text-left text-6xl font-semibold mt-12 mb-4">{text.substring(1)}</h2> : <p>{text}</p>))
 
   let doesImageExist:Boolean = !(thumbnailSrc === '');
 
   const bannerImage = doesImageExist ? <img className='w-0 sm:w-4xl mx-auto h-0 sm:h-72 object-cover rounded-xl sm:border-2' src={thumbnailSrc} alt=""/> : <div className='w-0 sm:w-4xl mx-auto h-0 sm:h-6'></div>;
   
-  const processImagesHeading = processImages.length ? <h2 className="font-(family-name:--display-font) text-center lg:text-left text-6xl w-full lg:w-4xl font-semibold mt-12 mb-12 mx-auto">Process</h2> : '';
+  const processImagesHeading = processImages.length ? <h2 className="font-(family-name:--display-font) text-center lg:text-left text-6xl w-full lg:w-4xl font-semibold mt-12 mb-12 mx-auto">Images</h2> : '';
 
   const captionedImageElements: ReactElement[] = []
   for (let image of processImages) {

@@ -21,7 +21,12 @@ export const MyProjects: ProjectData[] = [
         ],
         sampleLink: 'https://cytastorm.itch.io/eulyss-prologue',
         githubLink: 'https://github.com/CytaStorm/Taken',
-        processImages: []
+        processImages: [
+            { source:"/captures/eulyss-capture-2.png", caption:"Point and click gameplay"},
+            { source:"/captures/eulyss-capture-1.png", caption:"Dialogue menu"},
+            { source:"/captures/eulyss-capture-3.png", caption:"Player HUD"},
+            { source:"/captures/eulyss-capture-4.png", caption:"Title screen UI"},
+        ]
     },
 
     {
@@ -41,7 +46,9 @@ export const MyProjects: ProjectData[] = [
         ],
         sampleLink: 'https://people.rit.edu/zj7206/235/project2/',
         githubLink: '',
-        processImages: []
+        processImages: [
+            { source:"/captures/dex-capture-1.png", caption:"Attack data for a monster"},
+        ]
     },
 
     {
@@ -83,7 +90,10 @@ export const MyProjects: ProjectData[] = [
         ],
         sampleLink: 'https://people.rit.edu/zj7206/330/galaxy-visualizer/',
         githubLink: '',
-        processImages: []
+        processImages: [
+            { source:"/captures/galaxy-capture-1.png", caption:"Visualizer and playhead"},
+            { source:"/captures/galaxy-capture-2.png", caption:"User settings"},
+        ]
     },
 
     {
@@ -104,7 +114,11 @@ export const MyProjects: ProjectData[] = [
         ],
         sampleLink: 'https://ziadjaafar.itch.io/space-trucker',
         githubLink: '',
-        processImages: []
+        processImages: [
+            { source:"/captures/trucker-capture-1.png", caption:"Title screen UI"},
+            { source:"/captures/trucker-capture-4.png", caption:"Gameplay and player HUD"},
+            { source:"/captures/trucker-capture-3.png", caption:"Game over screen"},
+        ]
     },
 
     {
