@@ -88,21 +88,19 @@ export const MyProjects: ProjectData[] = [
 
     {
         projectName: 'Space Trucker',
-        companyName: 'School Project',
+        companyName: 'Personal Project',
         role: 'Solo Developer',
-        skills: [MySkills.HTML, MySkills.CSS, MySkills.JavaScript, MySkills.PixiJS],
+        skills: [MySkills.Godot, MySkills.GameDesign],
         thumbnailSrc: '/space-trucker-thumb.png',
         description: [
-            `Developed game engine, complete with custom physics simulation, using JavaScript with the Pixi.js visual library.`,
+            `Developed gameplay state machine and custom UI and HUD using Godot and GDScript.`,
             `#Overview`,
-            `Space Trucker is a web-based arcade game I designed and developed. I published it to my student website, where it is free to play.`,
+            `Space Trucker is an arcade-styled desktop game I designed and developed.`,
             `#Process`,
-            `I built the engine for this game from the ground up, using the Pixi.js library to render graphics to the page. The game uses a finite state machine to switch between gameplay, the pause screen, the title menu, and the game over screen. For the collision in the game, I implemented Jeffery Thompson's circle-rectangle collision algorithm. Gravity is simulated by applying a constant velocity to the player’s vehicle. An upwards impulse is added to the vehicle whenever the space bar is pressed, which is what allows the player to move.`,
-            `To save memory, I used object pooling on both the asteroids the player dodges and the stars in the background of the game. This was implemented after I noticed a visible drop in performance after I implemented the background stars.`,
-            `The game also features custom-made UI elements. I sketched out several potential layouts on paper before deciding on one I was happy with.`,
+            `The game features custom-made UI elements. I sketched out several potential layouts on paper before deciding on one I was happy with.`,
 
         ],
-        sampleLink: 'https://people.rit.edu/zj7206/235/project3/',
+        sampleLink: '',
         githubLink: '',
         processImages: []
     },
