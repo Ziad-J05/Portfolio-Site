@@ -52,8 +52,8 @@ export function ProjectPage({projectName, companyName, description, sampleLink, 
   for (let image of processImages) {
     captionedImageElements.push(
         /* TODO: these divs are just Flowbite cards. They should be card components instead*/
-        <div className='relative top-0 left-0 h-fit max-w-lg overflow-hidden rounded-lg border-2 bg-white'>
-            <img className='object-cover h-fit w-fit sm:h-96' src={image.source} alt={image.caption}></img>
+        <div className='relative top-0 left-0 overflow-hidden rounded-lg border-2 bg-white'>
+            <img className='object-contain sm:h-96' src={image.source} alt={image.caption}></img>
             <p className='text-lg px-2'>{image.caption}</p>
         </div>
     )
@@ -83,7 +83,7 @@ export function ProjectPage({projectName, companyName, description, sampleLink, 
 
             {processImagesHeading}
 
-            <div className='grid grid-auto-rows-auto grid-cols-1 md:grid-cols-2 gap-4 w-full lg:w-4xl mx-auto justify-items-center'>
+            <div className='flex flex-wrap gap-4 w-full lg:w-4xl mx-auto justify-items-center'>
                 {captionedImageElements}
             </div>
         </div>

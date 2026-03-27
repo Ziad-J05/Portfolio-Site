@@ -91,8 +91,7 @@ export const MyProjects: ProjectData[] = [
         sampleLink: 'https://people.rit.edu/zj7206/330/galaxy-visualizer/',
         githubLink: '',
         processImages: [
-            { source:"/captures/galaxy-capture-1.png", caption:"Visualizer and playhead"},
-            { source:"/captures/galaxy-capture-2.png", caption:"User settings"},
+            { source:"/captures/galaxy-capture-1.png", caption:"Visualizer, playhead, and user settings"},
         ]
     },
 
