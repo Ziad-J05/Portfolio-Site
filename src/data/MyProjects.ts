@@ -93,11 +93,13 @@ export const MyProjects: ProjectData[] = [
         skills: [MySkills.Godot, MySkills.GameDesign],
         thumbnailSrc: '/space-trucker-thumb.png',
         description: [
-            `Developed gameplay state machine and custom UI and HUD using Godot and GDScript.`,
+            `Implemented object pooling and custom queue system in GDScript. Developed custom UI and HUD using Godot UI nodes.`,
             `#Overview`,
-            `Space Trucker is an arcade-styled desktop game I designed and developed.`,
+            `Space Trucker is an arcade-styled desktop game I designed and developed as a solo developer in Godot 4.4.1.`,
             `#Process`,
-            `The game features custom-made UI elements. I sketched out several potential layouts on paper before deciding on one I was happy with.`,
+            `To create the effect of shipping crates trailing behind the player’s space shuttle, I implemented a queue system that was used to determine the position of the crates. Every frame, the current position of the player shuttle is added to the position queue, and if the queue is full then the oldest position is removed. The positions of the crates are obtained from this queue, with the values being taken farther apart from each other for the crates to appear less synced. This system was built to be scalable to as few or as many crates as necessary.`,
+            `I noticed in earlier builds of the game that the system for spawning asteroids was causing performance issues. To fix this, I implemented an object pooling system for the asteroids, to replace the existing system of instantiating a new asteroid every time a new one appeared onscreen. In this new system, asteroids that went offscreen were kept in memory. When a new asteroid was needed, one of the old asteroids was placed where the new one was spawned. To make it less clear to the player that the same asteroids were being reused, the properties (such as size, velocity, and rotational speed) are randomized before each asteroid re-enters gameplay.`,
+            `The game features custom-made UI elements. I used paper to prototype several potential layouts before deciding on the ones that best fit the game. I was able to apply my previous experience with HTML and CSS to Godot’s UI system, using features like alternate styles for different button states, `,
 
         ],
         sampleLink: '',
