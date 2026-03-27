@@ -102,7 +102,7 @@ export const MyProjects: ProjectData[] = [
             `The game features custom-made UI elements. I used paper to prototype several potential layouts before deciding on the ones that best fit the game. I was able to apply my previous experience with HTML and CSS to Godot’s UI system, using features like alternate styles for different button states, `,
 
         ],
-        sampleLink: '',
+        sampleLink: 'https://ziadjaafar.itch.io/space-trucker',
         githubLink: '',
         processImages: []
     },
