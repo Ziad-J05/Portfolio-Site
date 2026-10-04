@@ -7,9 +7,9 @@ import AboutSection from '../components/AboutSection'
 import Footer from '../components/Footer'
 
 const aboutSectionContent:string[] = [
-  "I'm a game designer and software developer pusruing a Bachelor's of Science in Game Design and Development at Rochester Institute of Technology.",
+  "I'm a UX designer pusruing a Bachelor's of Science in Game Design and Development at Rochester Institute of Technology.",
 
-  "Unity and C# are my bread and butter, though I'm also familiar with frontend development technologies like React and Typescript, as well as languages like C++ and Java. No matter what project I'm working on, I always put the user first, making UX as good as it can be."
+  "UX design and research are my bread butter, though I also have plenty of expereince working with web technologies and frameworks. No matter what kind of project I'm working on, I always do what I can to be a voice for the people I design for. My love for design comes from my love for helping people through technology, and I try to put that into everything I do."
 ]
 
 export default function AboutPage() {

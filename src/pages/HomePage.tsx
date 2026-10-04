@@ -14,9 +14,9 @@ import { ArrowDown, AngleDown } from '../components/Icons';
 
 /* const skills: Skill[] = Object.values(MySkills); */
 const frameworks: Skill[] = [
-  
+
   MySkills.React,
-  
+
   MySkills.Tailwind,
 ]
 const languages: Skill[] = [
@@ -37,11 +37,16 @@ const software: Skill[] = [
 ]
 
 const jobInfoList: JobInfo[] = [
-  new JobInfo("Game Developer", "Space Boss", "2025", "Present",
-    ["Worked with U.S. Department of War to design an educational XR tabletop game.",
+  new JobInfo("Web Team Lead", "LevelSmith Labs", "2026", "2026",
+    ["Designed UI for game creation software and led development of company website.",
+      "Collaborated with design team to research UI and mock up wireframes in Figma.",
+      "Created and maintained all website documentation to assist in future onboarding."]
+  ),
+  new JobInfo("Game Developer", "RIT", "2025", "2026",
+    ["Worked with U.S. Space Force to design an educational XR tabletop game.",
       "Collaborated with researchers from Technergetics to train a custom LLM."]
   ),
-  new JobInfo("Virtual Tech Instructor", "iD Tech", "2025", "Present",
+  new JobInfo("Virtual Tech Instructor", "iD Tech", "2025", "2026",
     ["Taught STEM technologies to students in one-on-one sessions and group tech camps.",
       "Learned new tools like Godot and Blender during lesson preparation."]
   ),
